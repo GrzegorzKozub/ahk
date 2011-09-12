@@ -1,7 +1,4 @@
-﻿;TODO: if iis remembers its size update the settings
-
-
-; Settings
+﻿; Settings
 
 autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True }            
              , { Title: "Microsoft Visual Studio", Max: True } ]
@@ -51,14 +48,17 @@ updates4 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True }
             , { Title: " - Message", Width: 925, Height: 800, Center: True } ; gkozub only            
             , { Title: " - Task", Width: 925, Height: 800, Center: True } ] ; gkozub only                        
             
-updates5 := [ { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
+updates5 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True } ; gkozub only
+            , { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
             , { Title: "InfraRecorder", Width: 900, Height: 600, Center: True }
             , { Title: "eMule", Width: 900, Height: 600, Center: True }
+            , { Title: "Internet Information Services (IIS) Manager", Width: 900, Height: 600, Center: True, LoResMax: True } ; gkozub only
             , { Title: "KeePass Password Safe", Width: 900, Height: 600, Center: True }
             , { Title: "Notepad", Width: 900, Height: 600, Center: True, Except: "Notepad++" } ; also Notepad2
             , { Title: "Rapid Environment Editor", Width: 900, Height: 600, Center: True }
             , { Title: "Registry Editor", Width: 900, Height: 600, Center: True }
             , { Title: "Resource Hacker", Width: 900, Height: 600, Center: True }
+            , { Title: "Sql Server Configuration Manager", Width: 900, Height: 600, Center: True } ; gkozub only
             , { Title: "VLC media player", Width: 900, Height: 600, Center: True }
             , { Title: "WinRAR", Width: 900, Height: 600, Center: True } ]
                      
@@ -71,9 +71,9 @@ updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "BRISS - BRight Snippet Sire", Center: True }
             , { Title: "Catalyst Control Center", Center: True }
             , { Title: "DAEMON Tools Lite", Center: True }
-            , { Title: "Internet Information Services (IIS) Manager", Center: True } ; gkozub only
             , { Title: "IrfanView", Center: True }            
             , { Title: "Konsola programu VirusScan", Center: True } ; gkozub only
+            , { Title: "McAfee Host Intrusion Prevention", Center: True } ; gkozub only
             , { Title: "Microsoft Security Essentials", Center: True }
             , { Title: "Piriform Defraggler", Center: True }
             , { Title: "Shotty", Center: True }
@@ -95,7 +95,7 @@ if (A_ComputerName == "ACID") {
     _updates := [ updates1, updates2, updates3, updates5, updates6, updates8, updates9 ]
 } else if (A_ComputerName == "GKOZUB") {
     _autofits := [ autofits1, autofits2 ]
-    _updates := [ updates4, updates5, updates6, updates7, updates9 ]
+    _updates := [ updates4, updates5, updates6, updates7, updates8, updates9 ]
 } else {
     MsgBox Missing %A_ScriptName% settings for the %A_ComputerName% host name. The script will now exit.
     ExitApp
