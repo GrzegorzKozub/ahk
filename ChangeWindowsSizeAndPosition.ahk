@@ -1,5 +1,5 @@
 ﻿;TODO: if iis remembers its size update the settings
-;TODO: " - Conversation", " - Meeting", " - Message"
+
 
 ; Settings
 
@@ -10,7 +10,7 @@ autofits2 := [ { Title: "Adobe Reader" }
              , { Title: "Beyond Compare" }
              , { Title: "Enterprise Architect" }
              , { Title: "Google Chrome" }
-             , { Title: "LinqPAD" }
+             , { Title: "LINQPad" }
              , { Title: "Microsoft Excel" }
              , { Title: "Microsoft OneNote" }
              , { Title: "Microsoft Outlook" }
@@ -45,7 +45,13 @@ updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
 updates3 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
             , { Title: "Steam", Width: 1200, Height: 850, Center: True } ]
 
-updates4 := [ { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
+updates4 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True } ; gkozub only            
+            , { Title: " - Contact", Width: 925, Height: 800, Center: True } ; gkozub only            
+            , { Title: " - Meeting", Width: 925, Height: 800, Center: True } ; gkozub only                         
+            , { Title: " - Message", Width: 925, Height: 800, Center: True } ; gkozub only            
+            , { Title: " - Task", Width: 925, Height: 800, Center: True } ] ; gkozub only                        
+            
+updates5 := [ { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
             , { Title: "InfraRecorder", Width: 900, Height: 600, Center: True }
             , { Title: "eMule", Width: 900, Height: 600, Center: True }
             , { Title: "KeePass Password Safe", Width: 900, Height: 600, Center: True }
@@ -56,10 +62,12 @@ updates4 := [ { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: Tr
             , { Title: "VLC media player", Width: 900, Height: 600, Center: True }
             , { Title: "WinRAR", Width: 900, Height: 600, Center: True } ]
                      
-updates5 := [ { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
+updates6 := [ { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
             , { Title: "Windows Snapshot Maker", Width: 750, Height: 500, Center: True } ]
+            
+updates7 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ] ; gkozub only                                    
 
-updates6 := [ { Title: "Apple QuickTime", Center: True }
+updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "BRISS - BRight Snippet Sire", Center: True }
             , { Title: "Catalyst Control Center", Center: True }
             , { Title: "DAEMON Tools Lite", Center: True }
@@ -72,7 +80,7 @@ updates6 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "Stickies", Center: True }
             , { Title: "Web Platform Installer", Center: True } ]
 
-updates7 := [ { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
+updates9 := [ { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
             , { Title: "Friends", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; Steam
             , { Title: "GVIM", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
             , { Title: "Miranda IM", Right: 25, Bottom: 25, Width: 300, Height: 500 } 
@@ -84,10 +92,10 @@ updates7 := [ { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 
             
 if (A_ComputerName == "ACID") {
     _autofits := []
-    _updates := [ updates1, updates2, updates3, updates4, updates5, updates6, updates7 ]
+    _updates := [ updates1, updates2, updates3, updates5, updates6, updates8, updates9 ]
 } else if (A_ComputerName == "GKOZUB") {
     _autofits := [ autofits1, autofits2 ]
-    _updates := [ updates4, updates5, updates6, updates7 ]
+    _updates := [ updates4, updates5, updates6, updates7, updates9 ]
 } else {
     MsgBox Missing %A_ScriptName% settings for the %A_ComputerName% host name. The script will now exit.
     ExitApp
