@@ -70,6 +70,8 @@ updates7 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True 
 updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "BRISS - BRight Snippet Sire", Center: True }
             , { Title: "Catalyst Control Center", Center: True }
+            , { Title: "C:\Windows\System32\cmd.exe", Center: True }
+            , { Title: "Command Prompt", Center: True }
             , { Title: "DAEMON Tools Lite", Center: True }
             , { Title: "IrfanView", Center: True }            
             , { Title: "Konsola programu VirusScan", Center: True } ; gkozub only
@@ -80,7 +82,8 @@ updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "Stickies", Center: True }
             , { Title: "Web Platform Installer", Center: True } ]
 
-updates9 := [ { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
+updates9 := [ { Title: "Console", Left: 25, Top: 25 }
+            , { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
             , { Title: "Friends", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; Steam
             , { Title: "GVIM", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
             , { Title: "Miranda IM", Right: 25, Bottom: 25, Width: 300, Height: 500 } 
