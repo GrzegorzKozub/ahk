@@ -69,8 +69,9 @@ updates7 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True 
 
 updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "BRISS - BRight Snippet Sire", Center: True }
-            , { Title: "Catalyst Control Center", Center: True }
             , { Title: "C:\Windows\System32\cmd.exe", Center: True }
+            , { Title: "Catalyst Control Center", Center: True }
+            , { Title: "Client Automation Application Self-Service Manager", Center: True }
             , { Title: "Command Prompt", Center: True }
             , { Title: "DAEMON Tools Lite", Center: True }
             , { Title: "IrfanView", Center: True }            
