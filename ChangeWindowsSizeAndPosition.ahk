@@ -3,9 +3,9 @@
 autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True }            
              , { Title: "Microsoft Visual Studio", Max: True } ]
             
-autofits2 := [ { Title: "Adobe Reader" }
+autofits2 := [ { Title: " - EA" }
+             , { Title: "Adobe Reader" }
              , { Title: "Beyond Compare" }
-             , { Title: "Enterprise Architect" }
              , { Title: "Google Chrome" }
              , { Title: "LINQPad" }
              , { Title: "Microsoft Excel" }
