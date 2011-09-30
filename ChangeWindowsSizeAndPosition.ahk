@@ -5,6 +5,7 @@ autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True }
             
 autofits2 := [ { Title: " - EA" }
              , { Title: "Adobe Reader" }
+             , { Title: "BareTail" }
              , { Title: "Beyond Compare" }
              , { Title: "Google Chrome" }
              , { Title: "LINQPad" }
@@ -25,6 +26,7 @@ updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, He
             , { Title: "Microsoft Visual Studio", Width: 1750, Height: 1000, Center: True } ]
 
 updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
+            , { Title: "BareTail", Width: 1500, Height: 1000, Center: True }
             , { Title: "Google Chrome", Width: 1500, Height: 1000, Center: True }
             , { Title: "Kindle for PC", Width: 1500, Height: 1000, Center: True }
             , { Title: "LINQPad", Width: 1500, Height: 1000, Center: True }
