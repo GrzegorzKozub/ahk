@@ -92,7 +92,7 @@ updates9 := [ { Title: "Console", Left: 25, Top: 25 }
             , { Title: "Miranda IM", Right: 25, Bottom: 25, Width: 300, Height: 500 } 
             , { Title: "Notepad++", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
             , { Title: "Office Communicator", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; gkozub only
-            , { Title: "Total Commander", Left: 50, Top: 50, Width: 1075, Height: 775 }
+            , { Title: "Total Commander", Left: 25, Top: 25, Width: 1075, Height: 775 }
             , { Title: "Windows Task Manager", Right: 25, Bottom: 25, Width: 420, Height: 460 } 
             , { Title: "WinMerge", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ] ; smaller on gkozub
             
