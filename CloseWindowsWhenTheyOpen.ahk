@@ -4,6 +4,7 @@ loop {
    CloseWindow( { Title: "Information" } )
    CloseWindow( { Text: "Na pytanie o instalacje odpowiedz TAK." } )
    CloseWindow( { Text: "Błąd wczytania danych z" } )
+   CloseWindow( { Text: "oznaczenia przypisane"} )
 } 
 return
 
