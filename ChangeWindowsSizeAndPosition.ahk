@@ -96,7 +96,7 @@ updates9 := [ { Title: "Console", Left: 25, Top: 25 }
             , { Title: "Windows Task Manager", Right: 25, Bottom: 25, Width: 420, Height: 460 } 
             , { Title: "WinMerge", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ] ; smaller on gkozub
             
-if (A_ComputerName == "ACID") {
+if (A_ComputerName == "ENVY") {
     _autofits := []
     _updates := [ updates1, updates2, updates3, updates5, updates6, updates8, updates9 ]
 } else if (A_ComputerName == "GKOZUB") {
