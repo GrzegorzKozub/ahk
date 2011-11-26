@@ -31,6 +31,7 @@ updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "Kindle for PC", Width: 1500, Height: 1000, Center: True }
             , { Title: "LINQPad", Width: 1500, Height: 1000, Center: True }
             , { Title: "Microsoft Excel", Width: 1500, Height: 1000, Center: True }
+            , { Title: "Microsoft FxCop", Width: 1500, Height: 1000, Center: True }
             , { Title: "Microsoft PowerPoint", Width: 1500, Height: 1000, Center: True }
             , { Title: "Microsoft Word", Width: 1500, Height: 1000, Center: True }
             , { Title: "Mozilla Firefox", Width: 1500, Height: 1000, Center: True }
@@ -42,6 +43,7 @@ updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "Windows Internet Explorer", Width: 1500, Height: 1000, Center: True } ]
 
 updates3 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
+            , { Title: "Origin", Width: 1200, Height: 850, Center: True }
             , { Title: "Steam", Width: 1200, Height: 850, Center: True } ]
 
 updates4 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True } ; gkozub only            
