@@ -10,6 +10,7 @@ autofits2 := [ { Title: " - EA" }
              , { Title: "Google Chrome" }
              , { Title: "LINQPad" }
              , { Title: "Microsoft Excel" }
+             , { Title: "Microsoft FxCop" }
              , { Title: "Microsoft OneNote" }
              , { Title: "Microsoft Outlook" }
              , { Title: "Microsoft PowerPoint" }
