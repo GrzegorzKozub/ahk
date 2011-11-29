@@ -65,8 +65,9 @@ updates5 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True } ; 
             , { Title: "Resource Hacker", Width: 900, Height: 600, Center: True }
             , { Title: "Sql Server Configuration Manager", Width: 900, Height: 600, Center: True } ; gkozub only
             , { Title: "VLC media player", Width: 900, Height: 600, Center: True }
-            , { Title: "WinRAR", Width: 900, Height: 600, Center: True } ]
-                     
+            , { Title: "WinRAR", Width: 900, Height: 600, Center: True } 
+            , { Title: "µTorrent", Width: 900, Height: 600, Center: True } ]
+
 updates6 := [ { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
             , { Title: "Windows Snapshot Maker", Width: 750, Height: 500, Center: True } ]
             
