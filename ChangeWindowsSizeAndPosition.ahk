@@ -8,6 +8,7 @@ autofits2 := [ { Title: " - EA" }
              , { Title: "BareTail" }
              , { Title: "Beyond Compare" }
              , { Title: "Google Chrome" }
+             , { Title: "JetBrains dotPeek" }
              , { Title: "LINQPad" }
              , { Title: "Microsoft Excel" }
              , { Title: "Microsoft FxCop" }
@@ -29,6 +30,7 @@ updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, He
 updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "BareTail", Width: 1500, Height: 1000, Center: True }
             , { Title: "Google Chrome", Width: 1500, Height: 1000, Center: True }
+            , { Title: "JetBrains dotPeek", Width: 1500, Height: 1000, Center: True }            
             , { Title: "Kindle for PC", Width: 1500, Height: 1000, Center: True }
             , { Title: "LINQPad", Width: 1500, Height: 1000, Center: True }
             , { Title: "Microsoft Excel", Width: 1500, Height: 1000, Center: True }
