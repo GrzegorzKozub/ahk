@@ -22,6 +22,7 @@ autofits2 := [ { Title: " - EA" }
              , { Title: "Paint.NET" }
              , { Title: "SQL Server Profiler" }
              , { Title: "SumatraPDF" }
+             , { Title: "Waterfox" }
              , { Title: "Windows Internet Explorer" } ] 
 
 updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, Height: 1000, Center: True }
@@ -43,6 +44,7 @@ updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "Picasa", Width: 1500, Height: 1000, Center: True } 
             , { Title: "SQL Server Profiler", Width: 1500, Height: 1000, Center: True } 
             , { Title: "SumatraPDF", Width: 1500, Height: 1000, Center: True }
+            , { Title: "Waterfox", Width: 1500, Height: 1000, Center: True }
             , { Title: "Windows Internet Explorer", Width: 1500, Height: 1000, Center: True } ]
 
 updates3 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
