@@ -1,12 +1,13 @@
 ﻿; Settings
 
-autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True }            
+autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True }
              , { Title: "Microsoft Visual Studio", Max: True } ]
             
 autofits2 := [ { Title: " - EA" }
              , { Title: "Adobe Reader" }
              , { Title: "BareTail" }
              , { Title: "Beyond Compare" }
+             , { Title: "Git Gui" }
              , { Title: "Google Chrome" }
              , { Title: "JetBrains dotPeek" }
              , { Title: "LINQPad" }
@@ -18,20 +19,21 @@ autofits2 := [ { Title: " - EA" }
              , { Title: "Microsoft Visio" }
              , { Title: "Microsoft Word" }
              , { Title: "Mozilla Firefox" }
-             , { Title: "NUnit" }             
+             , { Title: "NUnit" }
              , { Title: "Paint.NET" }
              , { Title: "SQL Server Profiler" }
              , { Title: "SumatraPDF" }
              , { Title: "Waterfox" }
-             , { Title: "Windows Internet Explorer" } ] 
+             , { Title: "Windows Internet Explorer" } ]
 
 updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, Height: 1000, Center: True }
             , { Title: "Microsoft Visual Studio", Width: 1750, Height: 1000, Center: True } ]
 
 updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "BareTail", Width: 1500, Height: 1000, Center: True }
+            , { Title: "Git Gui", Width: 1500, Height: 1000, Center: True }
             , { Title: "Google Chrome", Width: 1500, Height: 1000, Center: True }
-            , { Title: "JetBrains dotPeek", Width: 1500, Height: 1000, Center: True }            
+            , { Title: "JetBrains dotPeek", Width: 1500, Height: 1000, Center: True }
             , { Title: "Kindle for PC", Width: 1500, Height: 1000, Center: True }
             , { Title: "LINQPad", Width: 1500, Height: 1000, Center: True }
             , { Title: "Microsoft Excel", Width: 1500, Height: 1000, Center: True }
@@ -51,11 +53,11 @@ updates3 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
             , { Title: "Origin", Width: 1200, Height: 850, Center: True }
             , { Title: "Steam", Width: 1200, Height: 850, Center: True } ]
 
-updates4 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True } ; gkozub only            
-            , { Title: " - Contact", Width: 925, Height: 800, Center: True } ; gkozub only            
-            , { Title: " - Meeting", Width: 925, Height: 800, Center: True } ; gkozub only                         
-            , { Title: " - Message", Width: 925, Height: 800, Center: True } ; gkozub only            
-            , { Title: " - Task", Width: 925, Height: 800, Center: True } ] ; gkozub only                        
+updates4 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True } ; gkozub only
+            , { Title: " - Contact", Width: 925, Height: 800, Center: True } ; gkozub only
+            , { Title: " - Meeting", Width: 925, Height: 800, Center: True } ; gkozub only
+            , { Title: " - Message", Width: 925, Height: 800, Center: True } ; gkozub only
+            , { Title: " - Task", Width: 925, Height: 800, Center: True } ] ; gkozub only
             
 updates5 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True } ; gkozub only
             , { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
@@ -75,7 +77,7 @@ updates5 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True } ; 
 updates6 := [ { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
             , { Title: "Windows Snapshot Maker", Width: 750, Height: 500, Center: True } ]
             
-updates7 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ] ; gkozub only                                    
+updates7 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ] ; gkozub only
 
 updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "BRISS - BRight Snippet Sire", Center: True }
