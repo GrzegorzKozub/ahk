@@ -74,7 +74,8 @@ updates5 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True } ; 
             , { Title: "WinRAR", Width: 900, Height: 600, Center: True } 
             , { Title: "µTorrent", Width: 900, Height: 600, Center: True } ]
 
-updates6 := [ { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
+updates6 := [ { Title: "Manage Stickies", Width: 750, Height: 500, Center: True } 
+            , { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
             , { Title: "Windows Snapshot Maker", Width: 750, Height: 500, Center: True } ]
             
 updates7 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ] ; gkozub only
