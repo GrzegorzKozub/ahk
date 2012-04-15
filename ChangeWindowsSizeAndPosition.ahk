@@ -24,7 +24,8 @@ autofits2 := [ { Title: " - EA" }
              , { Title: "SQL Server Profiler" }
              , { Title: "SumatraPDF" }
              , { Title: "Waterfox" }
-             , { Title: "Windows Internet Explorer" } ]
+             , { Title: "Windows Internet Explorer" } 
+             , { Title: "WinMerge" } ]
 
 updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, Height: 1000, Center: True }
             , { Title: "Microsoft Visual Studio", Width: 1750, Height: 1000, Center: True } ]
@@ -47,7 +48,8 @@ updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "SQL Server Profiler", Width: 1500, Height: 1000, Center: True } 
             , { Title: "SumatraPDF", Width: 1500, Height: 1000, Center: True }
             , { Title: "Waterfox", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Windows Internet Explorer", Width: 1500, Height: 1000, Center: True } ]
+            , { Title: "Windows Internet Explorer", Width: 1500, Height: 1000, Center: True } 
+            , { Title: "WinMerge", Width: 1500, Height: 1000, Center: True } ]
 
 updates3 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
             , { Title: "Origin", Width: 1200, Height: 850, Center: True }
@@ -97,23 +99,24 @@ updates8 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "Stickies", Center: True }
             , { Title: "Web Platform Installer", Center: True } ]
 
-updates9 := [ { Title: "Console", Left: 25, Top: 25 }
+updates9 := [ { Title: "Console", Right: 25, Bottom: 25, Width: 1003, Height: 793 }
             , { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
             , { Title: "Friends", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; Steam
-            , { Title: "GVIM", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
             , { Title: "Miranda IM", Right: 25, Bottom: 25, Width: 300, Height: 500 } 
-            , { Title: "Notepad++", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
             , { Title: "Office Communicator", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; gkozub only
             , { Title: "Total Commander", Left: 25, Top: 25, Width: 1075, Height: 775 }
-            , { Title: "Windows Task Manager", Right: 25, Bottom: 25, Width: 420, Height: 460 } 
-            , { Title: "WinMerge", Left: 25, Top: 25, Width: 1317, Height: 894, LoResHeight: 799, LoResMax: True } ] ; smaller on gkozub
+            , { Title: "Windows Task Manager", Right: 25, Bottom: 25, Width: 420, Height: 460 } ]
+            
+updates10 := [ { Title: "GVIM", Width: 1317, Height: 934, Center: True, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
+             , { Title: "Notepad++", Width: 1317, Height: 934, Center: True, LoResHeight: 799, LoResMax: True } ; smaller on gkozub
+             , { Title: "Sublime Text", Width: 1317, Height: 934, Center: True, LoResHeight: 799, LoResMax: True } ] ; smaller on gkozub
             
 if (A_ComputerName == "ENVY") {
     _autofits := []
-    _updates := [ updates1, updates2, updates3, updates5, updates6, updates8, updates9 ]
+    _updates := [ updates1, updates2, updates3, updates5, updates6, updates8, updates9, updates10 ]
 } else if (A_ComputerName == "GKOZUB") {
     _autofits := [ autofits1, autofits2 ]
-    _updates := [ updates4, updates5, updates6, updates7, updates8, updates9 ]
+    _updates := [ updates4, updates5, updates6, updates7, updates8, updates9, updates10 ]
 } else {
     MsgBox Missing %A_ScriptName% settings for the %A_ComputerName% host name. The script will now exit.
     ExitApp
