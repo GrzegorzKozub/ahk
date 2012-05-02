@@ -1,34 +1,10 @@
 ﻿; Settings
 
-autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True }
-             , { Title: "Microsoft Visual Studio", Max: True } ]
-            
-autofits2 := [ { Title: " - EA" }
-             , { Title: "Adobe Reader" }
-             , { Title: "BareTail" }
-             , { Title: "Beyond Compare" }
-             , { Title: "Git Gui" }
-             , { Title: "Google Chrome" }
-             , { Title: "JetBrains dotPeek" }
-             , { Title: "LINQPad" }
-             , { Title: "Microsoft Excel" }
-             , { Title: "Microsoft FxCop" }
-             , { Title: "Microsoft OneNote" }
-             , { Title: "Microsoft Outlook" }
-             , { Title: "Microsoft PowerPoint" }
-             , { Title: "Microsoft Visio" }
-             , { Title: "Microsoft Word" }
-             , { Title: "Mozilla Firefox" }
-             , { Title: "NUnit" }
-             , { Title: "Paint.NET" }
-             , { Title: "SQL Server Profiler" }
-             , { Title: "SumatraPDF" }
-             , { Title: "Waterfox" }
-             , { Title: "Windows Internet Explorer" } 
-             , { Title: "WinMerge" } ]
-
 updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, Height: 1000, Center: True }
             , { Title: "Microsoft Visual Studio", Width: 1750, Height: 1000, Center: True } ]
+            
+autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True, LoResMax: True }
+             , { Title: "Microsoft Visual Studio", Max: True, LoResMax: True } ]
 
 updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "BareTail", Width: 1500, Height: 1000, Center: True }
@@ -47,13 +23,34 @@ updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
             , { Title: "Picasa", Width: 1500, Height: 1000, Center: True } 
             , { Title: "SQL Server Profiler", Width: 1500, Height: 1000, Center: True } 
             , { Title: "SumatraPDF", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Waterfox", Width: 1500, Height: 1000, Center: True }
             , { Title: "Windows Internet Explorer", Width: 1500, Height: 1000, Center: True } 
             , { Title: "WinMerge", Width: 1500, Height: 1000, Center: True } ]
-
-updates3 := [ { Title: "GVIM", Width: 1317, Height: 934, Center: True, LoResHeight: 801, LoResMax: True }
-            , { Title: "Notepad++", Width: 1317, Height: 934, Center: True, LoResHeight: 801, LoResMax: True } ]
             
+autofits2 := [ { Title: "Adobe Reader", LoResMax: True }
+             , { Title: "BareTail", LoResMax: True }
+             , { Title: "Beyond Compare", LoResMax: True }
+             , { Title: "Git Gui", LoResMax: True }
+             , { Title: "Google Chrome", LoResMax: True }
+             , { Title: "JetBrains dotPeek", LoResMax: True }
+             , { Title: "LINQPad", LoResMax: True }
+             , { Title: "Microsoft Excel", LoResMax: True }
+             , { Title: "Microsoft FxCop", LoResMax: True }
+             , { Title: "Microsoft OneNote", LoResMax: True }
+             , { Title: "Microsoft Outlook", LoResMax: True }
+             , { Title: "Microsoft PowerPoint", LoResMax: True }
+             , { Title: "Microsoft Visio", LoResMax: True }
+             , { Title: "Microsoft Word", LoResMax: True }
+             , { Title: "Mozilla Firefox", LoResMax: True }
+             , { Title: "NUnit", LoResMax: True }
+             , { Title: "Paint.NET", LoResMax: True }
+             , { Title: "SQL Server Profiler", LoResMax: True }
+             , { Title: "SumatraPDF", LoResMax: True }
+             , { Title: "Windows Internet Explorer", LoResMax: True }
+             , { Title: "WinMerge", LoResMax: True } ]            
+
+updates3 := [ { Title: "GVIM", Width: 1317, Height: 934, Center: True, LoResHeight: 801 }
+            , { Title: "Notepad++", Width: 1317, Height: 934, Center: True, LoResHeight: 801 } ]
+
 updates4 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
             , { Title: "Origin", Width: 1200, Height: 850, Center: True }
             , { Title: "Steam", Width: 1200, Height: 850, Center: True } ]
@@ -63,11 +60,9 @@ updates5 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True }
             , { Title: " - Meeting", Width: 925, Height: 800, Center: True }
             , { Title: " - Message", Width: 925, Height: 800, Center: True }
             , { Title: " - Task", Width: 925, Height: 800, Center: True } ]
-            
-updates6 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True }
-            , { Title: "C:\Users\Grzegorz\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
+
+updates6 := [ { Title: "C:\Users\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
             , { Title: "InfraRecorder", Width: 900, Height: 600, Center: True }
-            , { Title: "eMule", Width: 900, Height: 600, Center: True }
             , { Title: "Internet Information Services (IIS) Manager", Width: 900, Height: 600, Center: True, LoResMax: True }
             , { Title: "KeePass Password Safe", Width: 900, Height: 600, Center: True }
             , { Title: "Notepad", Width: 900, Height: 600, Center: True, Except: "Notepad++" } ; also Notepad2
@@ -82,7 +77,7 @@ updates6 := [ { Title: "ActivClient", Width: 900, Height: 600, Center: True }
 updates7 := [ { Title: "Manage Stickies", Width: 750, Height: 500, Center: True } 
             , { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
             , { Title: "Windows Snapshot Maker", Width: 750, Height: 500, Center: True } ]
-            
+
 updates8 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ]
 
 updates9 := [ { Title: "Apple QuickTime", Center: True }
@@ -90,33 +85,29 @@ updates9 := [ { Title: "Apple QuickTime", Center: True }
             , { Title: "C:\Windows\System32\cmd.exe", Center: True }
             , { Title: "Calculator", Center: True }
             , { Title: "Catalyst Control Center", Center: True }
-            , { Title: "Client Automation Application Self-Service Manager", Center: True }
             , { Title: "Command Prompt", Center: True }
-            , { Title: "DAEMON Tools Lite", Center: True }
             , { Title: "IrfanView", Center: True }            
-            , { Title: "Konsola programu VirusScan", Center: True }
-            , { Title: "McAfee Host Intrusion Prevention", Center: True }
             , { Title: "Microsoft Security Essentials", Center: True }
             , { Title: "Piriform Defraggler", Center: True }
             , { Title: "Shotty", Center: True }
             , { Title: "Stickies", Center: True }
             , { Title: "Web Platform Installer", Center: True } ]
-            
+
 updates10 := [ { Title: "Friends", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; Steam
              , { Title: "Miranda IM", Right: 25, Bottom: 25, Width: 300, Height: 500 }
              , { Title: "Office Communicator", Right: 25, Bottom: 25, Width: 300, Height: 500 } ]
-            
+
 updates11 := [ { Title: "Console", Right: 25, Bottom: 25, Width: 1003, Height: 793 }
              , { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
              , { Title: "Total Commander", Left: 25, Top: 25, Width: 1075, Height: 775 }
              , { Title: "Windows Task Manager", Right: 25, Bottom: 25, Width: 420, Height: 460 } ]
 
 if (A_ComputerName == "ENVY") {
-    _autofits := []
     _updates := [ updates1, updates2, updates3, updates4, updates6, updates7, updates9, updates10, updates11 ]
-} else if (A_ComputerName == "GKOZUB") {
-    _autofits := [ autofits1, autofits2 ]
+    _autofits := []
+} else if (A_ComputerName == "KOZUB") {
     _updates := [ updates3, updates5, updates6, updates7, updates8, updates9, updates10, updates11 ]
+    _autofits := [ autofits1, autofits2 ]
 } else {
     MsgBox Missing %A_ScriptName% settings for the %A_ComputerName% host name. The script will now exit.
     ExitApp
@@ -186,9 +177,6 @@ Act(settings, action, title = "") {
 
 AutofitWindow(options) {
     global _screen
-    if (!options.LoResMax) {
-        options.LoResMax := True
-    }
     if (!options.MarginWidth) {
         options.MarginWidth := 10
     }    
@@ -275,5 +263,5 @@ GetScreen(monitor = "") {
         SysGet, monitor, MonitorPrimary
     }
     SysGet workArea, MonitorWorkArea, %monitor%
-    return { Width: workAreaRight - workAreaLeft, Height: workAreaBottom - workAreaTop, LoRes: (workAreaRight - workAreaLeft) < 1600 }
+    return { Width: workAreaRight - workAreaLeft, Height: workAreaBottom - workAreaTop, LoRes: (workAreaRight - workAreaLeft) <= 1600 }
 }
