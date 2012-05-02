@@ -76,7 +76,7 @@ updates6 := [ { Title: "C:\Users\", Width: 900, Height: 600, Center: True, Excep
 
 updates7 := [ { Title: "Manage Stickies", Width: 750, Height: 500, Center: True } 
             , { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
-            , { Title: "Windows Snapshot Maker", Width: 750, Height: 500, Center: True } ]
+            , { Title: "WinSnap", Width: 750, Height: 500, Center: True } ]
 
 updates8 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ]
 
