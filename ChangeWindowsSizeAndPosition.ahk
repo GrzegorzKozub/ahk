@@ -1,117 +1,107 @@
 ﻿; Settings
 
-updates1 := [ { Title: "Microsoft SQL Server Management Studio", Width: 1750, Height: 1000, Center: True }
-            , { Title: "Microsoft Visual Studio", Width: 1750, Height: 1000, Center: True } ]
-            
-autofits1 := [ { Title: "Microsoft SQL Server Management Studio", Max: True, LoResMax: True }
-             , { Title: "Microsoft Visual Studio", Max: True, LoResMax: True } ]
+_group1 := { Options: { Width: 1750, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
+           , Windows: [ "Microsoft SQL Server Management Studio"
+                      , "Microsoft Visual Studio" ] }
 
-updates2 := [ { Title: "Adobe Reader", Width: 1500, Height: 1000, Center: True }
-            , { Title: "BareTail", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Git Gui", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Google Chrome", Width: 1500, Height: 1000, Center: True }
-            , { Title: "JetBrains dotPeek", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Kindle for PC", Width: 1500, Height: 1000, Center: True }
-            , { Title: "LINQPad", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Microsoft Excel", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Microsoft FxCop", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Microsoft PowerPoint", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Microsoft Word", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Mozilla Firefox", Width: 1500, Height: 1000, Center: True }
-            , { Title: "NUnit", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Paint.NET", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Picasa", Width: 1500, Height: 1000, Center: True } 
-            , { Title: "SQL Server Profiler", Width: 1500, Height: 1000, Center: True } 
-            , { Title: "SumatraPDF", Width: 1500, Height: 1000, Center: True }
-            , { Title: "Windows Internet Explorer", Width: 1500, Height: 1000, Center: True } 
-            , { Title: "WinMerge", Width: 1500, Height: 1000, Center: True } ]
-            
-autofits2 := [ { Title: "Adobe Reader", LoResMax: True }
-             , { Title: "BareTail", LoResMax: True }
-             , { Title: "Beyond Compare", LoResMax: True }
-             , { Title: "Git Gui", LoResMax: True }
-             , { Title: "Google Chrome", LoResMax: True }
-             , { Title: "JetBrains dotPeek", LoResMax: True }
-             , { Title: "LINQPad", LoResMax: True }
-             , { Title: "Microsoft Excel", LoResMax: True }
-             , { Title: "Microsoft FxCop", LoResMax: True }
-             , { Title: "Microsoft OneNote", LoResMax: True }
-             , { Title: "Microsoft Outlook", LoResMax: True }
-             , { Title: "Microsoft PowerPoint", LoResMax: True }
-             , { Title: "Microsoft Visio", LoResMax: True }
-             , { Title: "Microsoft Word", LoResMax: True }
-             , { Title: "Mozilla Firefox", LoResMax: True }
-             , { Title: "NUnit", LoResMax: True }
-             , { Title: "Paint.NET", LoResMax: True }
-             , { Title: "SQL Server Profiler", LoResMax: True }
-             , { Title: "SumatraPDF", LoResMax: True }
-             , { Title: "Windows Internet Explorer", LoResMax: True }
-             , { Title: "WinMerge", LoResMax: True } ]            
+_group2 := { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
+           , Windows: [ "Adobe Reader"
+                      , "BareTail"
+                      , "Beyond Compare"
+                      , "Git Gui"
+                      , "Google Chrome"
+                      , "JetBrains dotPeek"
+                      , "Kindle for PC"
+                      , "LINQPad"
+                      , "Microsoft Excel"
+                      , "Microsoft FxCop"
+                      , "Microsoft OneNote"
+                      , "Microsoft Outlook"
+                      , "Microsoft PowerPoint"
+                      , "Microsoft Visio"
+                      , "Microsoft Word"
+                      , "Mozilla Firefox"
+                      , "NUnit"
+                      , "Paint.NET"
+                      , "Picasa"
+                      , "SQL Server Profiler"
+                      , "SumatraPDF"
+                      , "Windows Internet Explorer"
+                      , "WinMerge"
+                      , "XPS Viewer" ] } 
 
-updates3 := [ { Title: "GVIM", Width: 1317, Height: 934, Center: True, LoResHeight: 801 }
-            , { Title: "Notepad++", Width: 1317, Height: 934, Center: True, LoResHeight: 801 } ]
+_group3 := { Options: { Width: 1317, Height: 934, LoResHeight: 801, Center: True }
+           , Windows: [ "GVIM"
+                      , "Notepad++" ] }
 
-updates4 := [ { Title: "iTunes", Width: 1200, Height: 850, Center: True }
-            , { Title: "Origin", Width: 1200, Height: 850, Center: True }
-            , { Title: "Steam", Width: 1200, Height: 850, Center: True } ]
+_group4 := { Options: { Width: 1200, Height: 850, LoResAutofit: True, Center: True }
+           , Windows: [ "iTunes"
+                      , "Origin"
+                      , "Steam" ] }
 
-updates5 := [ { Title: " - Appointment", Width: 925, Height: 800, Center: True }
-            , { Title: " - Contact", Width: 925, Height: 800, Center: True }
-            , { Title: " - Meeting", Width: 925, Height: 800, Center: True }
-            , { Title: " - Message", Width: 925, Height: 800, Center: True }
-            , { Title: " - Task", Width: 925, Height: 800, Center: True } ]
+_group5 := { Options: { Width: 925, Height: 800, Center: True }
+           , Windows: [ " - Appointment"
+                      , " - Contact"
+                      , " - Meeting"
+                      , " - Message"
+                      , " - Task" ] }
 
-updates6 := [ { Title: "C:\Users\", Width: 900, Height: 600, Center: True, Except: "Notepad" } ; 7-Zip
-            , { Title: "InfraRecorder", Width: 900, Height: 600, Center: True }
-            , { Title: "Internet Information Services (IIS) Manager", Width: 900, Height: 600, Center: True, LoResMax: True }
-            , { Title: "KeePass Password Safe", Width: 900, Height: 600, Center: True }
-            , { Title: "Notepad", Width: 900, Height: 600, Center: True, Except: "Notepad++" } ; also Notepad2
-            , { Title: "Rapid Environment Editor", Width: 900, Height: 600, Center: True }
-            , { Title: "Registry Editor", Width: 900, Height: 600, Center: True }
-            , { Title: "Resource Hacker", Width: 900, Height: 600, Center: True }
-            , { Title: "Sql Server Configuration Manager", Width: 900, Height: 600, Center: True }
-            , { Title: "VLC media player", Width: 900, Height: 600, Center: True }
-            , { Title: "WinRAR", Width: 900, Height: 600, Center: True } 
-            , { Title: "µTorrent", Width: 900, Height: 600, Center: True } ]
+_group6 := { Options: { Width: 900, Height: 600, Center: True }
+           , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
+                      , "InfraRecorder"
+                      , "Internet Information Services (IIS) Manager"
+                      , "KeePass Password Safe"
+                      , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
+                      , "Rapid Environment Editor"
+                      , "Registry Editor"
+                      , "Resource Hacker"
+                      , "Sql Server Configuration Manager"
+                      , "VLC media player"
+                      , "WinRAR"
+                      , "µTorrent" ] }
 
-updates7 := [ { Title: "Manage Stickies", Width: 750, Height: 500, Center: True } 
-            , { Title: "SyncBackPro", Width: 750, Height: 500, Center: True } 
-            , { Title: "WinSnap", Width: 750, Height: 500, Center: True } ]
+_group7 := { Options: { Width: 750, Height: 500, Center: True }
+           , Windows: [ "Manage Stickies"
+                      , "SyncBackPro"
+                      , "WinSnap" ] } ; does not work
 
-updates8 := [ { Title: " - Conversation", Width: 450, Height: 500, Center: True } ]
+_group8 := { Options: { Width: 450, Height: 500, Center: True }
+           , Windows: [ " - Conversation" ] }
 
-updates9 := [ { Title: "Apple QuickTime", Center: True }
-            , { Title: "BRISS - BRight Snippet Sire", Center: True }
-            , { Title: "C:\Windows\System32\cmd.exe", Center: True }
-            , { Title: "Calculator", Center: True }
-            , { Title: "Catalyst Control Center", Center: True }
-            , { Title: "Command Prompt", Center: True }
-            , { Title: "IrfanView", Center: True }            
-            , { Title: "Microsoft Security Essentials", Center: True }
-            , { Title: "Piriform Defraggler", Center: True }
-            , { Title: "Shotty", Center: True }
-            , { Title: "Stickies", Center: True }
-            , { Title: "Web Platform Installer", Center: True } ]
+_group9 := { Options: { Center: True }
+           , Windows: [ "Apple QuickTime"
+                      , "BRISS - BRight Snippet Sire"
+                      , "C:\Windows\System32\cmd.exe"
+                      , "Calculator"
+                      , "Catalyst Control Center"
+                      , "Command Prompt"
+                      , "IrfanView"
+                      , "Microsoft Security Essentials"
+                      , "Piriform Defraggler"
+                      , "Shotty"
+                      , "Stickies"
+                      , "Web Platform Installer" ] }
 
-updates10 := [ { Title: "Friends", Right: 25, Bottom: 25, Width: 300, Height: 500 } ; Steam
-             , { Title: "Miranda IM", Right: 25, Bottom: 25, Width: 300, Height: 500 }
-             , { Title: "Office Communicator", Right: 25, Bottom: 25, Width: 300, Height: 500 } ]
+_group10 := { Options: { Width: 300, Height: 500, Right: 25, Bottom: 25 }
+            , Windows: [ "Friends" ; Steam
+                       , "Miranda IM"
+                       , "Office Communicator" ] }
 
-updates11 := [ { Title: "Console", Right: 25, Bottom: 25, Width: 1003, Height: 793 }
-             , { Title: "foobar2000", Right: 25, Bottom: 25, Width: 900, Height: 830 }
-             , { Title: "Total Commander", Left: 25, Top: 25, Width: 1075, Height: 775 }
-             , { Title: "Windows Task Manager", Right: 25, Bottom: 25, Width: 420, Height: 460 } ]
+;TODO: reorder, add to array
 
-if (A_ComputerName == "ENVY") {
-    _updates := [ updates1, updates2, updates3, updates4, updates6, updates7, updates9, updates10, updates11 ]
-    _autofits := []
-} else if (A_ComputerName == "KOZUB") {
-    _updates := [ updates3, updates5, updates6, updates7, updates8, updates9, updates10, updates11 ]
-    _autofits := [ autofits1, autofits2 ]
-} else {
-    MsgBox Missing %A_ScriptName% settings for the %A_ComputerName% host name. The script will now exit.
-    ExitApp
-}
+_group11 := { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
+            , Windows: [ "Console" ] }
+
+_group12 := { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
+            , Windows: [ "foobar2000" ] }
+
+_group13 := { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
+            , Windows: [ "Total Commander" ] }
+
+_group14 := { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
+            , Windows: [ "Windows Task Manager" ] }
+
+_settings := [ _group1, _group2, _group3, _group4, _group5, _group6, _group7 ]
 
 ; Main
 
@@ -132,21 +122,19 @@ return
 
 FixWindows:
     _screen := GetScreen()
-    Act(_autofits, "AutofitWindow")
-    Act(_updates, "UpdateWindow")
+    Act(_settings)
 return
 
 FixActiveWindow:
     _screen := GetScreen()
-    WinGetActiveTitle title
-    Act(_autofits, "AutofitWindow", title)
-    Act(_updates, "UpdateWindow", title) 
+    WinGetActiveTitle activeWindowTitle
+    Act(_settings, activeWindowTitle)
 return
 
 CenterActiveWindow:
     _screen := GetScreen()
     WinGetActiveTitle title
-    UpdateWindow({ Title: title, Center: True })
+    UpdateWindow(title, "", { Center: True })
 return
 
 ; Functions
@@ -157,12 +145,20 @@ OnWmDeviceChange(wParam, lParam, msg, hwnd) {
     GoSub FixDesktopIcons
 }
 
-Act(settings, action, title = "") {
-    For key, value in settings {
-        For key, value in value {
-            if (!title || (InStr(title, value.Title) > 0 && (!value.Except || InStr(title, value.Except) == 0))) {
-                %action%(value)
-                if (title) {
+Act(settings, filter = "") {
+    global _screen
+    For key, group In settings {
+        autofit := (_screen.LoRes && group.Options.LoResAutofit) || group.Options.Autofit
+        For key, window In group.Windows {
+            title := window.Title ? window.Title : window
+            except := window.Except ? window.Except : ""
+            if (!filter || (InStr(filter, title) > 0 && (!except || InStr(filter, except) == 0))) {
+                if (autofit) {
+                    AutofitWindow(title, except, group.Options)
+                } else {
+                    UpdateWindow(title, except, group.Options)
+                }
+                if (filter) {
                     match := True
                     break
                 }
@@ -172,10 +168,10 @@ Act(settings, action, title = "") {
             match := False
             break
         }
-    } 
+    }
 }
 
-AutofitWindow(options) {
+AutofitWindow(title, except, options) {
     global _screen
     if (!options.MarginWidth) {
         options.MarginWidth := 10
@@ -184,7 +180,7 @@ AutofitWindow(options) {
         options.MarginHeight := 2
     }      
     if (!options.LoResMarginWidth) {
-        options.LoResMarginWidth := 1
+        options.LoResMarginWidth := 5
     }
     if (!options.LoResMarginHeight) {
         options.LoResMarginHeight := 1
@@ -197,27 +193,32 @@ AutofitWindow(options) {
     options.Top := verticalMargin
     options.Width := _screen.Width - 2 * horizontalMargin
     options.Height := _screen.Height - 2 * verticalMargin
-    UpdateWindow(options)
+    UpdateWindow(title, except, options)
 }
 
-UpdateWindow(options) {
+UpdateWindow(title, except, options) {
     global _screen
-    window := GetWindowPositionAndSize(options.Title, options.Except)
+    window := GetWindowPositionAndSize(title, except)
     if (!window) {
         return
-    }   
+    }
+    loResLeft := options.LoResLeft ? options.LoResLeft : - options.LoResRight
     left := options.Left ? options.Left : - options.Right
+    left := (_screen.LoRes && loResLeft) ? loResLeft : left
+    loResTop := options.LoResTop ? options.LoResTop : - options.LoResBottom
     top := options.Top ? options.Top : - options.Bottom
+    top := (_screen.LoRes && loResTop) ? loResTop : top
     width := (_screen.LoRes && options.LoResWidth) ? options.LoResWidth : options.Width
     height := (_screen.LoRes && options.LoResHeight) ? options.LoResHeight : options.Height
-    maximize := _screen.LoRes ? options.LoResMax : options.Max
-    SetWindowPositionAndSize(options.Title, options.Except, left, top, width, height, options.Center, maximize)
+    center := (_screen.LoRes && options.LoResCenter) ? options.LoResCenter : options.Center
+    max := (_screen.LoRes && options.LoResMax) ? options.LoResMax : options.Max
+    SetWindowPositionAndSize(title, except, left, top, width, height, center, max)
     if (window.Minimized) {
-        WinMinimize % options.Title
+        WinMinimize % title
     }
 }
 
-SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", height = "", center = False, maximize = False) {
+SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", height = "", center = False, max = False) {
     global _screen
     WinRestore %title%,, %except%
     window := GetWindowPositionAndSize(title, except)
@@ -241,7 +242,7 @@ SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", he
     if (center) {
         WinMove %title%,, (_screen.Width / 2) - (width / 2), (_screen.Height / 2) - (height / 2),,, %except%
     }
-    if (maximize) {
+    if (max) {
         WinMaximize %title%,, %except%
     }
 }
