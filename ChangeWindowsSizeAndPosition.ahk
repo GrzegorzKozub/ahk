@@ -1,107 +1,105 @@
 ﻿; Settings
 
-_group1 := { Options: { Width: 1750, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
-           , Windows: [ "Microsoft SQL Server Management Studio"
-                      , "Microsoft Visual Studio" ] }
+_settings := [ Join
 
-_group2 := { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
-           , Windows: [ "Adobe Reader"
-                      , "BareTail"
-                      , "Beyond Compare"
-                      , "Git Gui"
-                      , "Google Chrome"
-                      , "JetBrains dotPeek"
-                      , "Kindle for PC"
-                      , "LINQPad"
-                      , "Microsoft Excel"
-                      , "Microsoft FxCop"
-                      , "Microsoft OneNote"
-                      , "Microsoft Outlook"
-                      , "Microsoft PowerPoint"
-                      , "Microsoft Visio"
-                      , "Microsoft Word"
-                      , "Mozilla Firefox"
-                      , "NUnit"
-                      , "Paint.NET"
-                      , "Picasa"
-                      , "SQL Server Profiler"
-                      , "SumatraPDF"
-                      , "Windows Internet Explorer"
-                      , "WinMerge"
-                      , "XPS Viewer" ] } 
+    , { Options: { Width: 1750, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
+      , Windows: [ "Microsoft SQL Server Management Studio"
+                 , "Microsoft Visual Studio" ] }
 
-_group3 := { Options: { Width: 1317, Height: 934, LoResHeight: 801, Center: True }
-           , Windows: [ "GVIM"
-                      , "Notepad++" ] }
+    , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
+      , Windows: [ "Adobe Reader"
+                 , "BareTail"
+                 , "Beyond Compare"
+                 , "Git Gui"
+                 , "Google Chrome"
+                 , "JetBrains dotPeek"
+                 , "Kindle for PC"
+                 , "LINQPad"
+                 , "Microsoft Excel"
+                 , "Microsoft FxCop"
+                 , "Microsoft OneNote"
+                 , "Microsoft Outlook"
+                 , "Microsoft PowerPoint"
+                 , "Microsoft Visio"
+                 , "Microsoft Word"
+                 , "Mozilla Firefox"
+                 , "NUnit"
+                 , "Paint.NET"
+                 , "Picasa"
+                 , "SQL Server Profiler"
+                 , "SumatraPDF"
+                 , "Windows Internet Explorer"
+                 , "WinMerge"
+                 , "XPS Viewer" ] }
 
-_group4 := { Options: { Width: 1200, Height: 850, LoResAutofit: True, Center: True }
-           , Windows: [ "iTunes"
-                      , "Origin"
-                      , "Steam" ] }
+    , { Options: { Width: 1317, Height: 934, LoResHeight: 801, Center: True }
+      , Windows: [ "GVIM"
+                 , "Notepad++" ] }
 
-_group5 := { Options: { Width: 925, Height: 800, Center: True }
-           , Windows: [ " - Appointment"
-                      , " - Contact"
-                      , " - Meeting"
-                      , " - Message"
-                      , " - Task" ] }
+    , { Options: { Width: 1200, Height: 850, Center: True }
+      , Windows: [ "iTunes"
+                , "Origin"
+                , "Steam" ] }
 
-_group6 := { Options: { Width: 900, Height: 600, Center: True }
-           , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
-                      , "InfraRecorder"
-                      , "Internet Information Services (IIS) Manager"
-                      , "KeePass Password Safe"
-                      , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
-                      , "Rapid Environment Editor"
-                      , "Registry Editor"
-                      , "Resource Hacker"
-                      , "Sql Server Configuration Manager"
-                      , "VLC media player"
-                      , "WinRAR"
-                      , "µTorrent" ] }
+    , { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
+      , Windows: [ "Total Commander" ] }
 
-_group7 := { Options: { Width: 750, Height: 500, Center: True }
-           , Windows: [ "Manage Stickies"
-                      , "SyncBackPro"
-                      , "WinSnap" ] } ; does not work
+    , { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
+      , Windows: [ "Console" ] }
 
-_group8 := { Options: { Width: 450, Height: 500, Center: True }
-           , Windows: [ " - Conversation" ] }
+    , { Options: { Width: 925, Height: 800, Center: True }
+      , Windows: [ " - Appointment"
+                , " - Contact"
+                , " - Meeting"
+                , " - Message"
+                , " - Task" ] }
 
-_group9 := { Options: { Center: True }
-           , Windows: [ "Apple QuickTime"
-                      , "BRISS - BRight Snippet Sire"
-                      , "C:\Windows\System32\cmd.exe"
-                      , "Calculator"
-                      , "Catalyst Control Center"
-                      , "Command Prompt"
-                      , "IrfanView"
-                      , "Microsoft Security Essentials"
-                      , "Piriform Defraggler"
-                      , "Shotty"
-                      , "Stickies"
-                      , "Web Platform Installer" ] }
+    , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
+      , Windows: [ "foobar2000" ] }
 
-_group10 := { Options: { Width: 300, Height: 500, Right: 25, Bottom: 25 }
-            , Windows: [ "Friends" ; Steam
-                       , "Miranda IM"
-                       , "Office Communicator" ] }
+    , { Options: { Width: 900, Height: 600, Center: True }
+      , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
+                , "InfraRecorder"
+                , "Internet Information Services (IIS) Manager"
+                , "KeePass Password Safe"
+                , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
+                , "Rapid Environment Editor"
+                , "Registry Editor"
+                , "Resource Hacker"
+                , "Sql Server Configuration Manager"
+                , "VLC media player"
+                , "WinRAR"
+                , "µTorrent" ] }
 
-;TODO: reorder, add to array
+    , { Options: { Width: 750, Height: 500, Center: True }
+      , Windows: [ "Manage Stickies"
+                 , "SyncBackPro"
+                 , "WinSnap" ] } ; does not work
 
-_group11 := { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
-            , Windows: [ "Console" ] }
+    , { Options: { Width: 450, Height: 500, Center: True }
+      , Windows: [ " - Conversation" ] }
 
-_group12 := { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
-            , Windows: [ "foobar2000" ] }
+    , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
+      , Windows: [ "Windows Task Manager" ] }
 
-_group13 := { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
-            , Windows: [ "Total Commander" ] }
+    , { Options: { Width: 300, Height: 500, Right: 25, Bottom: 25 }
+      , Windows: [ "Friends" ; Steam
+                 , "Miranda IM"
+                 , "Office Communicator" ] }
 
-_group14 := { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
-            , Windows: [ "Windows Task Manager" ] }
-
-_settings := [ _group1, _group2, _group3, _group4, _group5, _group6, _group7 ]
+    , { Options: { Center: True }
+      , Windows: [ "Apple QuickTime"
+                 , "BRISS - BRight Snippet Sire"
+                 , "C:\Windows\System32\cmd.exe"
+                 , "Calculator"
+                 , "Catalyst Control Center"
+                 , "Command Prompt"
+                 , "IrfanView"
+                 , "Microsoft Security Essentials"
+                 , "Piriform Defraggler"
+                 , "Shotty"
+                 , "Stickies"
+                 , "Web Platform Installer" ] } ]
 
 ; Main
 
@@ -175,16 +173,16 @@ AutofitWindow(title, except, options) {
     global _screen
     if (!options.MarginWidth) {
         options.MarginWidth := 10
-    }    
+    }
     if (!options.MarginHeight) {
         options.MarginHeight := 2
-    }      
+    }
     if (!options.LoResMarginWidth) {
         options.LoResMarginWidth := 5
     }
     if (!options.LoResMarginHeight) {
         options.LoResMarginHeight := 1
-    }        
+    }
     marginWidth := _screen.LoRes ? options.LoResMarginWidth : options.MarginWidth
     marginHeight := _screen.LoRes ? options.LoResMarginHeight : options.MarginHeight
     horizontalMargin := Round(_screen.Width * (marginWidth / 100))
@@ -224,10 +222,10 @@ SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", he
     window := GetWindowPositionAndSize(title, except)
     if (!width) {
         width := window.Width
-    }  
+    }
     if (!height) {
         height := window.Height
-    }     
+    }
     if (!left) {
         left := window.Left
     } else if (left < 0) {
@@ -237,7 +235,7 @@ SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", he
         top := window.Top
     } else if (top < 0) {
         top := _screen.Height - (height + Abs(top))
-    }   
+    }
     WinMove %title%,, %left%, %top%, %width%, %height%, %except%
     if (center) {
         WinMove %title%,, (_screen.Width / 2) - (width / 2), (_screen.Height / 2) - (height / 2),,, %except%
