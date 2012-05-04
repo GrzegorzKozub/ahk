@@ -38,8 +38,8 @@ _settings := [ Join
 
     , { Options: { Width: 1200, Height: 850, Center: True }
       , Windows: [ "iTunes"
-                , "Origin"
-                , "Steam" ] }
+                 , "Origin"
+                 , "Steam" ] }
 
     , { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
       , Windows: [ "Total Commander" ] }
@@ -49,27 +49,27 @@ _settings := [ Join
 
     , { Options: { Width: 925, Height: 800, Center: True }
       , Windows: [ " - Appointment"
-                , " - Contact"
-                , " - Meeting"
-                , " - Message"
-                , " - Task" ] }
+                 , " - Contact"
+                 , " - Meeting"
+                 , " - Message"
+                 , " - Task" ] }
 
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
 
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
-                , "InfraRecorder"
-                , "Internet Information Services (IIS) Manager"
-                , "KeePass Password Safe"
-                , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
-                , "Rapid Environment Editor"
-                , "Registry Editor"
-                , "Resource Hacker"
-                , "Sql Server Configuration Manager"
-                , "VLC media player"
-                , "WinRAR"
-                , "µTorrent" ] }
+                 , "InfraRecorder"
+                 , "Internet Information Services (IIS) Manager"
+                 , "KeePass Password Safe"
+                 , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
+                 , "Rapid Environment Editor"
+                 , "Registry Editor"
+                 , "Resource Hacker"
+                 , "Sql Server Configuration Manager"
+                 , "VLC media player"
+                 , "WinRAR"
+                 , "µTorrent" ] }
 
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Manage Stickies"
