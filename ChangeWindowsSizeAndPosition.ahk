@@ -82,7 +82,7 @@ _settings := [ Join
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
 
-    , { Options: { Width: 300, Height: 500, Right: 25, Bottom: 25 }
+    , { Options: { Width: 300, Height: 600, Right: 25, Bottom: 25 }
       , Windows: [ "Friends" ; Steam
                  , "Microsoft Lync"
                  , "Miranda IM" ] }
