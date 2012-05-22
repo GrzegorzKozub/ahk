@@ -77,15 +77,15 @@ _settings := [ Join
                  , "WinSnap" ] } ; does not work
 
     , { Options: { Width: 450, Height: 500, Center: True }
-      , Windows: [ " - Conversation" ] }
+      , Windows: [ ", " ] } ; Lync
 
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
 
     , { Options: { Width: 300, Height: 500, Right: 25, Bottom: 25 }
       , Windows: [ "Friends" ; Steam
-                 , "Miranda IM"
-                 , "Office Communicator" ] }
+                 , "Microsoft Lync"
+                 , "Miranda IM" ] }
 
     , { Options: { Center: True }
       , Windows: [ "Apple QuickTime"
