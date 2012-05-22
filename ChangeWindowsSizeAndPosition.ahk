@@ -77,7 +77,8 @@ _settings := [ Join
                  , "WinSnap" ] } ; does not work
 
     , { Options: { Width: 450, Height: 500, Center: True }
-      , Windows: [ ", " ] } ; Lync
+      , Windows: [ ", " ; Lync
+                 , "Group Conversation" ] } ; Lync
 
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
