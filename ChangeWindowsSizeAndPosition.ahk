@@ -5,6 +5,7 @@ _settings := [ Join
     , { Options: { Width: 1750, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
       , Windows: [ "Blend"
                  , "Microsoft SQL Server Management Studio"
+                 , "Microsoft WebMatrix"
                  , "Microsoft Visual Studio" ] }
 
     , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
