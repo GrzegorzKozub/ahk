@@ -148,9 +148,9 @@ OnWmDeviceChange(wParam, lParam, msg, hwnd) {
 
 Act(settings, filter = "") {
     global _screen
-    For key, group In settings {
+    for key, group in settings {
         autofit := (_screen.LoRes && group.Options.LoResAutofit) || group.Options.Autofit
-        For key, window In group.Windows {
+        for key, window in group.Windows {
             title := window.Title ? window.Title : window
             except := window.Except ? window.Except : ""
             if (!filter || (InStr(filter, title) > 0 && (!except || InStr(filter, except) == 0))) {
@@ -262,7 +262,7 @@ GetWindowPositionAndSize(title = "", except = "") {
 
 GetScreen(monitor = "") {
     if (!monitor) {
-        SysGet, monitor, MonitorPrimary
+        SysGet monitor, MonitorPrimary
     }
     SysGet workArea, MonitorWorkArea, %monitor%
     return { Width: workAreaRight - workAreaLeft, Height: workAreaBottom - workAreaTop, LoRes: (workAreaRight - workAreaLeft) <= 1600 }

@@ -4,8 +4,7 @@ if 0 != 1
     ExitApp
 }
 
-IfNotExist %1%
-{
+IfNotExist %1%, {
     MsgBox % "Provided path does not exist."
     ExitApp
 }
