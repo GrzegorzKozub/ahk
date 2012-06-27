@@ -1,16 +1,16 @@
-; TODO environment variable expansion
+; TODO Flash, Silverlight and QuickTime cache
 
 ; Settings
 
 _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
              , { Title: "Internet Explorer", Executable: "iexplore.exe", Confirmation: "PressAltD" }
-             , { Title: "Chrome", Executable: "C:\Users\Grzegorz\AppData\Local\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab8TimesThenEnter" } ]
+             , { Title: "Chrome", Executable: LOCALAPPDATA . "\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab8TimesThenEnter" } ]
 
-_folders := [ "C:\Users\Grzegorz\AppData\Local\Temp"
-            , "C:\Windows\Temp\"
-            , "C:\Users\Grzegorz\AppData\LocalLow\Sun\Java\Deployment\cache" ]
+_folders := [ TEMP
+            , WINDIR . "\Temp"
+            , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache" ]
 
-_files := [ "C:\Windows\MEMORY.DMP" ]
+_files := [ WINDIR . "\MEMORY.DMP" ]
 
 ; Main
 
@@ -44,7 +44,7 @@ return
 ; Functions
 
 EmptyBrowserCache(title, executable, confirmation) {
-    Run %executable%,,, pid
+    Run %executable%,,, processId
     WinWait %title%,, 5
     if ErrorLevel { 
         MsgBox,, %A_ScriptName%, Could not open %title% in time.
@@ -58,7 +58,7 @@ EmptyBrowserCache(title, executable, confirmation) {
     %confirmation%()
     Sleep 5000
     WinClose %title%
-    Process WaitClose, %pid%, 5
+    Process WaitClose, %processId%, 5
     if ErrorLevel {
         MsgBox,, %A_ScriptName%, Could not close %title% in time.
         return
