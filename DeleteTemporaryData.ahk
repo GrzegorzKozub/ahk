@@ -1,5 +1,3 @@
-; TODO Flash, Silverlight and QuickTime cache
-
 ; Settings
 
 _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
@@ -8,7 +6,8 @@ _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "Pre
 
 _folders := [ TEMP
             , WINDIR . "\Temp"
-            , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache" ]
+            , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache" 
+            , USERPROFILE . "\AppData\LocalLow\Apple Computer\QuickTime\downloads" ]
 
 _files := [ WINDIR . "\MEMORY.DMP" ]
 
