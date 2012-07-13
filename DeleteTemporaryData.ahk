@@ -1,8 +1,8 @@
 ; Settings
 
 _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
-             , { Title: "Internet Explorer", Executable: "iexplore.exe", Confirmation: "PressAltD" }
-             , { Title: "Chrome", Executable: LOCALAPPDATA . "\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab8TimesThenEnter" } ]
+             , { Title: "Chrome", Executable: LOCALAPPDATA . "\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab11TimesThenEnter" }
+             , { Title: "Internet Explorer", Executable: "iexplore.exe", Confirmation: "PressAltD" } ]
 
 _folders := [ TEMP
             , WINDIR . "\Temp"
@@ -74,8 +74,8 @@ PressAltD() {
     Send {Alt up}
 }
 
-PressTab8TimesThenEnter() {
-    Send {Tab 8}
+PressTab11TimesThenEnter() {
+    Send {Tab 11}
     Send {Enter}
 }
 
