@@ -78,17 +78,14 @@ _settings := [ Join
                  , "SyncBackPro"
                  , "WinSnap" ] } ; does not work
 
-    , { Options: { Width: 450, Height: 500, Center: True }
-      , Windows: [ ", " ; Lync
-                 , "Group Conversation" ] } ; Lync
-
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
 
     , { Options: { Width: 300, Height: 600, Right: 25, Bottom: 25 }
-      , Windows: [ "Friends" ; Steam
-                 , "Microsoft Lync"
-                 , "Miranda IM" ] }
+      , Windows: [ "Miranda IM" ] }
+
+    , { Options: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
+      , Windows: [ "Friends" ] } ; Origin, Steam
 
     , { Options: { Center: True }
       , Windows: [ "Apple QuickTime"
