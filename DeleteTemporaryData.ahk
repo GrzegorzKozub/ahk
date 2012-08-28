@@ -9,7 +9,8 @@ _folders := [ TEMP
             , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache" 
             , USERPROFILE . "\AppData\LocalLow\Apple Computer\QuickTime\downloads" ]
 
-_files := [ WINDIR . "\MEMORY.DMP" ]
+_files := [ WINDIR . "\MEMORY.DMP"
+          , USERPROFILE . "\AppData\Roaming\Microsoft\Windows\Recent\*.lnk" ]
 
 ; Main
 
