@@ -105,6 +105,8 @@ _settings := Concatenate(_settings, [ Join
 
 ; Main
 
+SplitPath A_ScriptName,,,, fileName
+Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
 HotKey #i, FixDesktopIcons
 HotKey #w, FixWindows

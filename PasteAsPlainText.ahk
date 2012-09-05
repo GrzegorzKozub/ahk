@@ -1,4 +1,7 @@
-﻿#v::
+﻿SplitPath A_ScriptName,,,, fileName
+Menu Tray, Icon, %fileName%.ico
+
+#v::
     originalClipboard = %ClipBoardAll%
     ClipBoard = %ClipBoard%
     Send ^v
