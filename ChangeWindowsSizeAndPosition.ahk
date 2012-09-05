@@ -2,7 +2,7 @@
 
 _settings := [ Join
 
-    , { Options: { Width: 1750, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
+    , { Options: { Width: 1650, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
       , Windows: [ "Blend"
                  , "Microsoft SQL Server Management Studio"
                  , "Microsoft WebMatrix"
@@ -25,7 +25,6 @@ _settings := [ Join
                  , "Microsoft Visio"
                  , "Microsoft Word"
                  , "Mozilla Firefox"
-                 , "NUnit"
                  , "Paint.NET"
                  , "Picasa"
                  , "SQL Server Profiler"
@@ -41,6 +40,7 @@ _settings := [ Join
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Internet Information Services (IIS) Manager"
                  , "iTunes"
+                 , "NUnit"
                  , "Origin"
                  , "Steam" ] } ]
 
@@ -79,7 +79,7 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Manage Stickies"
                  , "SyncBackPro"
-                 , "WinSnap" ] } ; does not work
+                 , "WinSnap" ] }
 
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
