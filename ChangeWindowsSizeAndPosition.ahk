@@ -36,12 +36,15 @@ _settings := [ Join
 
     , { Options: { Width: 1317, Height: 934, LoResHeight: 801, Center: True }
       , Windows: [ "GVIM"
-                 , "Notepad++" ] }
+                 , "Notepad++" ] } 
 
-    , { Options: { Width: 1200, Height: 850, Center: True }
-      , Windows: [ "iTunes"
+    , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
+      , Windows: [ "Internet Information Services (IIS) Manager"
+                 , "iTunes"
                  , "Origin"
-                 , "Steam" ] }
+                 , "Steam" ] } ]
+
+_settings := Concatenate(_settings, [ Join
 
     , { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
       , Windows: [ "Total Commander" ] }
@@ -62,7 +65,6 @@ _settings := [ Join
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
                  , "InfraRecorder"
-                 , "Internet Information Services (IIS) Manager"
                  , "KeePass Password Safe"
                  , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
                  , "Rapid Environment Editor"
@@ -90,7 +92,6 @@ _settings := [ Join
 
     , { Options: { Center: True }
       , Windows: [ "Apple QuickTime"
-                 , "BRISS - BRight Snippet Sire"
                  , "C:\Windows\System32\cmd.exe"
                  , "Calculator"
                  , "Catalyst Control Center"
@@ -100,7 +101,7 @@ _settings := [ Join
                  , "Piriform Defraggler"
                  , "Shotty"
                  , "Stickies"
-                 , "Web Platform Installer" ] } ]
+                 , "Web Platform Installer" ] } ] )
 
 ; Main
 
@@ -265,3 +266,14 @@ GetScreen(monitor = "") {
     SysGet workArea, MonitorWorkArea, %monitor%
     return { Width: workAreaRight - workAreaLeft, Height: workAreaBottom - workAreaTop, LoRes: (workAreaRight - workAreaLeft) <= 1600 }
 }
+
+Concatenate(arrays*) {
+    result := Object()
+    for key, array in arrays {
+        for key, element in array {
+            result.Insert(element)
+        }
+    }
+    return result
+}
+
