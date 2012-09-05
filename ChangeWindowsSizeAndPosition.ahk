@@ -68,6 +68,7 @@ _settings := [ Join
                  , "Rapid Environment Editor"
                  , "Registry Editor"
                  , "Resource Hacker"
+                 , "Skype"
                  , "Sql Server Configuration Manager"
                  , "VLC media player"
                  , "WinRAR"
