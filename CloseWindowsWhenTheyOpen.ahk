@@ -1,10 +1,7 @@
 ﻿; Main                        
 
 loop {
-   CloseWindow( { Text: "Na pytanie o instalacje odpowiedz TAK." } )
-   CloseWindow( { Text: "Błąd wczytania danych z" } )
-   CloseWindow( { Text: "oznaczenia przypisane"} )
-   CloseWindow( { Text: "weryfikacja podpisu wiadomo"} )
+   CloseWindow( { Text: "" } )
 } 
 return
 
