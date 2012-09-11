@@ -73,6 +73,7 @@ _settings := Concatenate(_settings, [ Join
                  , "Skype"
                  , "Sql Server Configuration Manager"
                  , "VLC media player"
+                 , "TortoiseSVN"
                  , "WinRAR"
                  , "µTorrent" ] }
 
