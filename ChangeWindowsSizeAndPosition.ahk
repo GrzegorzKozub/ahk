@@ -49,7 +49,7 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
       , Windows: [ "Total Commander" ] }
 
-    , { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
+    , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
       , Windows: [ "Console" ] }
 
     , { Options: { Width: 925, Height: 800, Center: True }
