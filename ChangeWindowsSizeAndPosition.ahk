@@ -42,7 +42,8 @@ _settings := [ Join
                  , "iTunes"
                  , "NUnit"
                  , "Origin"
-                 , "Steam" ] } ]
+                 , "Steam"
+                 , "Task Scheduler" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
