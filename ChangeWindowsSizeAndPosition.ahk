@@ -12,8 +12,11 @@ _settings := [ Join
       , Windows: [ "Adobe Reader"
                  , "BareTail"
                  , "Beyond Compare"
+                 , "Developer Tools" ; Chrome
+                 , "F12" ; Internet Explorer
+                 , "Firebug" ; Firefox
                  , "Git Gui"
-                 , "Google Chrome"
+                 , { Title: "Google Chrome", Except: "Task Manager - Google Chrome" }
                  , "JetBrains dotPeek"
                  , "Kindle for PC"
                  , "LINQPad"
@@ -24,7 +27,7 @@ _settings := [ Join
                  , "Microsoft PowerPoint"
                  , "Microsoft Visio"
                  , "Microsoft Word"
-                 , "Mozilla Firefox"
+                 , { Title: "Mozilla Firefox", Except: "Source of"}
                  , "Paint.NET"
                  , "Picasa"
                  , "SQL Server Profiler"
@@ -42,6 +45,7 @@ _settings := [ Join
                  , "iTunes"
                  , "NUnit"
                  , "Origin"
+                 , "Source of" ; Firefox
                  , "Steam"
                  , "Task Scheduler" ] } ]
 
@@ -51,7 +55,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "Total Commander" ] }
 
     , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
-      , Windows: [ "Console" ] }
+      , Windows: [ { Title: "Console", Except: "Error Console" } ] }
 
     , { Options: { Width: 925, Height: 800, Center: True }
       , Windows: [ " - Appointment"
@@ -65,14 +69,18 @@ _settings := Concatenate(_settings, [ Join
 
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
+                 , "Error Console" ; Firefox
                  , "InfraRecorder"
                  , "KeePass Password Safe"
+                 , "Library" ; Firefox
                  , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
                  , "Rapid Environment Editor"
                  , "Registry Editor"
                  , "Resource Hacker"
+                 , "Scratchpad" ; Firefox
                  , "Skype"
                  , "Sql Server Configuration Manager"
+                 , "Style Editor" ; Firefox
                  , "VLC media player"
                  , "TortoiseSVN"
                  , "WinRAR"
@@ -81,6 +89,7 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Manage Stickies"
                  , "SyncBackPro"
+                 , "Task Manager - Google Chrome"
                  , "WinSnap" ] }
 
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
