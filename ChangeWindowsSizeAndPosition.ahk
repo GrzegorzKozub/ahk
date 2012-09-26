@@ -43,6 +43,7 @@ _settings := [ Join
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Internet Information Services (IIS) Manager"
                  , "iTunes"
+                 , "Microsoft Help Viewer"
                  , "NUnit"
                  , "Origin"
                  , "Source of" ; Firefox
