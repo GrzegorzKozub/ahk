@@ -41,7 +41,8 @@ _settings := [ Join
                  , "Notepad++" ] } 
 
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
-      , Windows: [ "Internet Information Services (IIS) Manager"
+      , Windows: [ "Event Viewer"
+                 , "Internet Information Services (IIS) Manager"
                  , "iTunes"
                  , "Microsoft Help Viewer"
                  , "NUnit"
@@ -92,6 +93,9 @@ _settings := Concatenate(_settings, [ Join
                  , "SyncBackPro"
                  , "Task Manager - Google Chrome"
                  , "WinSnap" ] }
+
+    , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
+      , Windows: [ { Title: "Task Manager", Except: "Task Manager - Google Chrome" } ] }
 
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
