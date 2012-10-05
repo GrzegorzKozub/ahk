@@ -36,7 +36,7 @@ _settings := [ Join
                  , "WinMerge"
                  , "XPS Viewer" ] }
 
-    , { Options: { Width: 1317, Height: 934, LoResHeight: 801, Center: True }
+    , { Options: { Width: 1317, Height: 935, LoResHeight: 801, Center: True }
       , Windows: [ "GVIM"
                  , "Notepad++" ] } 
 
