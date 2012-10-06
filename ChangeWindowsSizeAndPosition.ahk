@@ -124,10 +124,10 @@ _settings := Concatenate(_settings, [ Join
 SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
-HotKey #i, FixDesktopIcons
-HotKey #w, FixWindows
-HotKey #a, FixActiveWindow
-HotKey #c, CenterActiveWindow
+HotKey ^#i, FixDesktopIcons
+HotKey ^#w, FixWindows
+HotKey ^#a, FixActiveWindow
+HotKey ^#c, CenterActiveWindow
 ;OnMessage(0x219, "OnWmDeviceChange")
 _screen := GetScreen()
 return

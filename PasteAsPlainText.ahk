@@ -1,7 +1,7 @@
 ﻿SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
 
-#v::
+^#v::
     originalClipboard = %ClipBoardAll%
     ClipBoard = %ClipBoard%
     Send ^v
@@ -10,7 +10,7 @@ Menu Tray, Icon, %fileName%.ico
     VarSetCapacity(originalClipboard, 0)
     return
 
-#p::
+^#p::
     ClipBoard = %ClipBoard%
     return
 
