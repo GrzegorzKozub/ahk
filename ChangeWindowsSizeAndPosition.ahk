@@ -58,7 +58,7 @@ _settings := Concatenate(_settings, [ Join
 
     , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
       , Windows: [ { Title: "Console", Except: "Error Console" }
-                 , "ConEmu" ] }
+                 , "C:\Windows\System32\cmd.exe" ] } ; ConEmu
 
     , { Options: { Width: 925, Height: 800, Center: True }
       , Windows: [ " - Appointment"
@@ -109,7 +109,6 @@ _settings := Concatenate(_settings, [ Join
 
     , { Options: { Center: True }
       , Windows: [ "Apple QuickTime"
-                 , "C:\Windows\System32\cmd.exe"
                  , "Calculator"
                  , "Catalyst Control Center"
                  , "Command Prompt"
