@@ -49,7 +49,8 @@ _settings := [ Join
                  , "Origin"
                  , "Source of" ; Firefox
                  , "Steam"
-                 , "Task Scheduler" ] } ]
+                 , "Task Scheduler"
+                 , "Uplay" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
