@@ -42,6 +42,7 @@ _settings := [ Join
 
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Event Viewer"
+                 , "Fiddler Web Debugger"
                  , "Internet Information Services (IIS) Manager"
                  , "iTunes"
                  , "Microsoft Help Viewer"
