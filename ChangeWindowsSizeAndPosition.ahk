@@ -78,6 +78,7 @@ _settings := Concatenate(_settings, [ Join
                  , "InfraRecorder"
                  , "KeePass Password Safe"
                  , "Library" ; Firefox
+                 , "Microsoft Service Trace Viewer"
                  , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
                  , "Rapid Environment Editor"
                  , "Registry Editor"
