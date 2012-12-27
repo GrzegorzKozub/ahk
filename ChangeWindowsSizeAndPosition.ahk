@@ -59,8 +59,10 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "Total Commander" ] }
 
     , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
-      , Windows: [ { Title: "Console", Except: "Error Console" }
-                 , "C:\Users\Grzegorz" ] } ; ConEmu
+      , Windows: [ { Title: "Console", Except: "Error Console" } ] }
+
+    , { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
+      , Windows: [ "C:\Users\Grzegorz" ] } ; ConEmu
 
     , { Options: { Width: 925, Height: 800, Center: True }
       , Windows: [ " - Appointment"
