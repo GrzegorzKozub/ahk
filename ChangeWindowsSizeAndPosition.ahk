@@ -8,6 +8,9 @@ _settings := [ Join
                  , "Microsoft WebMatrix"
                  , "Microsoft Visual Studio" ] }
 
+    , { Options: { Width: 1648, Height: 1004, LoResAutofit: True, Center: True }
+      , Windows: [ "GVIM" ] }
+
     , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Adobe Reader"
                  , "BareTail"
@@ -36,16 +39,13 @@ _settings := [ Join
                  , "WinMerge"
                  , "XPS Viewer" ] }
 
-    , { Options: { Width: 1317, Height: 935, LoResHeight: 801, Center: True }
-      , Windows: [ "GVIM"
-                 , "Notepad++" ] } 
-
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Internet Information Services (IIS) Manager"
                  , "iTunes"
                  , "Microsoft Help Viewer"
+                 , "Notepad++"
                  , "NUnit"
                  , "Origin"
                  , "Source of" ; Firefox
