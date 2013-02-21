@@ -16,6 +16,7 @@ _settings := [ Join
                  , "BareTail"
                  , "Beyond Compare"
                  , "Developer Tools" ; Chrome
+                 , "Excel"
                  , "F12" ; Internet Explorer
                  , "Firebug" ; Firefox
                  , "Git Gui"
@@ -23,20 +24,17 @@ _settings := [ Join
                  , "JetBrains dotPeek"
                  , "Kindle for PC"
                  , "LINQPad"
-                 , "Microsoft Excel"
                  , "Microsoft FxCop"
-                 , "Microsoft OneNote"
-                 , "Microsoft Outlook"
-                 , "Microsoft PowerPoint"
-                 , "Microsoft Visio"
-                 , "Microsoft Word"
                  , { Title: "Mozilla Firefox", Except: "Source of"}
                  , "Paint.NET"
                  , "Picasa"
+                 , "PowerPoint"
                  , "SQL Server Profiler"
                  , "SumatraPDF"
+                 , "Visio"
                  , "Windows Internet Explorer"
                  , "WinMerge"
+                 , "Word"
                  , "XPS Viewer" ] }
 
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
