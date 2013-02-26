@@ -1,17 +1,17 @@
 ; Main
 
 driveLabel := "Backup"
-message := "The backup will now begin."
+message := "Do you want to make the backup now?"
 
 Loop {
-    MsgBox, 1, %A_ScriptName%, %message%
-    IfMsgBox, OK 
+    MsgBox, 4, %A_ScriptName%, %message%
+    IfMsgBox, Yes
     {
         if (IsDriveConnected(driveLabel)) {
             Run, C:\Program Files (x86)\SyncBackPro\SyncBackPro.exe -m "Envy"
             Exit, 0
         } else {
-            message := "The drive labeled " . driveLabel . " is not connected."
+            message := "Is the drive labeled " . driveLabel . " connected?"
         }
     } else {
         Exit, 1
