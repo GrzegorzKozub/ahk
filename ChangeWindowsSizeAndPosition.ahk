@@ -29,6 +29,7 @@ _settings := [ Join
                  , "Paint.NET"
                  , "Picasa"
                  , "PowerPoint"
+                 , "SourceTree"
                  , "SQL Server Profiler"
                  , "SumatraPDF"
                  , "Visio"
