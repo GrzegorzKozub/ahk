@@ -46,6 +46,7 @@ _settings := [ Join
                  , "Microsoft Help Viewer"
                  , "Notepad++"
                  , "NUnit"
+                 , "NVIDIA Control Panel"
                  , "Origin"
                  , "Source of" ; Firefox
                  , "Steam"
