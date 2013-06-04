@@ -1,7 +1,7 @@
 ; Settings
 
 _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
-             , { Title: "Chrome", Executable: LOCALAPPDATA . "\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab11TimesThenEnter" }
+             , { Title: "Chrome", Executable: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab11TimesThenEnter" }
              , { Title: "Internet Explorer", Executable: "iexplore.exe", Confirmation: "PressAltD" } ]
 
 _folders := [ TEMP
