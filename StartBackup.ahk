@@ -8,7 +8,7 @@ Loop {
     IfMsgBox, Yes
     {
         if (IsDriveConnected(driveLabel)) {
-            Run, C:\Program Files (x86)\SyncBackPro\SyncBackPro.exe -m "Envy"
+            Run, C:\Program Files (x86)\SyncBackPro\SyncBackPro.exe -m "Xnote"
             Exit, 0
         } else {
             message := "Is the drive labeled " . driveLabel . " connected?"
