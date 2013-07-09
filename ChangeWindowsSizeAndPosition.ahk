@@ -78,7 +78,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
                  , "Error Console" ; Firefox
                  , "InfraRecorder"
-                 , "KeePass Password Safe"
+                 , "KeePass"
                  , "Library" ; Firefox
                  , "Microsoft Service Trace Viewer"
                  , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
