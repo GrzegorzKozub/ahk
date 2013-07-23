@@ -95,7 +95,8 @@ _settings := Concatenate(_settings, [ Join
                  , "µTorrent" ] }
 
     , { Options: { Width: 750, Height: 500, Center: True }
-      , Windows: [ "Manage Stickies"
+      , Windows: [ "Log History" ; TortoiseSVN
+                 , "Manage Stickies"
                  , "SyncBackPro"
                  , "Task Manager - Google Chrome"
                  , "WinSnap" ] }
