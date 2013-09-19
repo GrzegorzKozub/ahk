@@ -64,12 +64,8 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
       , Windows: [ "C:\Users\Grzegorz" ] } ; ConEmu
 
-    , { Options: { Width: 925, Height: 800, Center: True }
-      , Windows: [ " - Appointment"
-                 , " - Contact"
-                 , " - Meeting"
-                 , " - Message"
-                 , " - Task" ] }
+    , { Options: { Width: 975, Height: 650, Center: True }
+      , Windows: [ "Todoist" ] }
 
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
