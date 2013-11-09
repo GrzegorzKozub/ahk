@@ -33,7 +33,7 @@ _settings := [ Join
                  , "SQL Server Profiler"
                  , "SumatraPDF"
                  , "Visio"
-                 , "Windows Internet Explorer"
+                 , "Internet Explorer"
                  , "WinMerge"
                  , "Word"
                  , "XPS Viewer" ] }
