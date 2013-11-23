@@ -3,11 +3,11 @@
 SetDefaultSoundDevice("Speakers", 1)
 return
 
-^#k::
+^#p::
     SetDefaultSoundDevice("Speakers", 1)
     return
 
-^#m::
+^#h::
     SetDefaultSoundDevice("VG248-3", 2)
     return
 
