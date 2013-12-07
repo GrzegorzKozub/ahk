@@ -49,6 +49,7 @@ _settings := [ Join
                  , "NVIDIA Control Panel"
                  , "Origin"
                  , "Source of" ; Firefox
+                 , "Spotify"
                  , "Steam"
                  , "Task Scheduler"
                  , "Uplay" ] } ]
