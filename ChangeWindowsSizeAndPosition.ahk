@@ -140,24 +140,24 @@ return
 
 FixDesktopIcons:
     Run desktopcmd restore /y,, Hide
-return
+    return
 
 FixWindows:
     _screen := GetScreen()
     Act(_settings)
-return
+    return
 
 FixActiveWindow:
     _screen := GetScreen()
     WinGetActiveTitle activeWindowTitle
     Act(_settings, activeWindowTitle)
-return
+    return
 
 CenterActiveWindow:
     _screen := GetScreen()
     WinGetActiveTitle title
     UpdateWindow(title, "", { Center: True })
-return
+    return
 
 ; Functions
 

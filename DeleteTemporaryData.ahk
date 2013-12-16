@@ -6,7 +6,7 @@ _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "Pre
 
 _folders := [ TEMP
             , WINDIR . "\Temp"
-            , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache" 
+            , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache"
             , USERPROFILE . "\AppData\LocalLow\Apple Computer\QuickTime\downloads" ]
 
 _files := [ WINDIR . "\MEMORY.DMP"
@@ -27,29 +27,29 @@ ClearBrowserCache:
     for key, browser in _browsers {
         EmptyBrowserCache(browser.Title, browser.Executable, browser.Confirmation)
     }
-return
+    return
 
 ClearFolders:
     for key, folderPath in _folders {
         EmptyFolder(folderPath)
     }
-return
+    return
 
 DeleteFiles:
     for key, filePath in _files {
         FileDelete %filePath%
     }
-return
+    return
 
 ; Functions
 
 EmptyBrowserCache(title, executable, confirmation) {
     Run %executable%,,, processId
     WinWait %title%,, 5
-    if ErrorLevel { 
+    if ErrorLevel {
         MsgBox,, %A_ScriptName%, Could not open %title% in time.
         return
-    } 
+    }
     Sleep 1000
     Send {Ctrl down} {Shift down}
     Send {Del}
@@ -81,7 +81,7 @@ PressTab11TimesThenEnter() {
 }
 
 EmptyFolder(folderPath) {
-    Loop %folderPath%\*, 1 
+    Loop %folderPath%\*, 1
     {
         IfInString A_LoopFileAttrib, D, {
             FileRemoveDir %A_LoopFileFullPath%, 1

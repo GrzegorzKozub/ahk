@@ -1,4 +1,4 @@
-if 0 != 1 
+if 0 != 1
 {
     MsgBox % "Didn't pass the path as a parameter."
     ExitApp
