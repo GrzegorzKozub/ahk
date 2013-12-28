@@ -1,5 +1,9 @@
-﻿SplitPath A_ScriptName,,,, fileName
+﻿; Main
+
+SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
+
+; Hotkeys
 
 ^#v::
     originalClipboard = %ClipBoardAll%

@@ -8,6 +8,8 @@ Menu Tray, Click, 1
 GoSub ChangeDefaultSoundDevice
 return
 
+; Hotkeys
+
 ^#p::
     ChangeDefaultSoundDevice(True)
     return
