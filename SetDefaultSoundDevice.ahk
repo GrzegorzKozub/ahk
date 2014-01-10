@@ -28,7 +28,7 @@ Exit:
 ChangeDefaultSoundDevice(displayToolTip := False) {
     global _speakers
     if (_speakers) {
-        SetDefaultSoundDevice("VG248-3", 2, displayToolTip)
+        SetDefaultSoundDevice("VG248-C", 2, displayToolTip)
         _speakers := False
     } else {
         SetDefaultSoundDevice("Speakers", 1, displayToolTip)
