@@ -89,7 +89,7 @@ _settings := Concatenate(_settings, [ Join
                  , "VLC media player"
                  , "TortoiseSVN"
                  , "WinRAR"
-                 , "µTorrent" ] }
+                 , "Torrent" ] }
 
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Log History" ; TortoiseSVN
