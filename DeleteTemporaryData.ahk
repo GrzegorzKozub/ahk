@@ -58,7 +58,7 @@ EmptyBrowserCache(title, executable, confirmation) {
     %confirmation%()
     Sleep 5000
     WinClose %title%
-    Process WaitClose, %processId%, 5
+    Process WaitClose, %processId%, 10
     if ErrorLevel {
         MsgBox,, %A_ScriptName%, Could not close %title% in time.
         return
