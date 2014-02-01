@@ -1,7 +1,7 @@
 ; Settings
 
 _browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
-             , { Title: "Chrome", Executable: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab11TimesThenEnter" }
+             , { Title: "Chrome", Executable: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab10TimesThenEnter" }
              , { Title: "Internet Explorer", Executable: "iexplore.exe", Confirmation: "PressAltD" } ]
 
 _folders := [ TEMP
@@ -75,8 +75,8 @@ PressAltD() {
     Send {Alt up}
 }
 
-PressTab11TimesThenEnter() {
-    Send {Tab 11}
+PressTab10TimesThenEnter() {
+    Send {Tab 10}
     Send {Enter}
 }
 
