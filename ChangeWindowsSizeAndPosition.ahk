@@ -26,7 +26,7 @@ _settings := [ Join
                  , "LINQPad"
                  , "Microsoft FxCop"
                  , { Title: "Mozilla Firefox", Except: "Source of"}
-                 , "Paint.NET"
+                 , "paint.net"
                  , "Picasa"
                  , "PowerPoint"
                  , "SourceTree"
