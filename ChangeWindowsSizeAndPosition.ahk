@@ -12,9 +12,7 @@ _settings := [ Join
       , Windows: [ "GVIM" ] }
 
     , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
-      , Windows: [ "Adobe Reader"
-                 , "BareTail"
-                 , "Beyond Compare"
+      , Windows: [ "BareTail"
                  , "Developer Tools" ; Chrome
                  , "Excel"
                  , "F12" ; Internet Explorer
@@ -22,12 +20,10 @@ _settings := [ Join
                  , "Git Gui"
                  , { Title: "Google Chrome", Except: "Task Manager - Google Chrome" }
                  , "JetBrains dotPeek"
-                 , "Kindle for PC"
                  , "LINQPad"
                  , "Microsoft FxCop"
                  , { Title: "Mozilla Firefox", Except: "Source of"}
                  , "paint.net"
-                 , "Picasa"
                  , "PowerPoint"
                  , "SourceTree"
                  , "SQL Server Profiler"
@@ -41,6 +37,7 @@ _settings := [ Join
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
+                 , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
                  , "iTunes"
                  , "Microsoft Help Viewer"
@@ -51,8 +48,7 @@ _settings := [ Join
                  , "Source of" ; Firefox
                  , "Spotify"
                  , "Steam"
-                 , "Task Scheduler"
-                 , "Uplay" ] } ]
+                 , "Task Scheduler" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
@@ -111,15 +107,13 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "Friends" ] } ; Origin, Steam
 
     , { Options: { Center: True }
-      , Windows: [ "Apple QuickTime"
-                 , "C:\Windows\System32\cmd.exe"
+      , Windows: [ "C:\Windows\System32\cmd.exe"
                  , "Calculator"
                  , "Catalyst Control Center"
                  , "Command Prompt"
                  , "IrfanView"
                  , "Microsoft Security Essentials"
                  , "Piriform Defraggler"
-                 , "Shotty"
                  , "Stickies"
                  , "Web Platform Installer" ] } ] )
 
