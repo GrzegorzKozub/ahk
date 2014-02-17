@@ -87,10 +87,12 @@ _settings := Concatenate(_settings, [ Join
                  , "WinRAR"
                  , "Torrent" ] }
 
+    , { Options: { Width: 800, Height: 500, Center: True }
+      , Windows: [ "SyncBackPro" ] }
+
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Log History" ; TortoiseSVN
                  , "Manage Stickies"
-                 , "SyncBackPro"
                  , "Task Manager - Google Chrome"
                  , "WinSnap" ] }
 
