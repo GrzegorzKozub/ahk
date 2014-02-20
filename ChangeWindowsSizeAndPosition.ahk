@@ -62,7 +62,8 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "C:\Users\Grzegorz" ] } ; ConEmu
 
     , { Options: { Width: 975, Height: 650, Center: True }
-      , Windows: [ "Todoist" ] }
+      , Windows: [ "Todoist"
+                 , "WinSnap" ] }
 
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
@@ -93,8 +94,7 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Log History" ; TortoiseSVN
                  , "Manage Stickies"
-                 , "Task Manager - Google Chrome"
-                 , "WinSnap" ] }
+                 , "Task Manager - Google Chrome" ] }
 
     , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , Windows: [ { Title: "Task Manager", Except: "Task Manager - Google Chrome" } ] }
