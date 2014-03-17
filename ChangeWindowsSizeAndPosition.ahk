@@ -23,6 +23,7 @@ _settings := [ Join
                  , "LINQPad"
                  , "Microsoft FxCop"
                  , { Title: "Mozilla Firefox", Except: "Source of"}
+                 , { Title: "Oracle VM VirtualBox", Except: "Manager"}
                  , "paint.net"
                  , "PowerPoint"
                  , "SourceTree"
