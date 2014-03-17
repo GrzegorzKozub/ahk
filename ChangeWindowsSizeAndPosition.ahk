@@ -76,6 +76,7 @@ _settings := Concatenate(_settings, [ Join
                  , "Library" ; Firefox
                  , "Microsoft Service Trace Viewer"
                  , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
+                 , "Oracle VM VirtualBox Manager"
                  , "Rapid Environment Editor"
                  , "Registry Editor"
                  , "Resource Hacker"
