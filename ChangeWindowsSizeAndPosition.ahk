@@ -26,6 +26,7 @@ _settings := [ Join
                  , { Title: "Oracle VM VirtualBox", Except: "Manager"}
                  , "paint.net"
                  , "PowerPoint"
+                 , "Remote Desktop Connection"
                  , "SourceTree"
                  , "SQL Server Profiler"
                  , "SumatraPDF"
