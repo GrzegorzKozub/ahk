@@ -97,6 +97,7 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Log History" ; TortoiseSVN
                  , "Manage Stickies"
+                 , "Service Bus MQ Manager"
                  , "Task Manager - Google Chrome" ] }
 
     , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
