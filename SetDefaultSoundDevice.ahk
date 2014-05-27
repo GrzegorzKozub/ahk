@@ -26,13 +26,13 @@ Exit:
 ; Functions
 
 ChangeDefaultSoundDevice(displayToolTip := False) {
-    global _speakers
-    if (_speakers) {
-        SetDefaultSoundDevice("VG248-C", 2, displayToolTip)
-        _speakers := False
+    global _headphones
+    if (_headphones) {
+        SetDefaultSoundDevice("VG248", 2, displayToolTip)
+        _headphones := False
     } else {
-        SetDefaultSoundDevice("Speakers", 1, displayToolTip)
-        _speakers := True
+        SetDefaultSoundDevice("Headphones", 1, displayToolTip)
+        _headphones := True
     }
 }
 
