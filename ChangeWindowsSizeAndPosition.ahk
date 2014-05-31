@@ -72,6 +72,7 @@ _settings := Concatenate(_settings, [ Join
 
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
+                 , "Deluge"
                  , "Error Console" ; Firefox
                  , "InfraRecorder"
                  , "KeePass"
@@ -88,8 +89,7 @@ _settings := Concatenate(_settings, [ Join
                  , "Style Editor" ; Firefox
                  , "VLC media player"
                  , "TortoiseSVN"
-                 , "WinRAR"
-                 , "Torrent" ] }
+                 , "WinRAR" ] }
 
     , { Options: { Width: 800, Height: 500, Center: True }
       , Windows: [ "SyncBackPro" ] }
