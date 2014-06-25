@@ -24,18 +24,13 @@ return
 StartBackup:
     Loop {
         if (IsDriveConnected("Backup")) {
-            RunWait C:\Program Files (x86)\SyncBackPro\SyncBackPro.exe -m "Xnote",, UseErrorLevel
-            if (ErrorLevel) {
-                DisplayToolTip()
-                break
-            }
+            Run C:\Program Files (x86)\SyncBackPro\SyncBackPro.exe
             ExitApp
         } else {
             MsgBox 53, %A_ScriptName%, The drive labeled Backup is not connected. Attach it and hit Retry.
             IfMsgBox Cancel
             {
-                DisplayToolTip()
-                break
+                ExitApp
             }
         }
     }
