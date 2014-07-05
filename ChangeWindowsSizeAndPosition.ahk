@@ -64,8 +64,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "C:\Users\Grzegorz" ] } ; ConEmu
 
     , { Options: { Width: 975, Height: 650, Center: True }
-      , Windows: [ "Todoist"
-                 , "WinSnap" ] }
+      , Windows: [ "WinSnap" ] }
 
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
@@ -90,6 +89,9 @@ _settings := Concatenate(_settings, [ Join
                  , "VLC media player"
                  , "TortoiseSVN"
                  , "WinRAR" ] }
+
+    , { Options: { Width: 700, Height: 850, Center: True }
+      , Windows: [ "Todoist" ] }
 
     , { Options: { Width: 800, Height: 500, Center: True }
       , Windows: [ "SyncBackPro" ] }
