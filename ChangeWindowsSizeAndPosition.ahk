@@ -90,7 +90,7 @@ _settings := Concatenate(_settings, [ Join
                  , "TortoiseSVN"
                  , "WinRAR" ] }
 
-    , { Options: { Width: 700, Height: 850, Center: True }
+    , { Options: { Width: 700, Height: 800, Center: True }
       , Windows: [ "Todoist" ] }
 
     , { Options: { Width: 800, Height: 500, Center: True }
