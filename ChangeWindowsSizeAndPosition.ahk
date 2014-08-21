@@ -47,6 +47,7 @@ _settings := [ Join
                  , "NUnit"
                  , "NVIDIA Control Panel"
                  , "Origin"
+                 , "Skyrim Mod Organizer"
                  , "Source of" ; Firefox
                  , "Spotify"
                  , "Steam"
