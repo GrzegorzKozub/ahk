@@ -62,10 +62,11 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ { Title: "Console", Except: "Error Console" } ] }
 
     , { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
-      , Windows: [ "C:\Users\Grzegorz" ] } ; ConEmu
+      , Windows: [ "~" ] } ; ConEmu
 
     , { Options: { Width: 975, Height: 650, Center: True }
-      , Windows: [ "WinSnap" ] }
+      , Windows: [ "WinSnap"
+                 , "West Wind WebSurge" ] }
 
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
