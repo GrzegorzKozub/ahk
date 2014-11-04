@@ -51,7 +51,8 @@ _settings := [ Join
                  , "Source of" ; Firefox
                  , "Spotify"
                  , "Steam"
-                 , "Task Scheduler" ] } ]
+                 , "Task Scheduler"
+                 , "WinSCP" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
