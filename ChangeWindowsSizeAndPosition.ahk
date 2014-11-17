@@ -62,7 +62,7 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
       , Windows: [ { Title: "Console", Except: "Error Console" } ] }
 
-    , { Options: { Width: 1003, Height: 793, Right: 25, Bottom: 25 }
+    , { Options: { Width: 1013, Height: 779, Right: 25, Bottom: 25 }
       , Windows: [ "~" ] } ; ConEmu
 
     , { Options: { Width: 975, Height: 650, Center: True }
