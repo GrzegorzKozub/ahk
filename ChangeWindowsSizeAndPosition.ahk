@@ -72,6 +72,9 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
 
+    , { Options: { Width: 900, Height: 900, Center: True }
+      , Windows: [ "Skype" ] }
+
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
                  , "Deluge"
@@ -86,7 +89,6 @@ _settings := Concatenate(_settings, [ Join
                  , "Registry Editor"
                  , "Resource Hacker"
                  , "Scratchpad" ; Firefox
-                 , "Skype"
                  , "Sql Server Configuration Manager"
                  , "Style Editor" ; Firefox
                  , "VLC media player"
