@@ -52,12 +52,10 @@ _settings := [ Join
                  , "Spotify"
                  , "Steam"
                  , "Task Scheduler"
+                 , "Total Commander"
                  , "WinSCP" ] } ]
 
 _settings := Concatenate(_settings, [ Join
-
-    , { Options: { Width: 1075, Height: 775, Left: 25, Top: 25 }
-      , Windows: [ "Total Commander" ] }
 
     , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
       , Windows: [ { Title: "Console", Except: "Error Console" } ] }
@@ -82,6 +80,7 @@ _settings := Concatenate(_settings, [ Join
                  , "InfraRecorder"
                  , "KeePass"
                  , "Library" ; Firefox
+                 , "Lister" ; Total Commander
                  , "Microsoft Service Trace Viewer"
                  , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
                  , "Oracle VM VirtualBox Manager"
