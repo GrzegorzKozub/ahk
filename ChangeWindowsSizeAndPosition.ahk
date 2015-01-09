@@ -37,7 +37,8 @@ _settings := [ Join
                  , "XPS Viewer" ] }
 
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
-      , Windows: [ "Event Viewer"
+      , Windows: [ "Base16.A3LEX"
+                 , "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
