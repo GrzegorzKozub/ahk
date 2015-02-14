@@ -3,8 +3,7 @@
 _settings := [ Join
 
     , { Options: { Width: 1650, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
-      , Windows: [ "Blend"
-                 , "Microsoft SQL Server Management Studio"
+      , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft WebMatrix"
                  , "Microsoft Visual Studio" ] }
 
@@ -20,8 +19,6 @@ _settings := [ Join
                  , "Git Gui"
                  , { Title: "Google Chrome", Except: "Task Manager - Google Chrome" }
                  , "JetBrains dotPeek"
-                 , "LINQPad"
-                 , "Microsoft FxCop"
                  , { Title: "Mozilla Firefox", Except: "Source of"}
                  , { Title: "Oracle VM VirtualBox", Except: "Manager"}
                  , "paint.net"
@@ -32,20 +29,14 @@ _settings := [ Join
                  , "SumatraPDF"
                  , "Visio"
                  , "Internet Explorer"
-                 , "WinMerge"
-                 , "Word"
-                 , "XPS Viewer" ] }
+                 , "Word" ] }
 
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
-      , Windows: [ "Base16.A3LEX"
-                 , "Event Viewer"
+      , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
                  , "iTunes"
-                 , "Microsoft Help Viewer"
-                 , "Notepad++"
-                 , "NUnit"
                  , "NVIDIA Control Panel"
                  , "Origin"
                  , "Skyrim Mod Organizer"
@@ -78,21 +69,18 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
                  , "Deluge"
                  , "Error Console" ; Firefox
-                 , "InfraRecorder"
                  , "KeePass"
                  , "Library" ; Firefox
                  , "Lister" ; Total Commander
                  , "Microsoft Service Trace Viewer"
-                 , { Title: "Notepad", Except: "Notepad++" } ; also handles Notepad2
+                 , "Notepad"
                  , "Oracle VM VirtualBox Manager"
                  , "Rapid Environment Editor"
                  , "Registry Editor"
                  , "Resource Hacker"
                  , "Scratchpad" ; Firefox
-                 , "Sql Server Configuration Manager"
                  , "Style Editor" ; Firefox
                  , "VLC media player"
-                 , "TortoiseSVN"
                  , "WinRAR" ] }
 
     , { Options: { Width: 700, Height: 800, Center: True }
@@ -102,8 +90,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "SyncBackPro" ] }
 
     , { Options: { Width: 750, Height: 500, Center: True }
-      , Windows: [ "Log History" ; TortoiseSVN
-                 , "Manage Stickies"
+      , Windows: [ "Manage Stickies"
                  , "Task Manager - Google Chrome" ] }
 
     , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
@@ -115,20 +102,15 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
       , Windows: [ "Windows Task Manager" ] }
 
-    , { Options: { Width: 300, Height: 600, Right: 25, Bottom: 25 }
-      , Windows: [ "Miranda IM" ] }
-
     , { Options: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
       , Windows: [ "Friends" ] } ; Origin, Steam
 
     , { Options: { Center: True }
       , Windows: [ "C:\Windows\System32\cmd.exe"
                  , "Calculator"
-                 , "Catalyst Control Center"
                  , "Command Prompt"
                  , "IrfanView"
                  , "Microsoft Security Essentials"
-                 , "Piriform Defraggler"
                  , "Stickies"
                  , "Web Platform Installer" ] } ] )
 
