@@ -37,6 +37,7 @@ _settings := [ Join
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
                  , "iTunes"
+                 , "LOOT"
                  , "NVIDIA Control Panel"
                  , "Origin"
                  , "Skyrim Mod Organizer"
