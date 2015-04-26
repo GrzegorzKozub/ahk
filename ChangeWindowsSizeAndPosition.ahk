@@ -12,10 +12,10 @@ _settings := [ Join
 
     , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "BareTail"
+                 , "Console"
                  , "Developer Tools" ; Chrome
                  , "Excel"
                  , "F12" ; Internet Explorer
-                 , "Firebug" ; Firefox
                  , "Git Gui"
                  , { Title: "Google Chrome", Except: "Task Manager - Google Chrome" }
                  , "JetBrains dotPeek"
@@ -49,9 +49,6 @@ _settings := [ Join
                  , "WinSCP" ] } ]
 
 _settings := Concatenate(_settings, [ Join
-
-    , { Options: { Width: 1003, Height: 802, Right: 25, Bottom: 25 }
-      , Windows: [ { Title: "Console", Except: "Error Console" } ] }
 
     , { Options: { Width: 1013, Height: 779, Right: 25, Bottom: 25 }
       , Windows: [ "~" ] } ; ConEmu
