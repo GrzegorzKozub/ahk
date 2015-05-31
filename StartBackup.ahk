@@ -42,7 +42,7 @@ Exit:
 ; Functions
 
 GetDaysSinceLastBackup() {
-    backupSettingsFilePath := USERPROFILE . "\AppData\Local\2BrightSparks\SyncBackPro\Xnote_Settings.ini"
+    backupSettingsFilePath := USERPROFILE . "\AppData\Local\2BrightSparks\SyncBackPro\" . A_ComputerName . "_Settings.ini"
     FileGetTime lastBackupDate, %backupSettingsFilePath%
     result := %A_Now%
     EnvSub result, %lastBackupDate%, days
