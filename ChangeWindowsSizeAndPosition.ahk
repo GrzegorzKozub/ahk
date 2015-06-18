@@ -61,7 +61,8 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "foobar2000" ] }
 
     , { Options: { Width: 900, Height: 900, Center: True }
-      , Windows: [ "Skype" ] }
+      , Windows: [ "Skype"
+                 , "Slack" ] }
 
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
