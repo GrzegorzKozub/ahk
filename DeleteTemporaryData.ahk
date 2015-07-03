@@ -1,13 +1,11 @@
 ; Settings
 
-_browsers := [ { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
-             , { Title: "Chrome", Executable: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab10TimesThenEnter" }
+_browsers := [ { Title: "Chrome", Executable: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", Confirmation: "PressTab10TimesThenEnter" }
+             , { Title: "Firefox", Executable: "firefox.exe", Confirmation: "PressEnter" }
              , { Title: "Internet Explorer", Executable: "iexplore.exe", Confirmation: "PressAltD" } ]
 
 _folders := [ TEMP
-            , WINDIR . "\Temp"
-            , USERPROFILE . "\AppData\LocalLow\Sun\Java\Deployment\cache"
-            , USERPROFILE . "\AppData\LocalLow\Apple Computer\QuickTime\downloads" ]
+            , WINDIR . "\Temp" ]
 
 _files := [ WINDIR . "\MEMORY.DMP"
           , USERPROFILE . "\AppData\Roaming\Microsoft\Windows\Recent\*.lnk" ]
