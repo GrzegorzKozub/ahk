@@ -14,6 +14,7 @@ _settings := [ Join
       , Windows: [ "BareTail"
                  , "Console"
                  , "Developer Tools" ; Chrome
+                 , "Edge"
                  , "Excel"
                  , "F12" ; Internet Explorer
                  , "Git Gui"
