@@ -43,11 +43,13 @@ _settings := [ Join
                  , "Origin"
                  , "Skyrim Mod Organizer"
                  , "Source of" ; Firefox
-                 , "Spotify"
-                 , "Steam"
                  , "Task Scheduler"
                  , "Total Commander"
-                 , "WinSCP" ] } ]
+                 , "WinSCP" ] }
+
+    , { Options: { Width: 1100, Height: 800, LoResAutofit: True, LoResMax: True, Center: True }
+      , Windows: [ "Spotify"
+                 , "Steam" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
