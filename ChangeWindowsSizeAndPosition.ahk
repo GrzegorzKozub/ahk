@@ -32,6 +32,10 @@ _settings := [ Join
                  , "Internet Explorer"
                  , "Word" ] }
 
+    , { Options: { Width: 1300, Height: 900, LoResAutofit: True, LoResMax: True, Center: True }
+      , Windows: [ "Spotify"
+                 , "Steam" ] }
+
     , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
@@ -45,11 +49,7 @@ _settings := [ Join
                  , "Source of" ; Firefox
                  , "Task Scheduler"
                  , "Total Commander"
-                 , "WinSCP" ] }
-
-    , { Options: { Width: 1100, Height: 800, LoResAutofit: True, LoResMax: True, Center: True }
-      , Windows: [ "Spotify"
-                 , "Steam" ] } ]
+                 , "WinSCP" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
