@@ -46,6 +46,7 @@ _settings := [ Join
                  , "Source of" ; Firefox
                  , "Task Scheduler"
                  , "Total Commander"
+                 , "Settings"
                  , "WinSCP" ] } ]
 
 _settings := Concatenate(_settings, [ Join
