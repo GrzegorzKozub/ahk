@@ -21,7 +21,6 @@ _settings := [ Join
                  , { Title: "Google Chrome", Except: "Task Manager - Google Chrome" }
                  , "JetBrains dotPeek"
                  , { Title: "Mozilla Firefox", Except: "Source of"}
-                 , { Title: "Oracle VM VirtualBox", Except: "Manager"}
                  , "paint.net"
                  , "PowerPoint"
                  , "Remote Desktop Connection"
@@ -41,10 +40,8 @@ _settings := [ Join
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
-                 , "iTunes"
                  , "LOOT"
                  , "NVIDIA Control Panel"
-                 , "Origin"
                  , "Skyrim Mod Organizer"
                  , "Source of" ; Firefox
                  , "Task Scheduler"
@@ -98,6 +95,9 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , Windows: [ { Title: "Task Manager", Except: "Task Manager - Google Chrome" } ] }
 
+    , { Options: { Width: 650, Height: 600, Center: True }
+      , Windows: [ "Open Broadcaster Software" ] }
+
     , { Options: { Width: 600, Height: 600, Left: 200, Top: 200 }
       , Windows: [ "Service Bus MQ Manager" ] }
 
@@ -105,7 +105,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "Windows Task Manager" ] }
 
     , { Options: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
-      , Windows: [ "Friends" ] } ; Origin, Steam
+      , Windows: [ "Friends" ] } ; Steam
 
     , { Options: { Center: True }
       , Windows: [ "C:\Windows\System32\cmd.exe"
