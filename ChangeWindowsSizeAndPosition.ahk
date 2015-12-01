@@ -41,8 +41,8 @@ _settings := [ Join
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
                  , "LOOT"
+                 , "Mod Organizer"
                  , "NVIDIA Control Panel"
-                 , "Skyrim Mod Organizer"
                  , "Source of" ; Firefox
                  , "Task Scheduler"
                  , "Total Commander"
