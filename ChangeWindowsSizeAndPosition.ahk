@@ -7,7 +7,7 @@ _settings := [ Join
                  , "Microsoft WebMatrix"
                  , "Microsoft Visual Studio" ] }
 
-    , { Options: { Width: 1640, Height: 987, LoResAutofit: True, Center: True }
+    , { Options: { Width: 1636, Height: 984, LoResAutofit: True, Center: True }
       , Windows: [ "GVIM" ] }
 
     , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
