@@ -8,7 +8,8 @@ _settings := [ Join
                  , "Microsoft Visual Studio" ] }
 
     , { Options: { Width: 1636, Height: 984, LoResAutofit: True, Center: True }
-      , Windows: [ "GVIM" ] }
+      , Windows: [ "GVIM"
+                 , "Visual Studio Code" ] }
 
     , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
       , Windows: [ "BareTail"
