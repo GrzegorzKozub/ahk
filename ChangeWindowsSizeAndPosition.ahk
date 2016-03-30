@@ -45,6 +45,7 @@ _settings := [ Join
                  , "LOOT"
                  , "Mod Organizer"
                  , "NVIDIA Control Panel"
+                 , "Pogoda"
                  , "Source of" ; Firefox
                  , "Task Scheduler"
                  , "Total Commander"
