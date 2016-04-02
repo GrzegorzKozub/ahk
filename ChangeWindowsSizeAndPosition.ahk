@@ -112,7 +112,6 @@ SetTitleMatchMode 2
 HotKey ^#w, FixWindows
 HotKey ^#a, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
-;OnMessage(0x219, "OnWmDeviceChange")
 _screen := GetScreen()
 return
 
@@ -136,12 +135,6 @@ CenterActiveWindow:
     return
 
 ; Functions
-
-OnWmDeviceChange(wParam, lParam, msg, hwnd) {
-    Sleep 3000
-    GoSub FixWindows
-    GoSub FixDesktopIcons
-}
 
 Act(settings, filter = "") {
     global _screen
