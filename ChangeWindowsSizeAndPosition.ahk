@@ -109,7 +109,6 @@ _settings := Concatenate(_settings, [ Join
 SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
-HotKey ^#i, FixDesktopIcons
 HotKey ^#w, FixWindows
 HotKey ^#a, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
@@ -118,10 +117,6 @@ _screen := GetScreen()
 return
 
 ; Labels
-
-FixDesktopIcons:
-    Run desktopcmd restore /y,, Hide
-    return
 
 FixWindows:
     _screen := GetScreen()
