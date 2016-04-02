@@ -4,7 +4,6 @@ _settings := [ Join
 
     , { Options: { Width: 1650, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
       , Windows: [ "Microsoft SQL Server Management Studio"
-                 , "Microsoft WebMatrix"
                  , "Microsoft Visual Studio"
                  , "Release Management" ] }
 
@@ -18,11 +17,11 @@ _settings := [ Join
                  , "Developer Tools" ; Chrome
                  , "Edge"
                  , "Excel"
-                 , "F12" ; Internet Explorer
+                 , "F12 Developer Tools" ; Edge
                  , "Git Gui"
-                 , { Title: "Google Chrome", Except: "Task Manager - Google Chrome" }
+                 , "Google Chrome"
                  , "JetBrains dotPeek"
-                 , { Title: "Mozilla Firefox", Except: "Source of"}
+                 , "Mozilla Firefox",
                  , "paint.net"
                  , "PowerPoint"
                  , "Remote Desktop Connection"
@@ -46,7 +45,6 @@ _settings := [ Join
                  , "Mod Organizer"
                  , "NVIDIA Control Panel"
                  , "Pogoda"
-                 , "Source of" ; Firefox
                  , "Task Scheduler"
                  , "Total Commander"
                  , "Settings"
@@ -58,8 +56,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "~" ] } ; ConEmu
 
     , { Options: { Width: 975, Height: 650, Center: True }
-      , Windows: [ "WinSnap"
-                 , "West Wind WebSurge" ] }
+      , Windows: [ "WinSnap" ] }
 
     , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
       , Windows: [ "foobar2000" ] }
@@ -71,18 +68,13 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
                  , "Deluge"
-                 , "Error Console" ; Firefox
                  , "KeePass"
-                 , "Library" ; Firefox
                  , "Lister" ; Total Commander
-                 , "Microsoft Service Trace Viewer"
                  , "Notepad"
                  , "Oracle VM VirtualBox Manager"
                  , "Rapid Environment Editor"
                  , "Registry Editor"
                  , "Resource Hacker"
-                 , "Scratchpad" ; Firefox
-                 , "Style Editor" ; Firefox
                  , "VLC media player"
                  , "WinRAR" ] }
 
@@ -93,8 +85,7 @@ _settings := Concatenate(_settings, [ Join
       , Windows: [ "SyncBackPro" ] }
 
     , { Options: { Width: 750, Height: 500, Center: True }
-      , Windows: [ "Manage Stickies"
-                 , "Task Manager - Google Chrome" ] }
+      , Windows: [ "Manage Stickies" ] }
 
     , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , Windows: [ { Title: "Task Manager", Except: "Task Manager - Google Chrome" } ] }
@@ -102,18 +93,11 @@ _settings := Concatenate(_settings, [ Join
     , { Options: { Width: 650, Height: 600, Center: True }
       , Windows: [ "Open Broadcaster Software" ] }
 
-    , { Options: { Width: 600, Height: 600, Left: 200, Top: 200 }
-      , Windows: [ "Service Bus MQ Manager" ] }
-
-    , { Options: { Width: 420, Height: 460, Right: 25, Bottom: 25 }
-      , Windows: [ "Windows Task Manager" ] }
-
     , { Options: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
       , Windows: [ "Friends" ] } ; Steam
 
     , { Options: { Center: True }
-      , Windows: [ "C:\Windows\System32\cmd.exe"
-                 , "Calculator"
+      , Windows: [ "Calculator"
                  , "Command Prompt"
                  , "IrfanView"
                  , "Microsoft Security Essentials"
