@@ -2,16 +2,16 @@
 
 _settings := [ Join
 
-    , { Options: { Width: 1650, Height: 1000, LoResAutofit: True, Max: True, LoResMax: True, Center: True }
+    , { Options: { Width: 1650, Height: 1000, Max: True, LoResMax: True, Center: True }
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
                  , "Release Management" ] }
 
-    , { Options: { Width: 1636, Height: 984, LoResAutofit: True, Center: True }
+    , { Options: { Width: 1636, Height: 984, Center: True }
       , Windows: [ "GVIM"
                  , "Visual Studio Code" ] }
 
-    , { Options: { Width: 1500, Height: 1000, LoResAutofit: True, LoResMax: True, Center: True }
+    , { Options: { Width: 1500, Height: 1000, LoResMax: True, Center: True }
       , Windows: [ "BareTail"
                  , "Console"
                  , "Developer Tools" ; Chrome
@@ -32,11 +32,11 @@ _settings := [ Join
                  , "Internet Explorer"
                  , "Word" ] }
 
-    , { Options: { Width: 1300, Height: 900, LoResAutofit: True, LoResMax: True, Center: True }
+    , { Options: { Width: 1300, Height: 900, LoResMax: True, Center: True }
       , Windows: [ "Spotify"
                  , "Steam" ] }
 
-    , { Options: { Width: 1200, Height: 850, LoResAutofit: True, LoResMax: True, Center: True }
+    , { Options: { Width: 1200, Height: 850, LoResMax: True, Center: True }
       , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
@@ -139,16 +139,11 @@ CenterActiveWindow:
 Act(settings, filter = "") {
     global _screen
     for key, group in settings {
-        autofit := (_screen.LoRes && group.Options.LoResAutofit) || group.Options.Autofit
         for key, window in group.Windows {
             title := window.Title ? window.Title : window
             except := window.Except ? window.Except : ""
             if (!filter || (InStr(filter, title) > 0 && (!except || InStr(filter, except) == 0))) {
-                if (autofit) {
-                    AutofitWindow(title, except, group.Options)
-                } else {
-                    UpdateWindow(title, except, group.Options)
-                }
+                UpdateWindow(title, except, group.Options)
                 if (filter) {
                     match := True
                     break
@@ -160,31 +155,6 @@ Act(settings, filter = "") {
             break
         }
     }
-}
-
-AutofitWindow(title, except, options) {
-    global _screen
-    if (!options.MarginWidth) {
-        options.MarginWidth := 10
-    }
-    if (!options.MarginHeight) {
-        options.MarginHeight := 2
-    }
-    if (!options.LoResMarginWidth) {
-        options.LoResMarginWidth := 5
-    }
-    if (!options.LoResMarginHeight) {
-        options.LoResMarginHeight := 1
-    }
-    marginWidth := _screen.LoRes ? options.LoResMarginWidth : options.MarginWidth
-    marginHeight := _screen.LoRes ? options.LoResMarginHeight : options.MarginHeight
-    horizontalMargin := Round(_screen.Width * (marginWidth / 100))
-    verticalMargin := Round(_screen.Height * (marginHeight / 100))
-    options.Left := horizontalMargin
-    options.Top := verticalMargin
-    options.Width := _screen.Width - 2 * horizontalMargin
-    options.Height := _screen.Height - 2 * verticalMargin
-    UpdateWindow(title, except, options)
 }
 
 UpdateWindow(title, except, options) {
