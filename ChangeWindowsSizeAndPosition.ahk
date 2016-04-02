@@ -220,12 +220,15 @@ GetWindowPositionAndSize(title = "", except = "") {
     return { Left: x, Top: y, Width: width, Height: height, Maximized: minMax == 1, Minimized: minMax == -1 }
 }
 
-GetScreen(monitor = "") {
-    if (!monitor) {
-        SysGet monitor, MonitorPrimary
+GetScreen(monitorNumber = "") {
+    if (!monitorNumber) {
+        SysGet monitorNumber, MonitorPrimary
     }
-    SysGet workArea, MonitorWorkArea, %monitor%
-    return { Width: workAreaRight - workAreaLeft, Height: workAreaBottom - workAreaTop, LoRes: (workAreaRight - workAreaLeft) <= 1600 }
+    SysGet monitor, Monitor, %monitorNumber%
+    SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
+    return { LoRes: monitorBottom < 1440
+           , Width: monitorWorkAreaRight - monitorWorkAreaLeft
+           , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
 }
 
 Concatenate(arrays*) {
