@@ -2,18 +2,20 @@
 
 _settings := [ Join
 
-    , { Options: { Width: 1650, Height: 1000, Max: True, LoResMax: True, Center: True }
+    , { HiRes: { Width: 2200, Height: 1300, Center: True }
+      , LoRes: { Width: 1650, Height: 1000, Center: True, Max: True }
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
                  , "Release Management" ] }
 
-    , { Options: { Width: 1636, Height: 984, Center: True }
+    , { HiRes: { Width: 1636, Height: 984, Center: True }
+      , LoRes: { Width: 1636, Height: 984, Center: True }
       , Windows: [ "GVIM"
                  , "Visual Studio Code" ] }
 
-    , { Options: { Width: 1500, Height: 1000, LoResMax: True, Center: True }
+    , { HiRes: { Width: 1900, Height: 1200, Center: True }
+      , LoRes: { Width: 1500, Height: 1000, Center: True }
       , Windows: [ "BareTail"
-                 , "Console"
                  , "Developer Tools" ; Chrome
                  , "Edge"
                  , "Excel"
@@ -32,11 +34,13 @@ _settings := [ Join
                  , "Internet Explorer"
                  , "Word" ] }
 
-    , { Options: { Width: 1300, Height: 900, LoResMax: True, Center: True }
+    , { HiRes: { Width: 1500, Height: 1000, Center: True }
+      , LoRes: { Width: 1300, Height: 900, Center: True }
       , Windows: [ "Spotify"
                  , "Steam" ] }
 
-    , { Options: { Width: 1200, Height: 850, LoResMax: True, Center: True }
+    , { HiRes: { Width: 1200, Height: 850, Center: True }
+      , LoRes: { Width: 1200, Height: 850, Center: True }
       , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
@@ -52,20 +56,21 @@ _settings := [ Join
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: { Width: 1013, Height: 779, Right: 25, Bottom: 25 }
+    , { HiRes: { Width: 1253, Height: 959, Right: 25, Bottom: 25 }
+      , LoRes: { Width: 1013, Height: 779, Right: 25, Bottom: 25 }
       , Windows: [ "~" ] } ; ConEmu
 
-    , { Options: { Width: 975, Height: 650, Center: True }
+    , { HiRes: { Width: 975, Height: 650, Center: True }
+      , LoRes: { Width: 975, Height: 650, Center: True }
       , Windows: [ "WinSnap" ] }
 
-    , { Options: { Width: 900, Height: 830, Right: 25, Bottom: 25 }
-      , Windows: [ "foobar2000" ] }
-
-    , { Options: { Width: 900, Height: 900, Center: True }
+    , { HiRes: { Width: 900, Height: 900, Center: True }
+      , LoRes: { Width: 900, Height: 900, Center: True }
       , Windows: [ "Skype"
                  , "Slack" ] }
 
-    , { Options: { Width: 900, Height: 600, Center: True }
+    , { HiRes: { Width: 900, Height: 600, Center: True }
+      , LoRes: { Width: 900, Height: 600, Center: True }
       , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
                  , "Deluge"
                  , "KeePass"
@@ -76,27 +81,36 @@ _settings := Concatenate(_settings, [ Join
                  , "Registry Editor"
                  , "Resource Hacker"
                  , "VLC media player"
-                 , "WinRAR" ] }
+                 , "WinRAR" ] } ] )
 
-    , { Options: { Width: 700, Height: 800, Center: True }
+_settings := Concatenate(_settings, [ Join
+
+    , { HiRes: { Width: 700, Height: 800, Center: True }
+      , LoRes: { Width: 700, Height: 800, Center: True }
       , Windows: [ "Todoist" ] }
 
-    , { Options: { Width: 800, Height: 500, Center: True }
+    , { HiRes: { Width: 800, Height: 500, Center: True }
+      , LoRes: { Width: 800, Height: 500, Center: True }
       , Windows: [ "SyncBackPro" ] }
 
-    , { Options: { Width: 750, Height: 500, Center: True }
+    , { HiRes: { Width: 750, Height: 500, Center: True }
+      , LoRes: { Width: 750, Height: 500, Center: True }
       , Windows: [ "Manage Stickies" ] }
 
-    , { Options: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
-      , Windows: [ { Title: "Task Manager", Except: "Task Manager - Google Chrome" } ] }
+    , { HiRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
+      , LoRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
+      , Windows: [ "Task Manager" ] }
 
-    , { Options: { Width: 650, Height: 600, Center: True }
+    , { HiRes: { Width: 650, Height: 600, Center: True }
+      , LoRes: { Width: 650, Height: 600, Center: True }
       , Windows: [ "Open Broadcaster Software" ] }
 
-    , { Options: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
+    , { HiRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
+      , LoRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
       , Windows: [ "Friends" ] } ; Steam
 
-    , { Options: { Center: True }
+    , { HiRes: { Center: True }
+      , LoRes: { Center: True }
       , Windows: [ "Calculator"
                  , "Command Prompt"
                  , "IrfanView"
@@ -139,11 +153,12 @@ CenterActiveWindow:
 Act(settings, filter = "") {
     global _screen
     for key, group in settings {
+        options := _screen.LoRes ? group.LoRes : group.HiRes
         for key, window in group.Windows {
             title := window.Title ? window.Title : window
             except := window.Except ? window.Except : ""
             if (!filter || (InStr(filter, title) > 0 && (!except || InStr(filter, except) == 0))) {
-                UpdateWindow(title, except, group.Options)
+                UpdateWindow(title, except, options)
                 if (filter) {
                     match := True
                     break
@@ -163,17 +178,9 @@ UpdateWindow(title, except, options) {
     if (!window) {
         return
     }
-    loResLeft := options.LoResLeft ? options.LoResLeft : - options.LoResRight
-    left := options.Left ? options.Left : - options.Right
-    left := (_screen.LoRes && loResLeft) ? loResLeft : left
-    loResTop := options.LoResTop ? options.LoResTop : - options.LoResBottom
-    top := options.Top ? options.Top : - options.Bottom
-    top := (_screen.LoRes && loResTop) ? loResTop : top
-    width := (_screen.LoRes && options.LoResWidth) ? options.LoResWidth : options.Width
-    height := (_screen.LoRes && options.LoResHeight) ? options.LoResHeight : options.Height
-    center := (_screen.LoRes && options.LoResCenter) ? options.LoResCenter : options.Center
-    max := (_screen.LoRes && options.LoResMax) ? options.LoResMax : options.Max
-    SetWindowPositionAndSize(title, except, left, top, width, height, center, max)
+    left := options.Left ? options.Left : -options.Right
+    top := options.Top ? options.Top : -options.Bottom
+    SetWindowPositionAndSize(title, except, left, top, options.Width, options.Height, options.Center, options.Max)
     if (window.Minimized) {
         WinMinimize % title
     }
@@ -220,12 +227,15 @@ GetWindowPositionAndSize(title = "", except = "") {
     return { Left: x, Top: y, Width: width, Height: height, Maximized: minMax == 1, Minimized: minMax == -1 }
 }
 
-GetScreen(monitor = "") {
-    if (!monitor) {
-        SysGet monitor, MonitorPrimary
+GetScreen(monitorNumber = "") {
+    if (!monitorNumber) {
+        SysGet monitorNumber, MonitorPrimary
     }
-    SysGet workArea, MonitorWorkArea, %monitor%
-    return { Width: workAreaRight - workAreaLeft, Height: workAreaBottom - workAreaTop, LoRes: (workAreaRight - workAreaLeft) <= 1600 }
+    SysGet monitor, Monitor, %monitorNumber%
+    SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
+    return { LoRes: monitorBottom < 1440
+           , Width: monitorWorkAreaRight - monitorWorkAreaLeft
+           , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
 }
 
 Concatenate(arrays*) {
