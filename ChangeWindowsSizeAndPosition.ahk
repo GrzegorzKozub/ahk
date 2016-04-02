@@ -115,6 +115,8 @@ _settings := Concatenate(_settings, [ Join
                  , "Command Prompt"
                  , "IrfanView"
                  , "Microsoft Security Essentials"
+                 , "MSI Afterburner"
+                 , "RivaTunerStatisticsServer"
                  , "Stickies"
                  , "Web Platform Installer" ] } ] )
 
