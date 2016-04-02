@@ -2,7 +2,7 @@
 
 _settings := [ Join
 
-    , { Options: { Width: 1650, Height: 1000, Max: True, LoResMax: True, Center: True }
+    , { Options: { Width: 1650, Height: 1000, Max: True, Center: True }
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
                  , "Release Management" ] }
@@ -11,7 +11,7 @@ _settings := [ Join
       , Windows: [ "GVIM"
                  , "Visual Studio Code" ] }
 
-    , { Options: { Width: 1500, Height: 1000, LoResMax: True, Center: True }
+    , { Options: { Width: 1500, Height: 1000, Center: True }
       , Windows: [ "BareTail"
                  , "Console"
                  , "Developer Tools" ; Chrome
@@ -32,11 +32,11 @@ _settings := [ Join
                  , "Internet Explorer"
                  , "Word" ] }
 
-    , { Options: { Width: 1300, Height: 900, LoResMax: True, Center: True }
+    , { Options: { Width: 1300, Height: 900, Center: True }
       , Windows: [ "Spotify"
                  , "Steam" ] }
 
-    , { Options: { Width: 1200, Height: 850, LoResMax: True, Center: True }
+    , { Options: { Width: 1200, Height: 850, Center: True }
       , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
@@ -172,7 +172,7 @@ UpdateWindow(title, except, options) {
     width := (_screen.LoRes && options.LoResWidth) ? options.LoResWidth : options.Width
     height := (_screen.LoRes && options.LoResHeight) ? options.LoResHeight : options.Height
     center := (_screen.LoRes && options.LoResCenter) ? options.LoResCenter : options.Center
-    max := (_screen.LoRes && options.LoResMax) ? options.LoResMax : options.Max
+    max := options.Max
     SetWindowPositionAndSize(title, except, left, top, width, height, center, max)
     if (window.Minimized) {
         WinMinimize % title
