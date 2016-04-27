@@ -41,7 +41,8 @@ _settings := [ Join
 
     , { HiRes: { Width: 1200, Height: 850, Center: True }
       , LoRes: { Width: 1200, Height: 850, Center: True }
-      , Windows: [ "Event Viewer"
+      , Windows: [ "Battle.net"
+                 , "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
