@@ -94,9 +94,9 @@ _settings := Concatenate(_settings, [ Join
       , LoRes: { Width: 800, Height: 500, Center: True }
       , Windows: [ "SyncBackPro" ] }
 
-    , { HiRes: { Width: 750, Height: 500, Center: True }
-      , LoRes: { Width: 750, Height: 500, Center: True }
-      , Windows: [ "Manage Stickies" ] }
+    , { HiRes: { Center: True }
+      , LoRes: { Center: True }
+      , Windows: [ "Manage stickies" ] }
 
     , { HiRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , LoRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
