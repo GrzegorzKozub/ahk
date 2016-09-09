@@ -49,6 +49,7 @@ _settings := [ Join
                  , "LOOT"
                  , "Mod Organizer"
                  , "NVIDIA Control Panel"
+                 , "Origin"
                  , "Pogoda"
                  , "Task Scheduler"
                  , "Total Commander"
