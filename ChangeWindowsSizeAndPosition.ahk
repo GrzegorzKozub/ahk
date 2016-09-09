@@ -86,6 +86,10 @@ _settings := Concatenate(_settings, [ Join
 
 _settings := Concatenate(_settings, [ Join
 
+    , { HiRes: { Width: 850, Height: 700, Center: True }
+      , LoRes: { Width: 850, Height: 700, Center: True }
+      , Windows: [ "OBS" ] }
+
     , { HiRes: { Width: 700, Height: 800, Center: True }
       , LoRes: { Width: 700, Height: 800, Center: True }
       , Windows: [ "Todoist" ] }
