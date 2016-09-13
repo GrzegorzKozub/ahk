@@ -54,6 +54,7 @@ _settings := [ Join
                  , "Task Scheduler"
                  , "Total Commander"
                  , "Settings"
+                 , "Uplay"
                  , "WinSCP" ] } ]
 
 _settings := Concatenate(_settings, [ Join
