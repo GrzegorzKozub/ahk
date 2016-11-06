@@ -99,10 +99,6 @@ _settings := Concatenate(_settings, [ Join
       , LoRes: { Width: 800, Height: 500, Center: True }
       , Windows: [ "SyncBackPro" ] }
 
-    , { HiRes: { Center: True }
-      , LoRes: { Center: True }
-      , Windows: [ "Manage stickies" ] }
-
     , { HiRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , LoRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , Windows: [ "Task Manager" ] }
@@ -113,14 +109,11 @@ _settings := Concatenate(_settings, [ Join
 
     , { HiRes: { Center: True }
       , LoRes: { Center: True }
-      , Windows: [ "Calculator"
-                 , "Command Prompt"
-                 , "IrfanView"
-                 , "Microsoft Security Essentials"
+      , Windows: [ "IrfanView"
+                 , "Manage Stickies"
                  , "MSI Afterburner"
                  , "RivaTunerStatisticsServer"
-                 , "Stickies"
-                 , "Web Platform Installer" ] } ] )
+                 , "Stickies" ] } ] )
 
 ; Main
 
