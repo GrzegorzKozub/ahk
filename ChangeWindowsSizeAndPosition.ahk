@@ -36,8 +36,7 @@ _settings := [ Join
 
     , { HiRes: { Width: 1500, Height: 1000, Center: True }
       , LoRes: { Width: 1300, Height: 900, Center: True }
-      , Windows: [ "Spotify"
-                 , "Steam" ] }
+      , Windows: [ "Steam" ] }
 
     , { HiRes: { Width: 1200, Height: 850, Center: True }
       , LoRes: { Width: 1200, Height: 850, Center: True }
@@ -107,10 +106,6 @@ _settings := Concatenate(_settings, [ Join
     , { HiRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , LoRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
       , Windows: [ "Task Manager" ] }
-
-    , { HiRes: { Width: 650, Height: 600, Center: True }
-      , LoRes: { Width: 650, Height: 600, Center: True }
-      , Windows: [ "Open Broadcaster Software" ] }
 
     , { HiRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
       , LoRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
