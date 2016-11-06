@@ -73,7 +73,7 @@ _settings := Concatenate(_settings, [ Join
 
     , { HiRes: { Width: 900, Height: 600, Center: True }
       , LoRes: { Width: 900, Height: 600, Center: True }
-      , Windows: [ { Title: "C:\Users\", Except: "Notepad" } ; 7-Zip
+      , Windows: [ { Title: "C:\Users\" } ; 7-Zip
                  , "Deluge"
                  , "KeePass"
                  , "Lister" ; Total Commander
