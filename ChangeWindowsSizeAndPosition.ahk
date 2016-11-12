@@ -230,9 +230,7 @@ GetScreen(monitorNumber = "") {
     }
     SysGet monitor, Monitor, %monitorNumber%
     SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
-    return { LoRes: monitorBottom < 1440
-           , Width: monitorWorkAreaRight - monitorWorkAreaLeft
-           , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+    return { LoRes: monitorBottom < 1440, Width: monitorWorkAreaRight - monitorWorkAreaLeft, Height: monitorWorkAreaBottom - monitorWorkAreaTop }
 }
 
 Concatenate(arrays*) {
