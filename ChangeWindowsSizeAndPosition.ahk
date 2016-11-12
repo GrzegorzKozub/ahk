@@ -105,15 +105,7 @@ _settings := Concatenate(_settings, [ Join
 
     , { HiRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
       , LoRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
-      , Windows: [ "Friends" ] } ; Steam
-
-    , { HiRes: { Center: True }
-      , LoRes: { Center: True }
-      , Windows: [ "IrfanView"
-                 , "Manage Stickies"
-                 , "MSI Afterburner"
-                 , "RivaTunerStatisticsServer"
-                 , "Stickies" ] } ] )
+      , Windows: [ "Friends" ] } ] ) ; Steam
 
 ; Main
 
