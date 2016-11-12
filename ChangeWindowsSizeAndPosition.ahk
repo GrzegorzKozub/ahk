@@ -146,7 +146,17 @@ GetScreen() {
     SysGet monitorNumber, MonitorPrimary
     SysGet monitor, Monitor, %monitorNumber%
     SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
-    return { LoRes: monitorBottom < 1440, Width: monitorWorkAreaRight - monitorWorkAreaLeft, Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+    return { Dpi: GetDpi(), LoRes: monitorBottom < 1440, Width: monitorWorkAreaRight - monitorWorkAreaLeft, Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+}
+
+GetDpi() {
+    ; 96 (for 100%), 120, 144, 168, 192 (for 200%), ...
+    RegRead, dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
+    if (ErrorLevel = 1) {
+        return 96
+    } else {
+        return dpi
+    }
 }
 
 FixWindow(title) {
