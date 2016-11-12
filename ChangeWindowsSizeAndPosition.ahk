@@ -3,7 +3,7 @@
 _settings := [ Join
 
     , { HiRes: { Width: 2200, Height: 1300, Center: True }
-      , LoRes: { Width: 1650, Height: 1000, Center: True, Max: True }
+      , LoRes: { Width: 1650, Height: 1000, Center: True, Maximize: True }
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
                  , "Release Management" ] }
@@ -73,7 +73,7 @@ _settings := Concatenate(_settings, [ Join
 
     , { HiRes: { Width: 900, Height: 600, Center: True }
       , LoRes: { Width: 900, Height: 600, Center: True }
-      , Windows: [ { Title: "C:\Users\" } ; 7-Zip
+      , Windows: [ "C:\Users\" ; 7-Zip
                  , "Deluge"
                  , "KeePass"
                  , "Lister" ; Total Commander
@@ -120,73 +120,81 @@ _settings := Concatenate(_settings, [ Join
 SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
-HotKey ^#w, FixWindows
-HotKey ^#a, FixActiveWindow
+HotKey ^#w, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
-_screen := GetScreen()
 return
 
 ; Labels
 
-FixWindows:
-    _screen := GetScreen()
-    Act(_settings)
-    return
-
 FixActiveWindow:
     _screen := GetScreen()
     WinGetActiveTitle activeWindowTitle
-    Act(_settings, activeWindowTitle)
+    FixWindow(activeWindowTitle)
     return
 
 CenterActiveWindow:
     _screen := GetScreen()
-    WinGetActiveTitle title
-    UpdateWindow(title, "", { Center: True })
+    WinGetActiveTitle activeWindowTitle
+    CenterWindow(activeWindowTitle)
     return
 
 ; Functions
 
-Act(settings, filter = "") {
-    global _screen
-    for key, group in settings {
-        options := _screen.LoRes ? group.LoRes : group.HiRes
-        for key, window in group.Windows {
-            title := window.Title ? window.Title : window
-            except := window.Except ? window.Except : ""
-            if (!filter || (InStr(filter, title) > 0 && (!except || InStr(filter, except) == 0))) {
-                UpdateWindow(title, except, options)
-                if (filter) {
-                    match := True
-                    break
-                }
-            }
-        }
-        if (match) {
-            match := False
-            break
+Concatenate(arrays*) {
+    result := Object()
+    for key, array in arrays {
+        for key, element in array {
+            result.Insert(element)
         }
     }
+    return result
 }
 
-UpdateWindow(title, except, options) {
-    global _screen
-    window := GetWindowPositionAndSize(title, except)
+GetScreen() {
+    SysGet monitorNumber, MonitorPrimary
+    SysGet monitor, Monitor, %monitorNumber%
+    SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
+    return { LoRes: monitorBottom < 1440, Width: monitorWorkAreaRight - monitorWorkAreaLeft, Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+}
+
+FixWindow(title) {
+    options := GetOptions(title)
+    if (!options) {
+        return
+    }
+    window := GetWindow(title)
     if (!window) {
         return
     }
+    WinRestore %title%
     left := options.Left ? options.Left : -options.Right
     top := options.Top ? options.Top : -options.Bottom
-    SetWindowPositionAndSize(title, except, left, top, options.Width, options.Height, options.Center, options.Max)
-    if (window.Minimized) {
-        WinMinimize % title
+    MoveWindow(window, title, left, top, options.Width, options.Height)
+    if (options.Center) {
+        CenterWindow(title)
+    }
+    if (options.Maximize) {
+        WinMaximize %title%
     }
 }
 
-SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", height = "", center = False, max = False) {
+GetOptions(title) {
+    global _settings
     global _screen
-    WinRestore %title%,, %except%
-    window := GetWindowPositionAndSize(title, except)
+    for key, group in _settings {
+        options := _screen.LoRes ? group.LoRes : group.HiRes
+        for key, window in group.Windows {
+            find := window.Find ? window.Find : window
+            except := window.Except ? window.Except : ""
+            if (InStr(title, find) > 0 && (!except || InStr(title, except) == 0)) {
+                return options
+            }
+        }
+    }
+}
+
+MoveWindow(window, title, left = "", top = "", width = "", height = "") {
+    global _screen
     if (!width) {
         width := window.Width
     }
@@ -203,43 +211,24 @@ SetWindowPositionAndSize(title, except = "", left = "", top = "", width = "", he
     } else if (top < 0) {
         top := _screen.Height - (height + Abs(top))
     }
-    WinMove %title%,, %left%, %top%, %width%, %height%, %except%
-    if (center) {
-        WinMove %title%,, (_screen.Width / 2) - (width / 2), (_screen.Height / 2) - (height / 2),,, %except%
-    }
-    if (max) {
-        WinMaximize %title%,, %except%
-    }
+    WinMove %title%,, %left%, %top%, %width%, %height%
 }
 
-GetWindowPositionAndSize(title = "", except = "") {
-    if (!title) {
-        WinGetActiveTitle title
+CenterWindow(title) {
+    global _screen
+    window := GetWindow(title)
+    if (!window) {
+        return
     }
-    WinGetPos x, y, width, height, %title%,, %except%
+    WinMove %title%,, (_screen.Width / 2) - (window.Width / 2), (_screen.Height / 2) - (window.Height / 2)
+}
+
+GetWindow(title) {
+    WinGetPos x, y, width, height, %title%
     if (!x) {
         return
     }
-    WinGet minMax, MinMax, %title%,, %except%
-    return { Left: x, Top: y, Width: width, Height: height, Maximized: minMax == 1, Minimized: minMax == -1 }
-}
-
-GetScreen(monitorNumber = "") {
-    if (!monitorNumber) {
-        SysGet monitorNumber, MonitorPrimary
-    }
-    SysGet monitor, Monitor, %monitorNumber%
-    SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
-    return { LoRes: monitorBottom < 1440, Width: monitorWorkAreaRight - monitorWorkAreaLeft, Height: monitorWorkAreaBottom - monitorWorkAreaTop }
-}
-
-Concatenate(arrays*) {
-    result := Object()
-    for key, array in arrays {
-        for key, element in array {
-            result.Insert(element)
-        }
-    }
-    return result
+    WinGet minMax, MinMax, %title%
+    return { Left: x, Top: y, Width: width, Height: height }
 }
 
