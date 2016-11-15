@@ -13,12 +13,7 @@ _settings := [ Join
                  , { Left: 200, Top: 50, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "BareTail"
-                 , "Developer Tools" ; Chrome
-                 , "Edge"
-                 , "F12 Developer Tools" ; Edge
-                 , "Google Chrome"
                  , "JetBrains dotPeek"
-                 , "Mozilla Firefox"
                  , "paint.net"
                  , "Remote Desktop Connection"
                  , "SourceTree"
@@ -66,25 +61,38 @@ _settings := Concatenate(_settings, [ Join
     , { Options: [ { Width: 1296, Height: 832, Center: True } ]
       , Windows: [ "VLC media player" ] }
 
-    , { Options: [ { Width: 1250, Height: 850, Center: True }
-                 , { Width: 1150, Height: 750, Center: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
-                 , { Width: 1600, Height: 1000, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
-      , Windows: [ "Total Commander" ] }
-
     , { Options: [ { Width: 800, Height: 600, Center: True }
                  , { Width: 1200, Height: 800, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "SyncBackPro" ] } ] )
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1200, Left: 75, Top: 75, Bottom: 75 }
-                 , { Width: 900, Left: 75, Top: 75, Bottom: 75, Screens: [ { Resolution: 1080, Dpi: 96 } ] } ]
-      , Windows: [ "SumatraPDF" ] }
+    , { Options: [ { Width: 1600, Height: 1200, Left: 25, Top: 25 }
+                 , { Width: 1400, Height: 950, Left: 25, Top: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+                 , { Width: 1900, Height: 1200, Left: 25, Top: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "Developer Tools" ; Chrome
+                 , "Edge"
+                 , "F12 Developer Tools" ; Edge
+                 , "Google Chrome" ] }
+
+    , { Options: [ { Width: 1200, Left: 75, Top: 150, Bottom: 25 }
+                 , { Width: 900, Left: 75, Top: 125, Bottom: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+                 , { Width: 1200, Left: 75, Top: 75, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "SumatraPDF" ] } ] )
+
+_settings := Concatenate(_settings, [ Join
 
     , { Options: [ { Width: 1456, Height: 984, Center: True }
                  , { Width: 1321, Height: 879, Center: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
                  , { Width: 1842, Height: 1176, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
-      , Windows: [ "GVIM" ] }
+      , Windows: [ "GVIM" ] } ] )
+
+_settings := Concatenate(_settings, [ Join
+
+    , { Options: [ { Width: 1300, Height: 900, Right: 100, Top: 125 }
+                 , { Width: 1150, Height: 800, Right: 75, Top: 75, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+                 , { Width: 1450, Height: 1000, Right: 150, Top: 150, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "Total Commander" ] }
 
     , { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25 }
                  , { Width: 1061, Height: 699, Right: 25, Bottom: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
