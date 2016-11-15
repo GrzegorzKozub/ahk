@@ -2,47 +2,39 @@
 
 _settings := [ Join
 
-    , { HiRes: { Width: 2200, Height: 1300, Center: True }
-      , LoRes: { Width: 1650, Height: 1000, Center: True, Maximize: True }
+    , { Options: [ { Left: 150, Top: 50, Stretch: True } ; 2560 x 1440 at 96 dpi
+                 , { Left: 100, Top: 25, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
+                                                                 , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
-                 , "Release Management" ] }
-
-    , { HiRes: { Width: 1636, Height: 984, Center: True }
-      , LoRes: { Width: 1636, Height: 984, Center: True }
-      , Windows: [ "GVIM"
                  , "Visual Studio Code" ] }
 
-    , { HiRes: { Width: 1900, Height: 1200, Center: True }
-      , LoRes: { Width: 1500, Height: 1000, Center: True }
+    , { Options: [ { Left: 300, Top: 100, Stretch: True }
+                 , { Left: 200, Top: 50, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
+                                                                 , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "BareTail"
                  , "Developer Tools" ; Chrome
                  , "Edge"
-                 , "Excel"
                  , "F12 Developer Tools" ; Edge
-                 , "Git Gui"
                  , "Google Chrome"
                  , "JetBrains dotPeek"
-                 , "Mozilla Firefox",
+                 , "Mozilla Firefox"
                  , "paint.net"
-                 , "PowerPoint"
                  , "Remote Desktop Connection"
                  , "SourceTree"
-                 , "SQL Server Profiler"
-                 , "SumatraPDF"
-                 , "Visio"
-                 , "Internet Explorer"
-                 , "Word" ] }
+                 , "WinSnap" ] }
 
-    , { HiRes: { Width: 1500, Height: 1000, Center: True }
-      , LoRes: { Width: 1300, Height: 900, Center: True }
+    , { Options: [ { Left: 450, Top: 150, Stretch: True }
+                 , { Left: 300, Top: 75, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] } ]
       , Windows: [ "Steam" ] }
 
-    , { HiRes: { Width: 1200, Height: 850, Center: True }
-      , LoRes: { Width: 1200, Height: 850, Center: True }
+    , { Options: [ { Left: 600, Top: 200, Stretch: True }
+                 , { Left: 400, Top: 100, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
+                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Battle.net"
                  , "Event Viewer"
                  , "Fiddler Web Debugger"
+                 , "GOG Galaxy"
                  , "Hyper-V Manager"
                  , "Internet Information Services (IIS) Manager"
                  , "LOOT"
@@ -51,60 +43,59 @@ _settings := [ Join
                  , "Origin"
                  , "Pogoda"
                  , "Task Scheduler"
-                 , "Total Commander"
                  , "Settings"
-                 , "Uplay"
-                 , "WinSCP" ] } ]
+                 , "Uplay" ] }
 
-_settings := Concatenate(_settings, [ Join
-
-    , { HiRes: { Width: 1253, Height: 959, Right: 25, Bottom: 25 }
-      , LoRes: { Width: 1013, Height: 779, Right: 25, Bottom: 25 }
-      , Windows: [ "~" ] } ; ConEmu
-
-    , { HiRes: { Width: 975, Height: 650, Center: True }
-      , LoRes: { Width: 975, Height: 650, Center: True }
-      , Windows: [ "WinSnap" ] }
-
-    , { HiRes: { Width: 900, Height: 900, Center: True }
-      , LoRes: { Width: 900, Height: 900, Center: True }
-      , Windows: [ "Skype"
-                 , "Slack" ] }
-
-    , { HiRes: { Width: 900, Height: 600, Center: True }
-      , LoRes: { Width: 900, Height: 600, Center: True }
+    , { Options: [ { Left: 750, Top: 250, Stretch: True }
+                 , { Left: 500, Top: 125, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
+                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "C:\Users\" ; 7-Zip
                  , "Deluge"
                  , "KeePass"
                  , "Lister" ; Total Commander
                  , "Notepad"
+                 , "OBS"
                  , "Oracle VM VirtualBox Manager"
                  , "Rapid Environment Editor"
                  , "Registry Editor"
                  , "Resource Hacker"
-                 , "VLC media player"
-                 , "WinRAR" ] } ] )
+                 , "WinRAR" ] } ]
 
 _settings := Concatenate(_settings, [ Join
 
-    , { HiRes: { Width: 850, Height: 700, Center: True }
-      , LoRes: { Width: 850, Height: 700, Center: True }
-      , Windows: [ "OBS" ] }
+    , { Options: [ { Width: 1296, Height: 832, Center: True } ]
+      , Windows: [ "VLC media player" ] }
 
-    , { HiRes: { Width: 700, Height: 800, Center: True }
-      , LoRes: { Width: 700, Height: 800, Center: True }
-      , Windows: [ "Todoist" ] }
+    , { Options: [ { Width: 1250, Height: 850, Center: True }
+                 , { Width: 1150, Height: 750, Center: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+                 , { Width: 1600, Height: 1000, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "Total Commander" ] }
 
-    , { HiRes: { Width: 800, Height: 500, Center: True }
-      , LoRes: { Width: 800, Height: 500, Center: True }
-      , Windows: [ "SyncBackPro" ] }
+    , { Options: [ { Width: 800, Height: 600, Center: True }
+                 , { Width: 1200, Height: 800, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "SyncBackPro" ] } ] )
 
-    , { HiRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
-      , LoRes: { Width: 660, Height: 600, Right: 25, Bottom: 25 }
+_settings := Concatenate(_settings, [ Join
+
+    , { Options: [ { Width: 1200, Left: 75, Top: 75, Bottom: 75 }
+                 , { Width: 900, Left: 75, Top: 75, Bottom: 75, Screens: [ { Resolution: 1080, Dpi: 96 } ] } ]
+      , Windows: [ "SumatraPDF" ] }
+
+    , { Options: [ { Width: 1456, Height: 984, Center: True }
+                 , { Width: 1321, Height: 879, Center: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+                 , { Width: 1842, Height: 1176, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "GVIM" ] }
+
+    , { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25 }
+                 , { Width: 1061, Height: 699, Right: 25, Bottom: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+                 , { Width: 1412, Height: 1036, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "~" ] } ; ConEmu
+
+    , { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25 }
+                 , { Width: 1000, Height: 850, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Task Manager" ] }
 
-    , { HiRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
-      , LoRes: { Width: 233, Height: 450, Right: 25, Bottom: 25 }
+    , { Options: [ { Width: 250, Height: 450, Right: 25, Bottom: 25 } ]
       , Windows: [ "Friends" ] } ] ) ; Steam
 
 ; Main
@@ -146,17 +137,16 @@ GetScreen() {
     SysGet monitorNumber, MonitorPrimary
     SysGet monitor, Monitor, %monitorNumber%
     SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
-    return { Dpi: GetDpi(), LoRes: monitorBottom < 1440, Width: monitorWorkAreaRight - monitorWorkAreaLeft, Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+    return { Resolution: monitorBottom
+        , Dpi: GetDpi()
+        , Width: monitorWorkAreaRight - monitorWorkAreaLeft
+        , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
 }
 
 GetDpi() {
-    ; 96 (for 100%), 120, 144, 168, 192 (for 200%), ...
+    ; Returns 96 (for 100%), 120, 144, 168, 192 (for 200%), ...
     RegRead, dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
-    if (ErrorLevel = 1) {
-        return 96
-    } else {
-        return dpi
-    }
+    return (ErrorLevel = 1) ? 96 : dpi
 }
 
 FixWindow(title) {
@@ -169,9 +159,7 @@ FixWindow(title) {
         return
     }
     WinRestore %title%
-    left := options.Left ? options.Left : -options.Right
-    top := options.Top ? options.Top : -options.Bottom
-    MoveWindow(window, title, left, top, options.Width, options.Height)
+    MoveWindow(window, title, options)
     if (options.Center) {
         CenterWindow(title)
     }
@@ -184,36 +172,59 @@ GetOptions(title) {
     global _settings
     global _screen
     for key, group in _settings {
-        options := _screen.LoRes ? group.LoRes : group.HiRes
         for key, window in group.Windows {
             find := window.Find ? window.Find : window
             except := window.Except ? window.Except : ""
             if (InStr(title, find) > 0 && (!except || InStr(title, except) == 0)) {
-                return options
+                for key, options in group.Options {
+                    for key, screen in options.Screens {
+                        if (screen.Resolution == _screen.Resolution && screen.Dpi == _screen.Dpi) {
+                            return options
+                        }
+                    }
+                }
+                return group.Options[1]
             }
         }
     }
 }
 
-MoveWindow(window, title, left = "", top = "", width = "", height = "") {
+MoveWindow(window, title, options) {
     global _screen
-    if (!width) {
-        width := window.Width
+    if (!options.Left) {
+        options.Left := -options.Right
     }
-    if (!height) {
-        height := window.Height
+    if (!options.Top) {
+        options.Top := -options.Bottom
     }
-    if (!left) {
-        left := window.Left
-    } else if (left < 0) {
-        left := _screen.Width - (width + Abs(left))
+    options.Width := GetSize(options.Width, window.Width, _screen.Width, options.Left, options.Right, options.stretch)
+    options.Height := GetSize(options.Height, window.Height, _screen.Height, options.Top, options.Bottom, options.stretch)
+    options.Left := GetMargin(options.Left, window.Left, options.Width, _screen.Width)
+    options.Top := GetMargin(options.Top, window.Top, options.Height, _screen.Height)
+    WinMove % title,, options.Left, options.Top, options.Width, options.Height
+}
+
+GetSize(size, windowSize, screenSize, startMargin, endMargin, stretch) {
+    if (size) {
+        return size
     }
-    if (!top) {
-        top := window.Top
-    } else if (top < 0) {
-        top := _screen.Height - (height + Abs(top))
+    if (stretch) {
+        return screenSize - (2 * startMargin)
+    } else if (endMargin) {
+        return screenSize - startMargin - endMargin
+    } else {
+        return windowSize
     }
-    WinMove %title%,, %left%, %top%, %width%, %height%
+}
+
+GetMargin(margin, windowMargin, size, screenSize) {
+    if (!margin) {
+        return windowMargin
+    } else if (margin < 0) {
+        return screenSize - (size + Abs(margin))
+    } else {
+        return margin
+    }
 }
 
 CenterWindow(title) {
