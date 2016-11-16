@@ -2,16 +2,14 @@
 
 _settings := [ Join
 
-    , { Options: [ { Left: 150, Top: 50, Stretch: True } ; 2560 x 1440 at 96 dpi
-                 , { Left: 100, Top: 25, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
-                                                                 , { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Left: 100, Top: 25, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
                  , "Visual Studio Code" ] }
 
-    , { Options: [ { Left: 300, Top: 100, Stretch: True }
-                 , { Left: 200, Top: 50, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
-                                                                 , { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Left: 200, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "BareTail"
                  , "JetBrains dotPeek"
                  , "paint.net"
@@ -19,13 +17,12 @@ _settings := [ Join
                  , "SourceTree"
                  , "WinSnap" ] }
 
-    , { Options: [ { Left: 450, Top: 150, Stretch: True }
+    , { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Left: 300, Top: 75, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] } ]
       , Windows: [ "Steam" ] }
 
-    , { Options: [ { Left: 600, Top: 200, Stretch: True }
-                 , { Left: 400, Top: 100, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
-                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Left: 400, Top: 100, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Battle.net"
                  , "Event Viewer"
                  , "Fiddler Web Debugger"
@@ -41,10 +38,9 @@ _settings := [ Join
                  , "Settings"
                  , "Uplay" ] }
 
-    , { Options: [ { Left: 750, Top: 250, Stretch: True }
-                 , { Left: 500, Top: 125, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 }
-                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
-      , Windows: [ "C:\Users\" ; 7-Zip
+    , { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Left: 500, Top: 125, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "C:\Users\Grzegorz\" ; 7-Zip
                  , "Deluge"
                  , "KeePass"
                  , "Lister" ; Total Commander
@@ -58,52 +54,48 @@ _settings := [ Join
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1296, Height: 832, Center: True } ]
+    , { Options: [ { Width: 1296, Height: 832, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 }
+                                                                      , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "VLC media player" ] }
 
-    , { Options: [ { Width: 800, Height: 600, Center: True }
+    , { Options: [ { Width: 800, Height: 600, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1200, Height: 800, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "SyncBackPro" ] } ] )
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1600, Height: 1200, Left: 25, Top: 25 }
-                 , { Width: 1400, Height: 950, Left: 25, Top: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+    , { Options: [ { Width: 1600, Height: 1200, Left: 25, Top: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1900, Height: 1200, Left: 25, Top: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
-      , Windows: [ "Developer Tools" ; Chrome
+      , Windows: [ "Developer Tools" ; Chrome and Edge
                  , "Edge"
-                 , "F12 Developer Tools" ; Edge
                  , "Google Chrome" ] }
 
-    , { Options: [ { Width: 1200, Left: 75, Top: 150, Bottom: 25 }
-                 , { Width: 900, Left: 75, Top: 125, Bottom: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+    , { Options: [ { Width: 1200, Left: 75, Top: 150, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1200, Left: 75, Top: 75, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "SumatraPDF" ] } ] )
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1456, Height: 984, Center: True }
-                 , { Width: 1321, Height: 879, Center: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+    , { Options: [ { Width: 1456, Height: 984, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1842, Height: 1176, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "GVIM" ] } ] )
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1300, Height: 900, Right: 100, Top: 125 }
-                 , { Width: 1150, Height: 800, Right: 75, Top: 75, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+    , { Options: [ { Width: 1300, Height: 900, Right: 100, Top: 125, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1450, Height: 1000, Right: 150, Top: 150, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Total Commander" ] }
 
-    , { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25 }
-                 , { Width: 1061, Height: 699, Right: 25, Bottom: 25, Screens: [ { Resolution: 1080, Dpi: 96 } ] }
+    , { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1412, Height: 1036, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "~" ] } ; ConEmu
 
-    , { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25 }
+    , { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                  , { Width: 1000, Height: 850, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Task Manager" ] }
 
-    , { Options: [ { Width: 250, Height: 450, Right: 25, Bottom: 25 } ]
+    , { Options: [ { Width: 250, Height: 450, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 }
+                                                                              , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Friends" ] } ] ) ; Steam
 
 ; Main
@@ -153,7 +145,7 @@ GetScreen() {
 
 GetDpi() {
     ; Returns 96 (for 100%), 120, 144, 168, 192 (for 200%), ...
-    RegRead, dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
+    RegRead dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
     return (ErrorLevel = 1) ? 96 : dpi
 }
 
@@ -191,10 +183,10 @@ GetOptions(title) {
                         }
                     }
                 }
-                return group.Options[1]
             }
         }
     }
+    MsgBox 48,, Window or screen not configured
 }
 
 MoveWindow(window, title, options) {
