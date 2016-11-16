@@ -3,13 +3,13 @@
 _settings := [ Join
 
     , { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Left: 100, Top: 25, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+                 , { Left: 125, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Microsoft SQL Server Management Studio"
                  , "Microsoft Visual Studio"
                  , "Visual Studio Code" ] }
 
-    , { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Left: 200, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
+                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "BareTail"
                  , "JetBrains dotPeek"
                  , "paint.net"
@@ -17,14 +17,18 @@ _settings := [ Join
                  , "SourceTree"
                  , "WinSnap" ] }
 
-    , { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Left: 300, Top: 75, Stretch: True, Screens: [ { Resolution: 1080, Dpi: 96 } ] } ]
+    , { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
+                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Steam" ] }
 
-    , { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Left: 400, Top: 100, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Left: 600, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
+                                                                  , { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Battle.net"
-                 , "Event Viewer"
+                 , "Uplay" ] }
+
+    , { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "Event Viewer"
                  , "Fiddler Web Debugger"
                  , "GOG Galaxy"
                  , "Hyper-V Manager"
@@ -35,11 +39,10 @@ _settings := [ Join
                  , "Origin"
                  , "Pogoda"
                  , "Task Scheduler"
-                 , "Settings"
-                 , "Uplay" ] }
+                 , "Settings" ] }
 
     , { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Left: 500, Top: 125, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+                 , { Left: 600, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "C:\Users\Grzegorz\" ; 7-Zip
                  , "Deluge"
                  , "KeePass"
@@ -64,26 +67,24 @@ _settings := Concatenate(_settings, [ Join
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1600, Height: 1200, Left: 25, Top: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Width: 1900, Height: 1200, Left: 25, Top: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Width: 1900, Left: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Developer Tools" ; Chrome and Edge
                  , "Edge"
                  , "Google Chrome" ] }
 
-    , { Options: [ { Width: 1200, Left: 75, Top: 150, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Width: 1200, Left: 75, Top: 75, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
-      , Windows: [ "SumatraPDF" ] } ] )
-
-_settings := Concatenate(_settings, [ Join
-
-    , { Options: [ { Width: 1456, Height: 984, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Width: 1842, Height: 1176, Center: True, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Width: 1456, Height: 1005, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Width: 1702, Height: 1112, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "GVIM" ] } ] )
 
 _settings := Concatenate(_settings, [ Join
 
-    , { Options: [ { Width: 1300, Height: 900, Right: 100, Top: 125, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                 , { Width: 1450, Height: 1000, Right: 150, Top: 150, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
+    , { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 }
+                                                                           , { Resolution: 1440, Dpi: 144 } ] } ]
+      , Windows: [ "SumatraPDF" ] }
+
+    , { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                 , { Width: 1500, Height: 1025, Right: 75, Top: 75, Screens: [ { Resolution: 1440, Dpi: 144 } ] } ]
       , Windows: [ "Total Commander" ] }
 
     , { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
