@@ -100,13 +100,13 @@ Setup( { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25, Screens:
        , Windows: [ "~" ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 1350, Height: 1150, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 1700, Height: 1400, Right: 25, Bottom: 25, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
+                  , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
 
 Setup( { Options: [ { Width: 250, Height: 450, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 }
                                                                                , { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 600, Height: 1100, Right: 25, Bottom: 25, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Width: 600, Height: 1100, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Friends" ] } ) ; Steam
 
 ; Main
