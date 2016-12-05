@@ -90,13 +90,13 @@ Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { 
        , Windows: [ "SumatraPDF" ] } )
 
 Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 1600, Height: 1100, Right: 100, Top: 100, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 2000, Height: 1350, Right: 125, Top: 125, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
+                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Total Commander" ] } )
 
 Setup( { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 1980, Height: 1091, Right: 50, Bottom: 50, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 2395, Height: 1358, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Width: 2056, Height: 1251, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
+                  , { Width: 2694, Height: 1608, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "~" ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
