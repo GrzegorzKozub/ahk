@@ -67,7 +67,7 @@ Setup( { Options: [ { Width: 1296, Height: 832, Center: True, Screens: [ { Resol
                   , { Width: 1312, Height: 910, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "VLC media player" ] } )
 
-Setup( { Options: [ { Width: 800, Height: 600, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+Setup( { Options: [ { Width: 900, Height: 600, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 1660, Height: 1000, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
                   , { Width: 2100, Height: 1400, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "SyncBackPro" ] } )
