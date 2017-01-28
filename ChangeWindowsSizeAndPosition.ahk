@@ -96,7 +96,7 @@ Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ {
 
 Setup( { Options: [ { Width: 1205, Height: 1019, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 2056, Height: 1251, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 2687, Height: 1587, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Width: 2695, Height: 1587, Center: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "~" ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
