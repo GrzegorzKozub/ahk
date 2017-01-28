@@ -81,7 +81,7 @@ Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { R
 
 Setup( { Options: [ { Width: 1456, Height: 1005, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 2477, Height: 1276, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 3080, Height: 1572, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Width: 3074, Height: 1567, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
 
 Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
