@@ -85,8 +85,8 @@ Setup( { Options: [ { Width: 1456, Height: 1005, Left: 75, Bottom: 75, Screens: 
        , Windows: [ "GVIM" ] } )
 
 Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
+                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 }
+                                                                                 , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "SumatraPDF" ] } )
 
 Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
