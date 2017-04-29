@@ -39,7 +39,8 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolutio
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
                                                                   , { Resolution: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "Event Viewer"
+       , Windows: [ "Defender"
+                  , "Event Viewer"
                   , "GOG Galaxy"
                   , "Hyper-V Manager"
                   , "Internet Information Services (IIS) Manager"
