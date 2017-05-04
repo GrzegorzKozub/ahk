@@ -80,7 +80,7 @@ Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { R
                   , "Edge"
                   , "Google Chrome" ] } )
 
-Setup( { Options: [ { Width: 1616, Height: 1005, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+Setup( { Options: [ { Width: 1611, Height: 1005, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 2462, Height: 1289, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
                   , { Width: 3074, Height: 1567, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
