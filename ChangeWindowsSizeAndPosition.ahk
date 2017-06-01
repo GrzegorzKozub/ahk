@@ -78,7 +78,8 @@ Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { R
                                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Developer Tools" ; Chrome and Edge
                   , "Edge"
-                  , "Google Chrome" ] } )
+                  , "Google Chrome"
+                  , "Pluralsight" ] } )
 
 Setup( { Options: [ { Width: 1611, Height: 1005, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 2462, Height: 1289, Center: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
