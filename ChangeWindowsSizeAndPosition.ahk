@@ -23,15 +23,16 @@ Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolutio
        , Windows: [ "Steam" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
-                                                                   , { Resolution: 1440, Dpi: 192 } ] } ]
+                                                                   , { Resolution: 1440, Dpi: 192 } ] }
+                  , { Left: 250, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Battle.net"
+                  , "GOG Galaxy"
                   , "Uplay" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Left: 250, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
                                                                   , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Fiddler Web Debugger"
-                  , "GOG Galaxy"
                   , "LOOT"
                   , "Mod Organizer"
                   , "Pogoda" ] } )
@@ -41,7 +42,6 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolutio
                                                                   , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Defender"
                   , "Event Viewer"
-                  , "GOG Galaxy"
                   , "Hyper-V Manager"
                   , "Internet Information Services (IIS) Manager"
                   , "NVIDIA Control Panel"
