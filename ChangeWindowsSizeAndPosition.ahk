@@ -25,7 +25,7 @@ Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolutio
 Setup( { Options: [ { Left: 600, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
                                                                    , { Resolution: 1440, Dpi: 192 } ] }
                   , { Left: 250, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "Battle.net"
+       , Windows: [ "Blizzard App"
                   , "GOG Galaxy"
                   , "Uplay" ] } )
 
