@@ -17,17 +17,13 @@ Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolutio
                   , "SourceTree"
                   , "WinSnap" ] } )
 
-Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
-                                                                   , { Resolution: 1440, Dpi: 192 } ] }
-                  , { Left: 250, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "Steam" ] } )
-
-Setup( { Options: [ { Left: 600, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 }
-                                                                   , { Resolution: 1440, Dpi: 192 } ] }
-                  , { Left: 250, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                  , { Width: 2560, Height: 1360, Center: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
+                  , { Width: 3200, Height: 1700, Center: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Blizzard App"
                   , "GOG Galaxy"
-                  , "Uplay" ] } )
+                  , "Origin"
+                  , "Steam" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Left: 250, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
@@ -45,7 +41,6 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolutio
                   , "Hyper-V Manager"
                   , "Internet Information Services (IIS) Manager"
                   , "NVIDIA Control Panel"
-                  , "Origin"
                   , "Registry Editor"
                   , "Task Scheduler"
                   , "Settings" ] } )
@@ -106,10 +101,10 @@ Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [
                   , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 250, Height: 450, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 }
-                                                                               , { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 600, Height: 1100, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "Friends" ] } ) ; Steam
+Setup( { Options: [ { Width: 320, Height: 500, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
+                  , { Width: 660, Height: 1000, Right: 50, Bottom: 50, Screens: [ { Resolution: 1440, Dpi: 192 }
+                                                                                , { Resolution: 1800, Dpi: 240 } ] } ]
+       , Windows: [ "Friends" ] } ) ; Blizzard App, GOG Galaxy, Steam
 
 ; Main
 
