@@ -11,6 +11,7 @@ Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolutio
                   , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 }
                                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
+                  , "Inkscape"
                   , "JetBrains dotPeek"
                   , "paint.net"
                   , "Remote Desktop Connection"
