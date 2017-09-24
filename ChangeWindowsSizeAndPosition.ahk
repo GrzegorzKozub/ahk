@@ -51,13 +51,16 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { Resolutio
                                                                    , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "C:\Users\Grzegorz\" ; 7-Zip
                   , "Deluge"
+                  , "Find Files" ; Total Commander
                   , "KeePass"
                   , "Lister" ; Total Commander
+                  , "Multi-Rename Tool" ; Total Commander
                   , "Notepad"
                   , "OBS"
                   , "Oracle VM VirtualBox Manager"
                   , "Rapid Environment Editor"
-                  , "Resource Hacker" ] } )
+                  , "Resource Hacker"
+                  , "Synchronize directories" ] } ) ; Total Commander
 
 Setup( { Options: [ { Width: 1296, Height: 832, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 1306, Height: 882, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
