@@ -24,7 +24,8 @@ Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolutio
        , Windows: [ "Blizzard App"
                   , "GOG Galaxy"
                   , "Origin"
-                  , "Steam" ] } )
+                  , "Steam"
+                  , "Uplay" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Left: 250, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
