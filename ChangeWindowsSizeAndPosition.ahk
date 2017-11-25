@@ -123,13 +123,13 @@ return
 ; Labels
 
 FixActiveWindow:
-    _screen := GetScreen()
+    _screens := GetScreens()
     WinGetActiveTitle activeWindowTitle
     FixWindow(activeWindowTitle)
     return
 
 CenterActiveWindow:
-    _screen := GetScreen()
+    _screens := GetScreens()
     WinGetActiveTitle activeWindowTitle
     CenterWindow(activeWindowTitle)
     return
@@ -144,14 +144,30 @@ Setup(options) {
     _settings.Insert(options)
 }
 
-GetScreen() {
-    SysGet monitorNumber, MonitorPrimary
-    SysGet monitor, Monitor, %monitorNumber%
-    SysGet monitorWorkArea, MonitorWorkArea, %monitorNumber%
-    return { Resolution: monitorBottom
-        , Dpi: GetDpi()
-        , Width: monitorWorkAreaRight - monitorWorkAreaLeft
-        , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+GetScreens() {
+    SysGet count, 80
+    screens := Object()
+    i := 1
+    while i <= count {
+        SysGet monitor, Monitor, %current%
+        SysGet monitorWorkArea, MonitorWorkArea, %current%
+        screens[i] := { Number: i
+            , Resolution: monitorBottom
+            , Dpi: GetDpi()
+            , Width: monitorWorkAreaRight - monitorWorkAreaLeft
+            , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+        i++
+    }
+    return screens
+}
+
+ResolveScreen(preferred) {
+    global _screens
+    if (_screens[preferred]) {
+        return _screens[preferred]
+    } else {
+        return _screens[1]
+    }
 }
 
 GetDpi() {
@@ -161,58 +177,78 @@ GetDpi() {
 }
 
 FixWindow(title) {
-    options := GetOptions(title)
-    if (!options) {
+    match := FindMatch(title)
+    if (!match) {
         return
     }
     window := GetWindow(title)
     if (!window) {
         return
     }
-    WinRestore %title%
-    MoveWindow(window, title, options)
-    if (options.Center) {
-        CenterWindow(title)
+    RestoreWindow(title)
+    MoveWindowToScreen(window, match.Screen, match.Options)
+    if (match.Options.Center) {
+        window := GetWindow(title)
+        CenterWindowOnScreen(window, match.Screen)
     }
-    if (options.Maximize) {
-        WinMaximize %title%
+    if (match.Options.Maximize) {
+        MaximizeWindow(title)
     }
 }
 
-GetOptions(title) {
+CenterWindow(title) {
+    window := GetWindow(title)
+    if (!window) {
+        return
+    }
+    RestoreWindow(title)
+    window := GetWindow(title)
+    screen := ResolveScreen(1)
+    CenterWindowOnScreen(window, screen)
+}
+
+FindMatch(title) {
     global _settings
-    global _screen
     for key, group in _settings {
         for key, window in group.Windows {
             find := window.Find ? window.Find : window
             except := window.Except ? window.Except : ""
+            resolvedScreen := ResolveScreen(window.Screen)
             if (InStr(title, find) > 0 && (!except || InStr(title, except) == 0)) {
                 for key, options in group.Options {
-                    for key, screen in options.Screens {
-                        if (screen.Resolution == _screen.Resolution && screen.Dpi == _screen.Dpi) {
-                            return options
+                    for key, configuredScreen in options.Screens {
+                        if (configuredScreen.Resolution == resolvedScreen.Resolution && configuredScreen.Dpi == resolvedScreen.Dpi) {
+                            return { Screen: resolvedScreen, Options: options }
                         }
                     }
                 }
             }
         }
     }
-    MsgBox 48,, Window or screen not configured
+    MsgBox 48,, Match not found
 }
 
-MoveWindow(window, title, options) {
-    global _screen
+GetWindow(title) {
+    WinGetPos x, y, width, height, %title%
+    if (!x) {
+        return
+    }
+    WinGet minMax, MinMax, %title%
+    return { Title: title, Left: x, Top: y, Width: width, Height: height }
+}
+
+MoveWindowToScreen(window, screen, options) {
     if (!options.Left) {
         options.Left := -options.Right
     }
     if (!options.Top) {
         options.Top := -options.Bottom
     }
-    options.Width := GetSize(options.Width, window.Width, _screen.Width, options.Left, options.Right, options.stretch)
-    options.Height := GetSize(options.Height, window.Height, _screen.Height, options.Top, options.Bottom, options.stretch)
-    options.Left := GetMargin(options.Left, window.Left, options.Width, _screen.Width)
-    options.Top := GetMargin(options.Top, window.Top, options.Height, _screen.Height)
-    WinMove % title,, options.Left, options.Top, options.Width, options.Height
+    options.Width := GetSize(options.Width, window.Width, screen.Width, options.Left, options.Right, options.Stretch)
+    options.Height := GetSize(options.Height, window.Height, screen.Height, options.Top, options.Bottom, options.Stretch)
+    options.Left := GetMargin(options.Left, window.Left, options.Width, screen.Width)
+    options.Top := GetMargin(options.Top, window.Top, options.Height, screen.Height)
+    WinMove % window.Title,, options.Left, options.Top, options.Width, options.Height
 }
 
 GetSize(size, windowSize, screenSize, startMargin, endMargin, stretch) {
@@ -238,21 +274,15 @@ GetMargin(margin, windowMargin, size, screenSize) {
     }
 }
 
-CenterWindow(title) {
-    global _screen
-    window := GetWindow(title)
-    if (!window) {
-        return
-    }
-    WinMove %title%,, (_screen.Width / 2) - (window.Width / 2), (_screen.Height / 2) - (window.Height / 2)
+CenterWindowOnScreen(window, screen) {
+    WinMove % window.Title,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
 }
 
-GetWindow(title) {
-    WinGetPos x, y, width, height, %title%
-    if (!x) {
-        return
-    }
-    WinGet minMax, MinMax, %title%
-    return { Left: x, Top: y, Width: width, Height: height }
+RestoreWindow(title) {
+    WinRestore % title
+}
+
+MaximizeWindow(title) {
+    WinMaximize % title
 }
 
