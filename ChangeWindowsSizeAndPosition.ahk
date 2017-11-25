@@ -15,8 +15,7 @@ Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolutio
                   , "JetBrains dotPeek"
                   , "paint.net"
                   , "Remote Desktop Connection"
-                  , "SourceTree"
-                  , "WinSnap" ] } )
+                  , "SourceTree" ] } )
 
 Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Width: 2560, Height: 1360, Center: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
@@ -32,8 +31,7 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolutio
                                                                   , { Resolution: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Fiddler Web Debugger"
                   , "LOOT"
-                  , "Mod Organizer"
-                  , "Pogoda" ] } )
+                  , "Mod Organizer" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
@@ -62,16 +60,6 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { Resolutio
                   , "Rapid Environment Editor"
                   , "Resource Hacker"
                   , "Synchronize directories" ] } ) ; Total Commander
-
-Setup( { Options: [ { Width: 1296, Height: 832, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 1306, Height: 882, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 1312, Height: 910, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "VLC media player" ] } )
-
-Setup( { Options: [ { Width: 900, Height: 600, Center: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 1660, Height: 1000, Center: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 2100, Height: 1400, Center: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "SyncBackPro" ] } )
 
 Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
                   , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 }
