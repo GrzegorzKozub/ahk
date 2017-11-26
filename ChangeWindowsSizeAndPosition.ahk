@@ -111,159 +111,139 @@ return
 ; Labels
 
 FixActiveWindow:
-    _screens := GetScreens()
-    WinGetActiveTitle activeWindowTitle
-    FixWindow(activeWindowTitle)
+    try {
+        global _settings
+        monitor := GetPrimaryMonitor()
+        WinGetActiveTitle title
+        Fix(_settings, monitor, title)
+    } catch e {
+        MsgBox 48,, %e%
+    }
     return
 
 CenterActiveWindow:
-    _screens := GetScreens()
-    WinGetActiveTitle activeWindowTitle
-    CenterWindow(activeWindowTitle)
+    try {
+        monitor := GetPrimaryMonitor()
+        WinGetActiveTitle title
+        Center(monitor, title)
+    } catch e {
+        MsgBox 48,, %e%
+    }
     return
 
 ; Functions
 
-Setup(options) {
+Setup(settingsChunk) {
     global _settings
     if (!_settings) {
         _settings := Object()
     }
-    _settings.Insert(options)
+    _settings.Insert(settingsChunk)
 }
 
-GetScreens() {
-    SysGet count, 80
-    screens := Object()
-    i := 1
-    while i <= count {
-        SysGet monitor, Monitor, %current%
-        SysGet monitorWorkArea, MonitorWorkArea, %current%
-        screens[i] := { Number: i
-            , Resolution: monitorBottom
-            , Dpi: GetDpi()
-            , Width: monitorWorkAreaRight - monitorWorkAreaLeft
-            , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
-        i++
-    }
-    return screens
+GetPrimaryMonitor() {
+    SysGet monitor, Monitor, %current%
+    SysGet monitorWorkArea, MonitorWorkArea, %current%
+    return { Resolution: monitorBottom
+        , Dpi: GetPrimaryMonitorDpi()
+        , Width: monitorWorkAreaRight - monitorWorkAreaLeft
+        , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
 }
 
-ResolveScreen(preferred) {
-    global _screens
-    if (_screens[preferred]) {
-        return _screens[preferred]
-    } else {
-        return _screens[1]
-    }
-}
-
-GetDpi() {
+GetPrimaryMonitorDpi() {
     ; Returns 96 (for 100%), 120, 144, 168, 192 (for 200%), 216, 240 (for 250%)...
     RegRead dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
     return (ErrorLevel = 1) ? 96 : dpi
 }
 
-FixWindow(title) {
-    match := FindMatch(title)
-    if (!match) {
-        return
-    }
+Fix(settings, monitor, title) {
+    options := FindMatch(settings, monitor, title)
     window := GetWindow(title)
-    if (!window) {
-        return
-    }
     RestoreWindow(title)
-    MoveWindowToScreen(window, match.Screen, match.Options)
-    if (match.Options.Center) {
+    MoveWindow(monitor, options, window)
+    if (options.Center) {
         window := GetWindow(title)
-        CenterWindowOnScreen(window, match.Screen)
+        CenterWindow(monitor, window)
     }
-    if (match.Options.Maximize) {
+    if (options.Maximize) {
         MaximizeWindow(title)
     }
 }
 
-CenterWindow(title) {
+Center(monitor, title) {
     window := GetWindow(title)
-    if (!window) {
-        return
-    }
     RestoreWindow(title)
     window := GetWindow(title)
-    screen := ResolveScreen(1)
-    CenterWindowOnScreen(window, screen)
+    CenterWindow(monitor, window)
 }
 
-FindMatch(title) {
-    global _settings
-    for key, group in _settings {
+FindMatch(settings, monitor, title) {
+    for key, group in settings {
         for key, window in group.Windows {
             find := window.Find ? window.Find : window
             except := window.Except ? window.Except : ""
-            resolvedScreen := ResolveScreen(window.Screen)
             if (InStr(title, find) > 0 && (!except || InStr(title, except) == 0)) {
                 for key, options in group.Options {
-                    for key, configuredScreen in options.Screens {
-                        if (configuredScreen.Resolution == resolvedScreen.Resolution && configuredScreen.Dpi == resolvedScreen.Dpi) {
-                            return { Screen: resolvedScreen, Options: options }
+                    for key, screen in options.Screens {
+                        if (screen.Resolution == monitor.Resolution && screen.Dpi == monitor.Dpi) {
+                            return options
                         }
                     }
                 }
             }
         }
     }
-    MsgBox 48,, Match not found
+    throw "Match not found"
 }
 
 GetWindow(title) {
     WinGetPos x, y, width, height, %title%
     if (!x) {
-        return
+        throw "Window not found"
     }
     WinGet minMax, MinMax, %title%
     return { Title: title, Left: x, Top: y, Width: width, Height: height }
 }
 
-MoveWindowToScreen(window, screen, options) {
+MoveWindow(monitor, options, window) {
     if (!options.Left) {
         options.Left := -options.Right
     }
     if (!options.Top) {
         options.Top := -options.Bottom
     }
-    options.Width := GetSize(options.Width, window.Width, screen.Width, options.Left, options.Right, options.Stretch)
-    options.Height := GetSize(options.Height, window.Height, screen.Height, options.Top, options.Bottom, options.Stretch)
-    options.Left := GetMargin(options.Left, window.Left, options.Width, screen.Width)
-    options.Top := GetMargin(options.Top, window.Top, options.Height, screen.Height)
+    options.Width := GetSize(options.Width, window.Width, monitor.Width, options.Left, options.Right, options.Stretch)
+    options.Height := GetSize(options.Height, window.Height, monitor.Height, options.Top, options.Bottom, options.Stretch)
+    options.Left := GetMargin(options.Left, window.Left, options.Width, monitor.Width)
+    options.Top := GetMargin(options.Top, window.Top, options.Height, monitor.Height)
     WinMove % window.Title,, options.Left, options.Top, options.Width, options.Height
 }
 
-GetSize(size, windowSize, screenSize, startMargin, endMargin, stretch) {
+GetSize(size, windowSize, monitorSize, startMargin, endMargin, stretch) {
     if (size) {
         return size
     }
     if (stretch) {
-        return screenSize - (2 * startMargin)
+        return monitorSize - (2 * startMargin)
     } else if (endMargin) {
-        return screenSize - startMargin - endMargin
+        return monitorSize - startMargin - endMargin
     } else {
         return windowSize
     }
 }
 
-GetMargin(margin, windowMargin, size, screenSize) {
+GetMargin(margin, windowMargin, size, monitorSize) {
     if (!margin) {
         return windowMargin
     } else if (margin < 0) {
-        return screenSize - (size + Abs(margin))
+        return monitorSize - (size + Abs(margin))
     } else {
         return margin
     }
 }
 
-CenterWindowOnScreen(window, screen) {
-    WinMove % window.Title,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
+CenterWindow(monitor, window) {
+    WinMove % window.Title,, (monitor.Width / 2) - (window.Width / 2), (monitor.Height / 2) - (window.Height / 2)
 }
 
 RestoreWindow(title) {
