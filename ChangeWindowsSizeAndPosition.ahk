@@ -1,15 +1,15 @@
 ﻿; Settings
 
-Setup( { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                                 , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                                 , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Microsoft SQL Server Management Studio"
                   , "Microsoft Visual Studio"
                   , "Visual Studio Code" ] } )
 
-Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                                 , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                                 , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
                   , "Inkscape"
                   , "JetBrains dotPeek"
@@ -17,25 +17,25 @@ Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { Resolutio
                   , "Remote Desktop Connection"
                   , "SourceTree" ] } )
 
-Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 2560, Height: 1360, Center: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 3200, Height: 1700, Center: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 2560, Height: 1360, Center: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 } ] }
+                  , { Width: 3200, Height: 1700, Center: True, Maximize: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Blizzard App"
                   , "GOG Galaxy"
                   , "Origin"
                   , "Steam"
                   , "Uplay" ] } )
 
-Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 250, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Fiddler Web Debugger"
                   , "LOOT"
                   , "Mod Organizer" ] } )
 
-Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Defender"
                   , "Event Viewer"
                   , "Hyper-V Manager"
@@ -45,9 +45,9 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { Resolutio
                   , "Task Scheduler"
                   , "Settings" ] } )
 
-Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                   , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "C:\Users\Grzegorz\" ; 7-Zip
                   , "Deluge"
                   , "Find Files" ; Total Commander
@@ -61,42 +61,42 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { Resolutio
                   , "Resource Hacker"
                   , "Synchronize directories" ] } ) ; Total Commander
 
-Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                                 , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                                 , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Developer Tools" ; Chrome and Edge
                   , "Edge"
                   , "Google Chrome"
                   , "Pluralsight" ] } )
 
-Setup( { Options: [ { Width: 1611, Height: 1005, Left: 75, Bottom: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 2462, Height: 1289, Center: True, Maximize: True, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 3074, Height: 1567, Center: True, Maximize: True, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 1611, Height: 1005, Left: 75, Bottom: 75, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 2462, Height: 1289, Center: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 } ] }
+                  , { Width: 3074, Height: 1567, Center: True, Maximize: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
 
-Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "SumatraPDF" ] } )
 
-Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                  , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Total Commander" ] } )
 
-Setup( { Options: [ { Width: 1613, Height: 962, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 2080, Height: 1141, Right: 50, Bottom: 50, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 2595, Height: 1408, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 1613, Height: 962, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 2080, Height: 1141, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
+                  , { Width: 2595, Height: 1408, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "~" ] } ) ; ConEmu
 
-Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { Resolution: 1440, Dpi: 192 } ] }
-                  , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
+                  , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 320, Height: 500, Right: 25, Bottom: 25, Screens: [ { Resolution: 1440, Dpi: 96 } ] }
-                  , { Width: 660, Height: 1000, Right: 50, Bottom: 50, Screens: [ { Resolution: 1440, Dpi: 192 }
-                                                                                , { Resolution: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 320, Height: 500, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 660, Height: 1000, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 }
+                                                                                , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Friends" ] } ) ; Blizzard App, GOG Galaxy, Steam
 
 ; Main
@@ -144,7 +144,7 @@ Setup(settingsChunk) {
 GetPrimaryMonitor() {
     SysGet monitor, Monitor, %current%
     SysGet monitorWorkArea, MonitorWorkArea, %current%
-    return { Resolution: monitorBottom
+    return { P: monitorBottom
         , Dpi: GetPrimaryMonitorDpi()
         , Width: monitorWorkAreaRight - monitorWorkAreaLeft
         , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
@@ -185,7 +185,7 @@ FindMatch(settings, monitor, title) {
             if (InStr(title, find) > 0 && (!except || InStr(title, except) == 0)) {
                 for key, options in group.Options {
                     for key, screen in options.Screens {
-                        if (screen.Resolution == monitor.Resolution && screen.Dpi == monitor.Dpi) {
+                        if (screen.P == monitor.P && screen.Dpi == monitor.Dpi) {
                             return options
                         }
                     }
