@@ -101,6 +101,8 @@ Setup( { Options: [ { Width: 320, Height: 500, Right: 25, Bottom: 25, Screens: [
 
 ; Main
 
+#SingleInstance force
+
 SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
