@@ -1,14 +1,14 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Microsoft SQL Server Management Studio"
                   , "Microsoft Visual Studio"
                   , "Visual Studio Code" ] } )
 
 Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
                   , "Inkscape"
@@ -18,8 +18,8 @@ Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 1440, 
                   , "SourceTree" ] } )
 
 Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Width: 2560, Height: 1360, Center: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 } ] }
-                  , { Width: 3200, Height: 1700, Center: True, Maximize: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Width: 2560, Height: 1360, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] }
+                  , { Width: 3200, Height: 1700, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Blizzard App"
                   , "GOG Galaxy"
                   , "Origin"
@@ -62,7 +62,7 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1440, 
                   , "Synchronize directories" ] } ) ; Total Commander
 
 Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                                  , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Developer Tools" ; Chrome and Edge
                   , "Edge"
@@ -70,8 +70,8 @@ Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { P
                   , "Pluralsight" ] } )
 
 Setup( { Options: [ { Width: 1611, Height: 1005, Left: 75, Bottom: 75, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Width: 2462, Height: 1289, Center: True, Maximize: True, Screens: [ { P: 1440, Dpi: 192 } ] }
-                  , { Width: 3074, Height: 1567, Center: True, Maximize: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Width: 2462, Height: 1289, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] }
+                  , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
 
 Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
@@ -165,7 +165,7 @@ Fix(settings, monitor, title) {
         window := GetWindow(title)
         CenterWindow(monitor, window)
     }
-    if (options.Maximize) {
+    if (options.Max) {
         MaximizeWindow(title)
     }
 }
