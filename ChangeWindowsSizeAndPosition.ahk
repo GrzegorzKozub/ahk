@@ -2,14 +2,14 @@
 
 Setup( { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
-                                                                                 , { P: 1800, Dpi: 240 } ] } ]
+                                                                            , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Microsoft SQL Server Management Studio"
                   , "Microsoft Visual Studio"
                   , "Visual Studio Code" ] } )
 
 Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
-                                                                                 , { P: 1800, Dpi: 240 } ] } ]
+                                                                            , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
                   , "Inkscape"
                   , "JetBrains dotPeek"
@@ -63,7 +63,7 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1440, 
 
 Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
-                                                                                 , { P: 1800, Dpi: 240 } ] } ]
+                                                                            , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Developer Tools" ; Chrome and Edge
                   , "Edge"
                   , "Google Chrome"
