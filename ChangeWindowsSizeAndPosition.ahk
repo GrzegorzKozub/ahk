@@ -106,6 +106,7 @@ Setup( { Options: [ { Width: 320, Height: 500, Right: 25, Bottom: 25, Screens: [
 SplitPath A_ScriptName,,,, fileName
 Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
+HotKey ^#o, FixOpenWindows
 HotKey ^#w, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
 InitShellHooks()
@@ -130,10 +131,25 @@ HandleMessage(wParam, lParam) {
         Sleep 1000
         window := GetActiveWindow()
         Fix(_settings, screen, window)
-    } catch { }
+    } catch e {
+        MsgBox 48,, %e%
+    }
 }
 
 ; Labels
+
+FixOpenWindows:
+    try {
+        global _settings
+        screen := GetPrimaryScreen()
+        windows := GetOpenWindows()
+        for key, window in windows {
+            Fix(_settings, screen, window)
+        }
+    } catch e {
+        MsgBox 48,, %e%
+    }
+    return
 
 FixActiveWindow:
     try {
@@ -181,14 +197,35 @@ GetPrimaryScreenDpi() {
     return (ErrorLevel = 1) ? 96 : dpi
 }
 
+GetOpenWindows() {
+    supported:= Object()
+    WinGet all, List
+    loop %all% {
+        id := all%A_Index%
+        WinGetTitle title, ahk_id %id%
+        if (title != "" && title != "Microsoft Store" && title != "Program Manager" && title != "Settings") {
+            WinGetClass class, ahk_id %id%
+            supported.Insert(InitWindow(class, title))
+        }
+    }
+    return supported
+}
+
 GetActiveWindow() {
-    WinGetTitle title, A
     WinGetClass class, A
-    return { Title: title, Class: class }
+    WinGetTitle title, A
+    return InitWindow(class, title)
+}
+
+InitWindow(class, title) {
+    return { Class: class, Title: title }
 }
 
 Fix(settings, screen, window) {
     options := FindMatch(settings, screen, window)
+    if (!options) {
+        return
+    }
     window := MeasureWindow(window)
     RestoreWindow(window)
     MoveWindow(screen, options, window)
@@ -222,7 +259,6 @@ FindMatch(settings, screen, window) {
             }
         }
     }
-    throw "Match not found"
 }
 
 WindowMatchesConfig(windowOnScreen, windowInConfig) {
