@@ -48,7 +48,7 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 1440, 
 Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                    , { P: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "C:\Users\Grzegorz\" ; 7-Zip
+       , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Deluge"
                   , "Find Files" ; Total Commander
                   , "KeePass"
@@ -87,7 +87,7 @@ Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ {
 Setup( { Options: [ { Width: 1613, Height: 962, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Width: 2080, Height: 1141, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 2595, Height: 1408, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "~" ] } ) ; ConEmu
+       , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
@@ -108,7 +108,30 @@ Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
 HotKey ^#w, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
+InitShellHooks()
 return
+
+; Shell hooks
+
+InitShellHooks() {
+    Gui +LastFound +HwndWindowHwnd
+    DllCall("RegisterShellHookWindow", UInt, WindowHwnd)
+    msgNumber := DllCall("RegisterWindowMessage", Str, "SHELLHOOK")
+    OnMessage(msgNumber, "HandleMessage")
+}
+
+HandleMessage(wParam, lParam) {
+    if (wParam != 1) { ; HSHELL_WINDOWCREATED
+        return
+    }
+    try {
+        global _settings
+        monitor := GetPrimaryMonitor()
+        Sleep 1000
+        window := GetActiveWindow()
+        Fix(_settings, monitor, window)
+    } catch { }
+}
 
 ; Labels
 
@@ -116,8 +139,8 @@ FixActiveWindow:
     try {
         global _settings
         monitor := GetPrimaryMonitor()
-        WinGetActiveTitle title
-        Fix(_settings, monitor, title)
+        window := GetActiveWindow()
+        Fix(_settings, monitor, window)
     } catch e {
         MsgBox 48,, %e%
     }
@@ -126,8 +149,8 @@ FixActiveWindow:
 CenterActiveWindow:
     try {
         monitor := GetPrimaryMonitor()
-        WinGetActiveTitle title
-        Center(monitor, title)
+        window := GetActiveWindow()
+        Center(monitor, window)
     } catch e {
         MsgBox 48,, %e%
     }
@@ -158,36 +181,40 @@ GetPrimaryMonitorDpi() {
     return (ErrorLevel = 1) ? 96 : dpi
 }
 
-Fix(settings, monitor, title) {
-    options := FindMatch(settings, monitor, title)
-    window := GetWindow(title)
-    RestoreWindow(title)
+GetActiveWindow() {
+    WinGetTitle title, A
+    WinGetClass class, A
+    return { Title: title, Class: class }
+}
+
+Fix(settings, monitor, window) {
+    options := FindMatch(settings, monitor, window)
+    window := MeasureWindow(window)
+    RestoreWindow(window)
     MoveWindow(monitor, options, window)
     if (options.Center) {
-        window := GetWindow(title)
+        window := MeasureWindow(window)
         CenterWindow(monitor, window)
     }
     if (options.Max) {
-        MaximizeWindow(title)
+        MaximizeWindow(window)
     }
 }
 
-Center(monitor, title) {
-    window := GetWindow(title)
-    RestoreWindow(title)
-    window := GetWindow(title)
+Center(monitor, window) {
+    window := MeasureWindow(window)
+    RestoreWindow(window)
+    window := MeasureWindow(window)
     CenterWindow(monitor, window)
 }
 
-FindMatch(settings, monitor, title) {
+FindMatch(settings, monitor, window) {
     for key, group in settings {
-        for key, window in group.Windows {
-            find := window.Find ? window.Find : window
-            except := window.Except ? window.Except : ""
-            if (InStr(title, find) > 0 && (!except || InStr(title, except) == 0)) {
+        for key, windowInConfig in group.Windows {
+            if (WindowMatchesConfig(window, windowInConfig)) {
                 for key, options in group.Options {
-                    for key, screen in options.Screens {
-                        if (screen.P == monitor.P && screen.Dpi == monitor.Dpi) {
+                    for key, monitorInConfig in options.Screens {
+                        if (MonitorMatchesConfig(monitor, monitorInConfig)) {
                             return options
                         }
                     }
@@ -198,13 +225,43 @@ FindMatch(settings, monitor, title) {
     throw "Match not found"
 }
 
-GetWindow(title) {
-    WinGetPos x, y, width, height, %title%
-    if (!x) {
-        throw "Window not found"
+WindowMatchesConfig(windowOnScreen, windowInConfig) {
+    if (windowInConfig.Class && windowInConfig.Title) {
+        return windowOnScreen.Class == windowInConfig.Class && InStr(windowOnScreen.Title, windowInConfig.Title) > 0
+    } else if (windowInConfig.Class) {
+        return windowOnScreen.Class == windowInConfig.Class
+    } else {
+        return InStr(windowOnScreen.Title, windowInConfig.Title ? windowInConfig.Title : windowInConfig) > 0
     }
-    WinGet minMax, MinMax, %title%
-    return { Title: title, Left: x, Top: y, Width: width, Height: height }
+}
+
+MonitorMatchesConfig(actualMonitor, monitorInConfig) {
+    return actualMonitor.P == monitorInConfig.P && actualMonitor.Dpi == monitorInConfig.Dpi
+}
+
+MeasureWindow(window) {
+    class := window.Class
+    WinGetPos x, y, width, height, ahk_class %class%
+    window.Left := x
+    window.Top := y
+    window.Width := width
+    window.Height := height
+    return window
+}
+
+RestoreWindow(window) {
+    class := window.Class
+    WinRestore ahk_class %class%
+}
+
+MaximizeWindow(window) {
+    class := window.Class
+    WinMaximize ahk_class %class%
+}
+
+CenterWindow(monitor, window) {
+    class := window.Class
+    WinMove ahk_class %class%,, (monitor.Width / 2) - (window.Width / 2), (monitor.Height / 2) - (window.Height / 2)
 }
 
 MoveWindow(monitor, options, window) {
@@ -218,7 +275,8 @@ MoveWindow(monitor, options, window) {
     options.Height := GetSize(options.Height, window.Height, monitor.Height, options.Top, options.Bottom, options.Stretch)
     options.Left := GetMargin(options.Left, window.Left, options.Width, monitor.Width)
     options.Top := GetMargin(options.Top, window.Top, options.Height, monitor.Height)
-    WinMove % window.Title,, options.Left, options.Top, options.Width, options.Height
+    class := window.Class
+    WinMove ahk_class %class%,, options.Left, options.Top, options.Width, options.Height
 }
 
 GetSize(size, windowSize, monitorSize, startMargin, endMargin, stretch) {
@@ -242,17 +300,5 @@ GetMargin(margin, windowMargin, size, monitorSize) {
     } else {
         return margin
     }
-}
-
-CenterWindow(monitor, window) {
-    WinMove % window.Title,, (monitor.Width / 2) - (window.Width / 2), (monitor.Height / 2) - (window.Height / 2)
-}
-
-RestoreWindow(title) {
-    WinRestore % title
-}
-
-MaximizeWindow(title) {
-    WinMaximize % title
 }
 
