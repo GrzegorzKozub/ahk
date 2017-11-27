@@ -126,10 +126,10 @@ HandleMessage(wParam, lParam) {
     }
     try {
         global _settings
-        monitor := GetPrimaryMonitor()
+        screen := GetPrimaryScreen()
         Sleep 1000
         window := GetActiveWindow()
-        Fix(_settings, monitor, window)
+        Fix(_settings, screen, window)
     } catch { }
 }
 
@@ -138,9 +138,9 @@ HandleMessage(wParam, lParam) {
 FixActiveWindow:
     try {
         global _settings
-        monitor := GetPrimaryMonitor()
+        screen := GetPrimaryScreen()
         window := GetActiveWindow()
-        Fix(_settings, monitor, window)
+        Fix(_settings, screen, window)
     } catch e {
         MsgBox 48,, %e%
     }
@@ -148,9 +148,9 @@ FixActiveWindow:
 
 CenterActiveWindow:
     try {
-        monitor := GetPrimaryMonitor()
+        screen := GetPrimaryScreen()
         window := GetActiveWindow()
-        Center(monitor, window)
+        Center(screen, window)
     } catch e {
         MsgBox 48,, %e%
     }
@@ -166,16 +166,16 @@ Setup(settingsChunk) {
     _settings.Insert(settingsChunk)
 }
 
-GetPrimaryMonitor() {
+GetPrimaryScreen() {
     SysGet monitor, Monitor, %current%
     SysGet monitorWorkArea, MonitorWorkArea, %current%
     return { P: monitorBottom
-        , Dpi: GetPrimaryMonitorDpi()
+        , Dpi: GetPrimaryScreenDpi()
         , Width: monitorWorkAreaRight - monitorWorkAreaLeft
         , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
 }
 
-GetPrimaryMonitorDpi() {
+GetPrimaryScreenDpi() {
     ; Returns 96 (for 100%), 120, 144, 168, 192 (for 200%), 216, 240 (for 250%)...
     RegRead dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
     return (ErrorLevel = 1) ? 96 : dpi
@@ -187,34 +187,34 @@ GetActiveWindow() {
     return { Title: title, Class: class }
 }
 
-Fix(settings, monitor, window) {
-    options := FindMatch(settings, monitor, window)
+Fix(settings, screen, window) {
+    options := FindMatch(settings, screen, window)
     window := MeasureWindow(window)
     RestoreWindow(window)
-    MoveWindow(monitor, options, window)
+    MoveWindow(screen, options, window)
     if (options.Center) {
         window := MeasureWindow(window)
-        CenterWindow(monitor, window)
+        CenterWindow(screen, window)
     }
     if (options.Max) {
         MaximizeWindow(window)
     }
 }
 
-Center(monitor, window) {
+Center(screen, window) {
     window := MeasureWindow(window)
     RestoreWindow(window)
     window := MeasureWindow(window)
-    CenterWindow(monitor, window)
+    CenterWindow(screen, window)
 }
 
-FindMatch(settings, monitor, window) {
+FindMatch(settings, screen, window) {
     for key, group in settings {
         for key, windowInConfig in group.Windows {
             if (WindowMatchesConfig(window, windowInConfig)) {
                 for key, options in group.Options {
-                    for key, monitorInConfig in options.Screens {
-                        if (MonitorMatchesConfig(monitor, monitorInConfig)) {
+                    for key, screenInConfig in options.Screens {
+                        if (ScreenMatchesConfig(screen, screenInConfig)) {
                             return options
                         }
                     }
@@ -235,8 +235,8 @@ WindowMatchesConfig(windowOnScreen, windowInConfig) {
     }
 }
 
-MonitorMatchesConfig(actualMonitor, monitorInConfig) {
-    return actualMonitor.P == monitorInConfig.P && actualMonitor.Dpi == monitorInConfig.Dpi
+ScreenMatchesConfig(actualScreen, screen) {
+    return actualScreen.P == screen.P && actualScreen.Dpi == screen.Dpi
 }
 
 MeasureWindow(window) {
@@ -259,44 +259,44 @@ MaximizeWindow(window) {
     WinMaximize ahk_class %class%
 }
 
-CenterWindow(monitor, window) {
+CenterWindow(screen, window) {
     class := window.Class
-    WinMove ahk_class %class%,, (monitor.Width / 2) - (window.Width / 2), (monitor.Height / 2) - (window.Height / 2)
+    WinMove ahk_class %class%,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
 }
 
-MoveWindow(monitor, options, window) {
+MoveWindow(screen, options, window) {
     if (!options.Left) {
         options.Left := -options.Right
     }
     if (!options.Top) {
         options.Top := -options.Bottom
     }
-    options.Width := GetSize(options.Width, window.Width, monitor.Width, options.Left, options.Right, options.Stretch)
-    options.Height := GetSize(options.Height, window.Height, monitor.Height, options.Top, options.Bottom, options.Stretch)
-    options.Left := GetMargin(options.Left, window.Left, options.Width, monitor.Width)
-    options.Top := GetMargin(options.Top, window.Top, options.Height, monitor.Height)
+    options.Width := GetSize(options.Width, window.Width, screen.Width, options.Left, options.Right, options.Stretch)
+    options.Height := GetSize(options.Height, window.Height, screen.Height, options.Top, options.Bottom, options.Stretch)
+    options.Left := GetMargin(options.Left, window.Left, options.Width, screen.Width)
+    options.Top := GetMargin(options.Top, window.Top, options.Height, screen.Height)
     class := window.Class
     WinMove ahk_class %class%,, options.Left, options.Top, options.Width, options.Height
 }
 
-GetSize(size, windowSize, monitorSize, startMargin, endMargin, stretch) {
+GetSize(size, windowSize, screenSize, startMargin, endMargin, stretch) {
     if (size) {
         return size
     }
     if (stretch) {
-        return monitorSize - (2 * startMargin)
+        return screenSize - (2 * startMargin)
     } else if (endMargin) {
-        return monitorSize - startMargin - endMargin
+        return screenSize - startMargin - endMargin
     } else {
         return windowSize
     }
 }
 
-GetMargin(margin, windowMargin, size, monitorSize) {
+GetMargin(margin, windowMargin, size, screenSize) {
     if (!margin) {
         return windowMargin
     } else if (margin < 0) {
-        return monitorSize - (size + Abs(margin))
+        return screenSize - (size + Abs(margin))
     } else {
         return margin
     }
