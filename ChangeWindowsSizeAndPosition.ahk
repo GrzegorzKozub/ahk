@@ -276,8 +276,9 @@ ScreenMatchesConfig(actualScreen, screen) {
 }
 
 MeasureWindow(window) {
+    title := window.Title
     class := window.Class
-    WinGetPos x, y, width, height, ahk_class %class%
+    WinGetPos x, y, width, height, %title% ahk_class %class%
     window.Left := x
     window.Top := y
     window.Width := width
@@ -286,18 +287,21 @@ MeasureWindow(window) {
 }
 
 RestoreWindow(window) {
+    title := window.Title
     class := window.Class
-    WinRestore ahk_class %class%
+    WinRestore %title% ahk_class %class%
 }
 
 MaximizeWindow(window) {
+    title := window.Title
     class := window.Class
-    WinMaximize ahk_class %class%
+    WinMaximize %title% ahk_class %class%
 }
 
 CenterWindow(screen, window) {
+    title := window.Title
     class := window.Class
-    WinMove ahk_class %class%,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
+    WinMove %title% ahk_class %class%,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
 }
 
 MoveWindow(screen, options, window) {
@@ -311,8 +315,9 @@ MoveWindow(screen, options, window) {
     options.Height := GetSize(options.Height, window.Height, screen.Height, options.Top, options.Bottom, options.Stretch)
     options.Left := GetMargin(options.Left, window.Left, options.Width, screen.Width)
     options.Top := GetMargin(options.Top, window.Top, options.Height, screen.Height)
+    title := window.Title
     class := window.Class
-    WinMove ahk_class %class%,, options.Left, options.Top, options.Width, options.Height
+    WinMove %title% ahk_class %class%,, options.Left, options.Top, options.Width, options.Height
 }
 
 GetSize(size, windowSize, screenSize, startMargin, endMargin, stretch) {
