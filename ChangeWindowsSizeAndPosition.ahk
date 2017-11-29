@@ -87,7 +87,7 @@ Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ {
 Setup( { Options: [ { Width: 1613, Height: 962, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Width: 2080, Height: 1141, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 2595, Height: 1408, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
-       , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
+       , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: True } ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
@@ -130,6 +130,7 @@ HandleMessage(wParam, lParam) {
         screen := GetPrimaryScreen()
         Sleep 1000
         window := GetActiveWindow()
+        window.FixOnOpen := True
         Fix(_settings, screen, window)
     } catch e {
         MsgBox 48,, %e%
@@ -262,6 +263,9 @@ FindMatch(settings, screen, window) {
 }
 
 WindowMatchesConfig(windowOnScreen, windowInConfig) {
+    if (windowOnScreen.FixOnOpen && !windowInConfig.FixOnOpen) {
+        return False
+    }
     if (windowInConfig.Class && windowInConfig.Title) {
         return windowOnScreen.Class == windowInConfig.Class && InStr(windowOnScreen.Title, windowInConfig.Title) > 0
     } else if (windowInConfig.Class) {
@@ -343,3 +347,11 @@ GetMargin(margin, windowMargin, size, screenSize) {
     }
 }
 
+Contains(list, item) {
+    for key, value in list {
+        if (value == item) {
+            return True
+        }
+    }
+    return False
+}
