@@ -84,6 +84,9 @@ Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ {
                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Total Commander" ] } )
 
+Setup( { Options: [ { Width: 2600, Height: 1450, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+       , Windows: [ "Hyper" ] } )
+
 Setup( { Options: [ { Width: 1613, Height: 962, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Width: 2080, Height: 1141, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 2595, Height: 1408, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
