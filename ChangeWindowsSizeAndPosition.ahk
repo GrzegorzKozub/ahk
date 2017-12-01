@@ -1,21 +1,27 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 150, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 144 }
+                                                                            , { P: 1440, Dpi: 192 }
                                                                             , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Microsoft SQL Server Management Studio"
                   , "Microsoft Visual Studio"
                   , "Visual Studio Code" ] } )
 
 Setup( { Options: [ { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 144 }
+                                                                            , { P: 1440, Dpi: 192 }
                                                                             , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
+                  , "Excel"
                   , "Inkscape"
                   , "JetBrains dotPeek"
+                  , "Outlook"
                   , "paint.net"
+                  , "PowerPoint"
                   , "Remote Desktop Connection"
-                  , "SourceTree" ] } )
+                  , "SourceTree"
+                  , "Word" ] } )
 
 Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
                   , { Width: 2560, Height: 1360, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] }
@@ -27,13 +33,15 @@ Setup( { Options: [ { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1440, 
                   , "Uplay" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 }
+                                                                  , { P: 1440, Dpi: 192 }
                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Fiddler Web Debugger"
                   , "LOOT"
                   , "Mod Organizer" ] } )
 
 Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1400, Height: 1000, Center: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Defender"
@@ -46,6 +54,7 @@ Setup( { Options: [ { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 1440, 
                   , "Settings" ] } )
 
 Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1000, Height: 900, Center: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                    , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
@@ -62,24 +71,29 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1440, 
                   , "Synchronize directories" ] } ) ; Total Commander
 
 Setup( { Options: [ { Width: 1600, Left: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 144 }
+                                                                            , { P: 1440, Dpi: 192 }
                                                                             , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Developer Tools" ; Chrome and Edge
                   , "Edge"
                   , "Google Chrome"
-                  , "Pluralsight" ] } )
+                  , "Pluralsight"
+                  , "Slack" ] } )
 
 Setup( { Options: [ { Width: 1611, Height: 1005, Left: 75, Bottom: 75, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1862, Height: 1079, Center: True, Max: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 2462, Height: 1289, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
 
 Setup( { Options: [ { Width: 1100, Right: 25, Top: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 }
+                                                                  , { P: 1440, Dpi: 192 }
                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "SumatraPDF" ] } )
 
 Setup( { Options: [ { Width: 1300, Height: 900, Right: 75, Top: 75, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1600, Height: 1000, Center: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Total Commander" ] } )
@@ -88,11 +102,13 @@ Setup( { Options: [ { Width: 2600, Height: 1450, Right: 50, Bottom: 50, Screens:
        , Windows: [ "Hyper" ] } )
 
 Setup( { Options: [ { Width: 1613, Height: 962, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1568, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 2080, Height: 1141, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 2595, Height: 1408, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: True } ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 600, Right: 25, Bottom: 25, Screens: [ { P: 1440, Dpi: 96 } ] }
+                  , { Width: 1000, Height: 875, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
