@@ -11,6 +11,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Google Chrome"
                   , "Inkscape"
                   , "Microsoft Visual Studio"
+                  , "OneNote"
                   , "Outlook"
                   , "paint.net"
                   , "Pluralsight"
@@ -19,6 +20,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Slack"
                   , "SourceTree"
                   , "SQL Server Management Studio"
+                  , "SQL Server Profiler"
                   , "Visual Studio Code"
                   , "Word" ] } )
 
@@ -32,6 +34,8 @@ Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, D
                   , "Internet Information Services (IIS) Manager"
                   , "NVIDIA Control Panel"
                   , "Registry Editor"
+                  , "Services"
+                  , "SQL Server Configuration Manager"
                   , "SumatraPDF"
                   , "Task Scheduler"
                   , "Total Commander"
