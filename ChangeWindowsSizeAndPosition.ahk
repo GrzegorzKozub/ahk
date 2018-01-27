@@ -4,21 +4,21 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                                                                             , { P: 1440, Dpi: 192 }
                                                                             , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
-                  , "Developer Tools" ; Chrome, Edge
+                  , { Title: "Developer Tools", Push: True } ; Chrome, Edge
                   , "dotPeek"
                   , "Edge"
                   , "Excel"
                   , "Google Chrome"
                   , "Inkscape"
                   , "Microsoft Visual Studio"
-                  , "OneNote"
-                  , "Outlook"
+                  , { Title: "OneNote", Push: True }
+                  , { Title: "Outlook", Push: True }
                   , "paint.net"
                   , "Pluralsight"
                   , "PowerPoint"
-                  , "Remote Desktop Connection"
-                  , "Slack"
-                  , "SourceTree"
+                  , { Title: "Remote Desktop Connection", Push: True }
+                  , { Title: "Slack", Push: True }
+                  , { Title: "SourceTree", Push: True }
                   , "SQL Server Management Studio"
                   , "SQL Server Profiler"
                   , "Steam"
@@ -29,16 +29,16 @@ Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, D
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
                                                                   , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Defender"
-                  , "Event Viewer"
+                  , { Title: "Event Viewer", Push: True }
                   , "Fiddler"
-                  , "Hyper-V Manager"
-                  , "Internet Information Services (IIS) Manager"
+                  , { Title: "Hyper-V Manager", Push: True }
+                  , { Title: "Internet Information Services (IIS) Manager", Push: True }
                   , "NVIDIA Control Panel"
                   , "Registry Editor"
-                  , "Services"
-                  , "SQL Server Configuration Manager"
+                  , { Title: "Services", Push: True }
+                  , { Title: "SQL Server Configuration Manager", Push: True }
                   , "SumatraPDF"
-                  , "Task Scheduler"
+                  , { Title: "Task Scheduler", Push: True }
                   , "Total Commander"
                   , "Settings" ] } )
 
@@ -82,7 +82,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Uplay" ] } )
 
 Setup( { Options: [ { Width: 660, Height: 1000, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] } ]
-       , Windows: [ "Friends" ] } ) ; Blizzard App, GOG Galaxy, Steam
+       , Windows: [ "Friends" ] } ) ; Blizzard App, Galaxy, Steam
 
 ; Main
 
@@ -233,6 +233,9 @@ Fix(settings, screen, window) {
     if (options.Max) {
         MaximizeWindow(window)
     }
+    if (options.Push) {
+        Push(screen, window)    
+    }
 }
 
 Center(screen, window) {
@@ -268,6 +271,7 @@ FindMatch(settings, screen, window) {
                 for key, options in group.Options {
                     for key, screenInConfig in options.Screens {
                         if (ScreenMatchesConfig(screen, screenInConfig)) {
+                            options.Push := windowInConfig.Push
                             return options
                         }
                     }
