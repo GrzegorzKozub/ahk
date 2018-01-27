@@ -94,6 +94,7 @@ SetTitleMatchMode 2
 HotKey ^#o, FixOpenWindows
 HotKey ^#w, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
+HotKey ^#p, PushActiveWindow
 InitShellHooks()
 return
 
@@ -153,6 +154,16 @@ CenterActiveWindow:
         screen := GetPrimaryScreen()
         window := GetActiveWindow()
         Center(screen, window)
+    } catch e {
+        MsgBox 48,, %e%
+    }
+    return
+
+PushActiveWindow:
+    try {
+        screen := GetPrimaryScreen()
+        window := GetActiveWindow()
+        Push(screen, window)
     } catch e {
         MsgBox 48,, %e%
     }
@@ -231,6 +242,25 @@ Center(screen, window) {
     CenterWindow(screen, window)
 }
 
+Push(screen, window) {
+    ; Pushes the window to the screen on the right
+    ; Assumes all screen resolutions and DPI are the same
+    SysGet monitorCount, MonitorCount
+    if (monitorCount < 2) {
+        return
+    }
+    max := IsWindowMaximized(window)
+    if (max) {
+        RestoreWindow(window)
+    }
+    window := MeasureWindow(window)
+    left := window.Left < screen.Width ? screen.Width + window.Left : window.Left
+    PushWindow(window, left, window.Top)
+    if (max) {
+        MaximizeWindow(window)
+    }
+}
+
 FindMatch(settings, screen, window) {
     for key, group in settings {
         for key, windowInConfig in group.Windows {
@@ -275,6 +305,13 @@ MeasureWindow(window) {
     return window
 }
 
+IsWindowMaximized(window) {
+    title := window.Title
+    class := window.Class
+    WinGet minMax, MinMax, %title% ahk_class %class%
+    return minMax == 1 ? True : False
+}
+
 RestoreWindow(window) {
     title := window.Title
     class := window.Class
@@ -291,6 +328,12 @@ CenterWindow(screen, window) {
     title := window.Title
     class := window.Class
     WinMove %title% ahk_class %class%,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
+}
+
+PushWindow(window, left, top) {
+    title := window.Title
+    class := window.Class
+    WinMove %title% ahk_class %class%,, left, top
 }
 
 MoveWindow(screen, options, window) {
