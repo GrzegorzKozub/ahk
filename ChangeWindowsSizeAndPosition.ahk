@@ -17,6 +17,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Pluralsight"
                   , "PowerPoint"
                   , { Title: "Remote Desktop Connection", Push: True }
+                  , "S3 Browser"
                   , { Title: "Slack", Push: True }
                   , { Title: "SourceTree", Push: True }
                   , "SQL Server Management Studio"
@@ -54,6 +55,7 @@ Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, 
                   , "Notepad"
                   , "OBS"
                   , "Rapid Environment Editor"
+                  , { Class: "rctrl_renwnd32" } ; Outlook
                   , "Resource Hacker"
                   , "Synchronize directories" ] } ) ; Total Commander
 
@@ -83,6 +85,12 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
 
 Setup( { Options: [ { Width: 660, Height: 1000, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] } ]
        , Windows: [ "Friends" ] } ) ; Blizzard App, Galaxy, Steam
+
+Setup( { Options: [ { Width: 605, Height: 1035, Left: 50, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
+       , Windows: [ { Title: "Skype for Business", Push: True } ] } )
+
+Setup( { Options: [ { Width: 605, Height: 1035, Left: 705, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
+       , Windows: [ { Class: "LyncConversationWindowClass", Push: True } ] } ) ; Skype for Business
 
 ; Main
 
