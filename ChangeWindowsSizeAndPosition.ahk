@@ -26,7 +26,11 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Word" ] } )
 
 Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 144 } ] } ]
-       , Windows: [ "Steam" ] } )
+       , Windows: [ "Blizzard App"
+                  , "Galaxy"
+                  , "Origin"
+                  , "Steam"
+                  , "Uplay" ] } )
 
 Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 144 }
@@ -79,13 +83,7 @@ Setup( { Options: [ { Width: 1000, Height: 900, Right: 50, Bottom: 50, Screens: 
                   , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
 
-Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 144 } ] } ]
-       , Windows: [ "Blizzard App"
-                  , "Galaxy"
-                  , "Origin"
-                  , "Uplay" ] } )
-
-Setup( { Options: [ { Width: 500, Height: 750, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 144 } ] } ]
+Setup( { Options: [ { Width: 600, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 144 } ] } ]
        , Windows: [ "Friends" ] } ) ; Blizzard App, Galaxy, Steam
 
 Setup( { Options: [ { Width: 605, Height: 1035, Left: 50, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
