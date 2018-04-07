@@ -70,7 +70,7 @@ Setup( { Options: [ { Width: 1862, Height: 1079, Center: True, Max: True, Screen
                   , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
 
-Setup( { Options: [ { Width: 1568, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
+Setup( { Options: [ { Width: 1668, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 2104, Height: 1103, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 2579, Height: 1350, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
