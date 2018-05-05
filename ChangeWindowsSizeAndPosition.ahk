@@ -94,10 +94,9 @@ Setup( { Options: [ { Width: 605, Height: 1035, Left: 705, Top: 50, Screens: [ {
 
 ; Main
 
+#NoTrayIcon
 #SingleInstance force
 
-SplitPath A_ScriptName,,,, fileName
-Menu Tray, Icon, %fileName%.ico
 SetTitleMatchMode 2
 HotKey ^#o, FixOpenWindows
 HotKey ^#w, FixActiveWindow
