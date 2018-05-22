@@ -15,6 +15,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , { Title: "Outlook", Push: True }
                   , "paint.net"
                   , "Pluralsight"
+                  , "Postman"
                   , "PowerPoint"
                   , { Title: "Remote Desktop Connection", Push: True }
                   , "S3 Browser"
