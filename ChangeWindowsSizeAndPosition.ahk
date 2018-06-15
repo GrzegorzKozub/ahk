@@ -4,7 +4,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                                                                             , { P: 1440, Dpi: 192 }
                                                                             , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
-                  , { Title: "Developer Tools", Push: True } ; Chrome, Edge
+                  , { Title: "DevTools", Push: True } ; Chrome
                   , "dotPeek"
                   , "Edge"
                   , "Excel"
