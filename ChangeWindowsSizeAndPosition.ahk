@@ -1,7 +1,6 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 144 }
-                                                                            , { P: 1440, Dpi: 192 }
                                                                             , { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
                   , { Title: "DevTools", Push: True } ; Chrome
@@ -26,16 +25,8 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Visual Studio Code"
                   , "Word" ] } )
 
-Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
-       , Windows: [ "Blizzard App"
-                  , "Galaxy"
-                  , "Origin"
-                  , "Steam"
-                  , "Uplay" ] } )
-
 Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
-                                                                  , { P: 1800, Dpi: 240 } ] } ]
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Defender"
                   , { Title: "Event Viewer", Push: True }
                   , "Fiddler"
@@ -51,8 +42,7 @@ Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, D
                   , "Settings" ] } )
 
 Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 192 }
-                                                                   , { P: 1800, Dpi: 240 } ] } ]
+                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Deluge"
                   , "Find Files" ; Total Commander
@@ -67,12 +57,10 @@ Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, 
                   , "Synchronize directories" ] } ) ; Total Commander
 
 Setup( { Options: [ { Width: 1862, Height: 1079, Center: True, Max: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 2462, Height: 1289, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM" ] } )
 
 Setup( { Options: [ { Width: 1668, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 2104, Height: 1103, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 2579, Height: 1350, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
 
@@ -80,12 +68,8 @@ Setup( { Options: [ { Width: 2600, Height: 1450, Right: 50, Bottom: 50, Screens:
        , Windows: [ "Hyper" ] } )
 
 Setup( { Options: [ { Width: 1000, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 1350, Height: 1150, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] }
                   , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
-
-Setup( { Options: [ { Width: 800, Height: 1150, Right: 50, Bottom: 50, Screens: [ { P: 1440, Dpi: 192 } ] } ]
-       , Windows: [ "Friends" ] } ) ; Blizzard App, Galaxy, Steam
 
 Setup( { Options: [ { Width: 605, Height: 1035, Left: 50, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
        , Windows: [ { Title: "Skype for Business", Push: True } ] } )
