@@ -17,7 +17,6 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Postman"
                   , "PowerPoint"
                   , { Title: "Remote Desktop Connection", Push: True }
-                  , "S3 Browser"
                   , { Title: "Slack", Push: True }
                   , { Title: "SourceTree", Push: True }
                   , "SQL Server Management Studio"
@@ -27,8 +26,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
 
 Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "Defender"
-                  , { Title: "Event Viewer", Push: True }
+       , Windows: [ { Title: "Event Viewer", Push: True }
                   , "Fiddler"
                   , { Title: "Hyper-V Manager", Push: True }
                   , { Title: "Internet Information Services (IIS) Manager", Push: True }
@@ -36,10 +34,11 @@ Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, D
                   , "Registry Editor"
                   , { Title: "Services", Push: True }
                   , { Title: "SQL Server Configuration Manager", Push: True }
+                  , "Settings"
                   , "SumatraPDF"
                   , { Title: "Task Scheduler", Push: True }
                   , "Total Commander"
-                  , "Settings" ] } )
+                  , "Windows Defender Security Center"] } )
 
 Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
@@ -63,9 +62,6 @@ Setup( { Options: [ { Width: 1862, Height: 1079, Center: True, Max: True, Screen
 Setup( { Options: [ { Width: 1668, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 2579, Height: 1350, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
-
-Setup( { Options: [ { Width: 2600, Height: 1450, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
-       , Windows: [ "Hyper" ] } )
 
 Setup( { Options: [ { Width: 1000, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
