@@ -14,7 +14,3 @@
     VarSetCapacity(originalClipboard, 0)
     return
 
-^#p::
-    ClipBoard = %ClipBoard%
-    return
-
