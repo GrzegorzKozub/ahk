@@ -67,6 +67,9 @@ Setup( { Options: [ { Width: 1000, Height: 900, Right: 50, Bottom: 50, Screens: 
                   , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Task Manager" ] } )
 
+Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+       , Windows: [ "Steam" ] } )
+
 Setup( { Options: [ { Width: 605, Height: 1035, Left: 50, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
        , Windows: [ { Title: "Skype for Business", Push: True } ] } )
 
