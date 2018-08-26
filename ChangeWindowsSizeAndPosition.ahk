@@ -173,16 +173,28 @@ Setup(settingsChunk) {
 GetPrimaryScreen() {
     SysGet monitor, Monitor, %current%
     SysGet monitorWorkArea, MonitorWorkArea, %current%
-    return { P: monitorBottom
-        , Dpi: GetPrimaryScreenDpi()
+    screen := { Dpi: GetPrimaryScreenDpi()
         , Width: monitorWorkAreaRight - monitorWorkAreaLeft
-        , Height: monitorWorkAreaBottom - monitorWorkAreaTop }
+        , Height: monitorWorkAreaBottom - monitorWorkAreaTop
+        , P: monitorBottom }
+    if (Debug()) {
+        MsgBox % "Dpi: " . screen.Dpi . ", Width: " . screen.Width . ", Height: " . screen.Height . ", P: " . screen.P 
+    }
+    return screen
 }
 
 GetPrimaryScreenDpi() {
-    ; Returns 96 (for 100%), 120, 144, 168, 192 (for 200%), 216, 240 (for 250%)...
-    RegRead dpi, HKEY_CURRENT_USER, Control Panel\Desktop\WindowMetrics, AppliedDPI
-    return (ErrorLevel = 1) ? 96 : dpi
+    output := Execute("screen.exe")
+    RegExMatch(output, """dpi"": (\d+)", match)
+    return %match1%
+}
+
+Execute(command) {
+    tempFile := A_Temp . "\" . A_ScriptName . ".txt"
+    ComObjCreate("WScript.Shell").Run(ComSpec . " /c " . command . " > " . tempFile, 0, true)
+    FileRead, output, %tempFile%
+    FileDelete, %tempFile%
+    return output
 }
 
 GetOpenWindows() {
@@ -225,7 +237,7 @@ Fix(settings, screen, window) {
         MaximizeWindow(window)
     }
     if (options.Push) {
-        Push(screen, window)    
+        Push(screen, window)
     }
 }
 
@@ -377,4 +389,12 @@ Contains(list, item) {
         }
     }
     return False
+}
+
+Debug() {
+    if (A_Args[1] == "debug") {
+        return true
+    } else {
+        return false
+    }
 }
