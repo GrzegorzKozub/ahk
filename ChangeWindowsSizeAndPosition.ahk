@@ -1,7 +1,8 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 144 }
-                                                                            , { P: 1800, Dpi: 240 } ] } ]
+                                                                            , { P: 1800, Dpi: 240 } ] }
+                  , { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "BareTail"
                   , { Title: "DevTools", Push: True } ; Chrome
                   , "dotPeek"
@@ -25,7 +26,8 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Word" ] } )
 
 Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+                  , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Title: "Event Viewer", Push: True }
                   , "Fiddler"
                   , { Title: "Hyper-V Manager", Push: True }
@@ -38,10 +40,11 @@ Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, D
                   , "SumatraPDF"
                   , { Title: "Task Scheduler", Push: True }
                   , "Total Commander"
-                  , "Windows Defender Security Center"] } )
+                  , "Windows Defender Security Center" ] } )
 
 Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+                  , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Deluge"
                   , "Find Files" ; Total Commander
@@ -56,18 +59,22 @@ Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, 
                   , "Synchronize directories" ] } ) ; Total Commander
 
 Setup( { Options: [ { Width: 1862, Height: 1079, Center: True, Max: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+                  , { Width: 2546, Height: 1457, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "GVIM" ] } )
 
 Setup( { Options: [ { Width: 1668, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 2579, Height: 1350, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+                  , { Width: 2544, Height: 1455, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 1000, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+                  , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] }
+                  , { Width: 1700, Height: 1600, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 }
+                                                                               , { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "Steam" ] } )
 
 Setup( { Options: [ { Width: 605, Height: 1035, Left: 50, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
