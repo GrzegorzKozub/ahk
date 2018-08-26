@@ -104,7 +104,7 @@ HandleMessage(wParam, lParam) {
     }
     try {
         global _settings
-        screen := GetPrimaryScreen()
+        screen := GetCurrentScreen()
         Sleep 1000
         window := GetActiveWindow()
         window.FixOnOpen := True
@@ -119,7 +119,7 @@ HandleMessage(wParam, lParam) {
 FixOpenWindows:
     try {
         global _settings
-        screen := GetPrimaryScreen()
+        screen := GetCurrentScreen()
         windows := GetOpenWindows()
         for key, window in windows {
             Fix(_settings, screen, window)
@@ -132,7 +132,7 @@ FixOpenWindows:
 FixActiveWindow:
     try {
         global _settings
-        screen := GetPrimaryScreen()
+        screen := GetCurrentScreen()
         window := GetActiveWindow()
         Fix(_settings, screen, window)
     } catch e {
@@ -142,7 +142,7 @@ FixActiveWindow:
 
 CenterActiveWindow:
     try {
-        screen := GetPrimaryScreen()
+        screen := GetCurrentScreen()
         window := GetActiveWindow()
         Center(screen, window)
     } catch e {
@@ -152,7 +152,7 @@ CenterActiveWindow:
 
 PushActiveWindow:
     try {
-        screen := GetPrimaryScreen()
+        screen := GetCurrentScreen()
         window := GetActiveWindow()
         Push(screen, window)
     } catch e {
@@ -170,10 +170,10 @@ Setup(settingsChunk) {
     _settings.Insert(settingsChunk)
 }
 
-GetPrimaryScreen() {
+GetCurrentScreen() {
     SysGet monitor, Monitor, %current%
     SysGet monitorWorkArea, MonitorWorkArea, %current%
-    screen := { Dpi: GetPrimaryScreenDpi()
+    screen := { Dpi: GetCurrentScreenDpi()
         , Width: monitorWorkAreaRight - monitorWorkAreaLeft
         , Height: monitorWorkAreaBottom - monitorWorkAreaTop
         , P: monitorBottom }
@@ -183,7 +183,7 @@ GetPrimaryScreen() {
     return screen
 }
 
-GetPrimaryScreenDpi() {
+GetCurrentScreenDpi() {
     output := Execute("screen.exe")
     RegExMatch(output, """dpi"": (\d+)", match)
     return %match1%
