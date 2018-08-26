@@ -86,7 +86,7 @@ HotKey ^#o, FixOpenWindows
 HotKey ^#w, FixActiveWindow
 HotKey ^#c, CenterActiveWindow
 HotKey ^#p, PushActiveWindow
-InitShellHooks()
+;InitShellHooks()
 return
 
 ; Shell hooks
