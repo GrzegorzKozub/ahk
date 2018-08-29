@@ -56,7 +56,8 @@ Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, 
                   , "Rapid Environment Editor"
                   , { Class: "rctrl_renwnd32" } ; Outlook
                   , "Resource Hacker"
-                  , "Synchronize directories" ] } ) ; Total Commander
+                  , "Synchronize directories" ; Total Commander
+                  , "Task Manager" ] } )
 
 Setup( { Options: [ { Width: 1862, Height: 1079, Center: True, Max: True, Screens: [ { P: 1200, Dpi: 144 } ] }
                   , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
@@ -67,11 +68,6 @@ Setup( { Options: [ { Width: 1668, Height: 876, Right: 50, Bottom: 50, Screens: 
                   , { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2544, Height: 1455, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
-
-Setup( { Options: [ { Width: 1000, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 1700, Height: 1400, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Width: 1700, Height: 1600, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
-       , Windows: [ "Task Manager" ] } )
 
 Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 }
                                                                                , { P: 2160, Dpi: 192 } ] } ]
