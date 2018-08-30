@@ -62,7 +62,7 @@ Setup( { Options: [ { Width: 3074, Height: 1567, Center: True, Max: True, Screen
 
 Setup( { Options: [ { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2544, Height: 1455, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
-       , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
+       , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 }
                                                                                , { P: 2160, Dpi: 192 } ] } ]
@@ -84,6 +84,7 @@ return
 ; Shell hooks
 
 InitShellHooks() {
+    ; Enables support for FixOnOpen
     Gui +LastFound +HwndWindowHwnd
     DllCall("RegisterShellHookWindow", UInt, WindowHwnd)
     msgNumber := DllCall("RegisterWindowMessage", Str, "SHELLHOOK")
