@@ -1,7 +1,6 @@
 ﻿; Settings
 
-Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 144 }
-                                                                            , { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "BareTail"
                   , { Title: "DevTools", Push: True } ; Chrome
@@ -25,8 +24,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Visual Studio Code"
                   , "Word" ] } )
 
-Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Title: "Event Viewer", Push: True }
                   , "Fiddler"
@@ -42,8 +40,7 @@ Setup( { Options: [ { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1200, D
                   , "Total Commander"
                   , "Windows Defender Security Center" ] } )
 
-Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Deluge"
@@ -59,25 +56,17 @@ Setup( { Options: [ { Left: 400, Top: 100, Stretch: True, Screens: [ { P: 1200, 
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 1862, Height: 1079, Center: True, Max: True, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2546, Height: 1457, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "GVIM" ] } )
 
-Setup( { Options: [ { Width: 1668, Height: 876, Right: 50, Bottom: 50, Screens: [ { P: 1200, Dpi: 144 } ] }
-                  , { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2544, Height: 1455, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass", FixOnOpen: False } ] } ) ; ConEmu
 
 Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 }
                                                                                , { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "Steam" ] } )
-
-Setup( { Options: [ { Width: 605, Height: 1035, Left: 50, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
-       , Windows: [ { Title: "Skype for Business", Push: True } ] } )
-
-Setup( { Options: [ { Width: 605, Height: 1035, Left: 705, Top: 50, Screens: [ { P: 1200, Dpi: 144 } ] } ]
-       , Windows: [ { Class: "LyncConversationWindowClass", Push: True } ] } ) ; Skype for Business
 
 ; Main
 
