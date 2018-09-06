@@ -3,7 +3,7 @@
 #NoTrayIcon
 #SingleInstance force
 
-; Hotkeys
+; Paste as plain text
 
 ^#v::
     originalClipboard = %ClipBoardAll%
@@ -14,3 +14,8 @@
     VarSetCapacity(originalClipboard, 0)
     return
 
+; Toggle window always on top
+
+^#a::
+    Winset, AlwaysOnTop,, A
+    return
