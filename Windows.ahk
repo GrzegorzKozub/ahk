@@ -1,6 +1,7 @@
 ﻿; Settings
 
-Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1200, Dpi: 96 }
+                                                                            , { P: 1800, Dpi: 240 } ] }
                   , { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "BareTail"
                   , { Title: "DevTools", Push: True } ; Chrome
@@ -9,6 +10,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Excel"
                   , "Google Chrome"
                   , "Inkscape"
+                  , "Microsoft Azure Storage Explorer"
                   , "Microsoft Visual Studio"
                   , { Title: "OneNote", Push: True }
                   , { Title: "Outlook", Push: True }
@@ -24,7 +26,8 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Visual Studio Code"
                   , "Word" ] } )
 
-Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Left: 250, Top: 100, Stretch: True, Screens: [ { P: 1200, Dpi: 96 } ] }
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Title: "Event Viewer", Push: True }
                   , "Fiddler"
@@ -38,9 +41,11 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
                   , "SumatraPDF"
                   , { Title: "Task Scheduler", Push: True }
                   , "Total Commander"
+                  , "Virtual Machine Manager"
                   , "Windows Defender Security Center" ] } )
 
-Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Left: 450, Top: 200, Stretch: True, Screens: [ { P: 1200, Dpi: 96 } ] }
+                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Deluge"
@@ -56,11 +61,13 @@ Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, 
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 1396, Height: 837, Left: 25, Top: 25, Screens: [ { P: 1200, Dpi: 96 } ] }
+                  , { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2546, Height: 1457, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "GVIM" ] } )
 
-Setup( { Options: [ { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 1443, Height: 815, Right: 25, Bottom: 25, Screens: [ { P: 1200, Dpi: 96 } ] }
+                  , { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2544, Height: 1455, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
 
