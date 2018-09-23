@@ -47,7 +47,8 @@ Setup( { Options: [ { Left: 250, Top: 100, Stretch: True, Screens: [ { P: 1200, 
 Setup( { Options: [ { Left: 450, Top: 200, Stretch: True, Screens: [ { P: 1200, Dpi: 96 } ] }
                   , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
-       , Windows: [ { Class: "FM" } ; 7-Zip
+       , Windows: [ "4K Video Downloader"
+                  , { Class: "FM" } ; 7-Zip
                   , "Deluge"
                   , "Find Files" ; Total Commander
                   , "KeePass"
