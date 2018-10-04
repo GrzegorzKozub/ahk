@@ -28,7 +28,8 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
 
 Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 550, Top: 150, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
-       , Windows: [ "Steam" ] } )
+       , Windows: [ "Galaxy"
+                  , "Steam" ] } )
 
 Setup( { Options: [ { Left: 250, Top: 100, Stretch: True, Screens: [ { P: 1200, Dpi: 96 } ] }
                   , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
