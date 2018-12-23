@@ -23,6 +23,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , { Title: "SourceTree", Push: True }
                   , "SQL Server Management Studio"
                   , "SQL Server Profiler"
+                  , { Class: "Chrome_WidgetWin_1" } ; Termnius
                   , "Visual Studio Code"
                   , "Word" ] } )
 
