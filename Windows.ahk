@@ -68,11 +68,11 @@ Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, 
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 3074, Height: 1567, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 3080, Height: 1576, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2546, Height: 1457, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ "GVIM" ] } )
 
-Setup( { Options: [ { Width: 3092, Height: 1566, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 3071, Height: 1548, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2544, Height: 1455, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
 
