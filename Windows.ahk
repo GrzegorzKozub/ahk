@@ -70,7 +70,8 @@ Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, 
 
 Setup( { Options: [ { Width: 3080, Height: 1576, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2515, Height: 1439, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
-       , Windows: [ "GVIM" ] } )
+       , Windows: [ "GVIM"
+                  , "Neovim" ] } )
 
 Setup( { Options: [ { Width: 3071, Height: 1548, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2550, Height: 1459, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
