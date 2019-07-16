@@ -49,7 +49,7 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
                   , { Title: "Task Scheduler", Push: True }
                   , "Total Commander"
                   , "Virtual Machine Manager"
-                  , "Windows Defender Security Center" ] } )
+                  , "Windows Security" ] } )
 
 Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
