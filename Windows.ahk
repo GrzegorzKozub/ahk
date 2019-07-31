@@ -40,6 +40,7 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
                   , "Fiddler"
                   , { Title: "Hyper-V Manager", Push: True }
                   , { Title: "Internet Information Services (IIS) Manager", Push: True }
+                  , "Microsoft Store"
                   , "NVIDIA Control Panel"
                   , "Registry Editor"
                   , { Title: "Services", Push: True }
