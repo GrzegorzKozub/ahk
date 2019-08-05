@@ -1,7 +1,8 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
+                  , { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1080, Dpi: 96 } ] } ]
        , Windows: [ "BareTail"
                   , { Title: "DevTools", Push: True } ; Chrome
                   , "dotPeek"
@@ -35,7 +36,8 @@ Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [
                   , "Uplay" ] } )
 
 Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
+                  , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 300, Top: 50, Stretch: True, Screens: [ { P: 1080, Dpi: 96 } ] } ]
        , Windows: [ { Title: "Event Viewer", Push: True }
                   , "Fiddler"
                   , { Title: "Hyper-V Manager", Push: True }
@@ -53,7 +55,8 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
                   , "Windows Security" ] } )
 
 Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
+                  , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1080, Dpi: 96 } ] } ]
        , Windows: [ "4K Video Downloader"
                   , { Class: "FM" } ; 7-Zip
                   , "Deluge"
@@ -70,12 +73,14 @@ Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, 
                   , "Task Manager" ] } )
 
 Setup( { Options: [ { Width: 3080, Height: 1576, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Width: 2515, Height: 1439, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
+                  , { Width: 2515, Height: 1439, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Width: 1266, Height: 761, Left: 25, Top: 25, Screens: [ { P: 1080, Dpi: 96 } ] } ]
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
 
 Setup( { Options: [ { Width: 3071, Height: 1548, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Width: 2550, Height: 1459, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] } ]
+                  , { Width: 2550, Height: 1459, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Width: 1403, Height: 724, Right: 25, Bottom: 25, Screens: [ { P: 1080, Dpi: 96 } ] } ]
        , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
 
 ; Main
