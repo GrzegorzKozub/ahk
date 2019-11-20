@@ -34,6 +34,7 @@ Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [
        , Windows: [ "Battle.net"
                   , "Epic Games"
                   , "Galaxy"
+                  , "Rockstar Games"
                   , "Steam"
                   , "Uplay" ] } )
 
