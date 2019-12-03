@@ -45,6 +45,7 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
        , Windows: [ { Title: "Event Viewer", Push: True }
                   , "Fiddler"
                   , { Title: "Hyper-V Manager", Push: True }
+                  , "Intel® Graphics Command Center"
                   , { Title: "Internet Information Services (IIS) Manager", Push: True }
                   , "Microsoft Store"
                   , "NVIDIA Control Panel"
