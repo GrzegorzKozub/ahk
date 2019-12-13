@@ -78,7 +78,7 @@ Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, 
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 3080, Height: 1576, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
+Setup( { Options: [ { Width: 3082, Height: 1607, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Width: 2515, Height: 1439, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] }
                   , { Width: 1266, Height: 761, Left: 25, Top: 25, Screens: [ { P: 1080, Dpi: 96 } ] }
                   , { Width: 2458, Height: 1249, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
