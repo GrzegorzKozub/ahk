@@ -5,7 +5,7 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1080, Dpi: 96 } ] }
                   , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
        , Windows: [ "BareTail"
-                  , { Title: "DevTools", Push: True } ; Chrome
+                  , "DevTools" ; Chrome
                   , "dotPeek"
                   , "Edge"
                   , "Excel"
@@ -13,18 +13,18 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "Inkscape"
                   , "Microsoft Azure Storage Explorer"
                   , "Microsoft Visual Studio"
-                  , { Title: "OneNote", Push: True }
-                  , { Title: "Outlook", Push: True }
+                  , "OneNote"
+                  , "Outlook"
                   , "paint.net"
                   , "Pluralsight"
                   , "Postman"
                   , "PowerPoint"
-                  , { Title: "Remote Desktop Connection", Push: True }
-                  , { Title: "Slack", Push: True }
-                  , { Title: "SourceTree", Push: True }
+                  , "Remote Desktop Connection"
+                  , "Slack"
+                  , "SourceTree"
                   , "SQL Server Management Studio"
                   , "SQL Server Profiler"
-                  , { Title: "Teams", Push: True }
+                  , "Teams"
                   , { Class: "Chrome_WidgetWin_1" } ; Termnius
                   , "Visual Studio Code"
                   , "Word" ] } )
@@ -42,19 +42,19 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
                   , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
                   , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1080, Dpi: 96 } ] }
                   , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
-       , Windows: [ { Title: "Event Viewer", Push: True }
+       , Windows: [ "Event Viewer"
                   , "Fiddler"
-                  , { Title: "Hyper-V Manager", Push: True }
+                  , "Hyper-V Manager"
                   , "Intel® Graphics Command Center"
-                  , { Title: "Internet Information Services (IIS) Manager", Push: True }
+                  , "Internet Information Services (IIS) Manager"
                   , "Microsoft Store"
                   , "NVIDIA Control Panel"
                   , "Registry Editor"
-                  , { Title: "Services", Push: True }
-                  , { Title: "SQL Server Configuration Manager", Push: True }
+                  , "Services"
+                  , "SQL Server Configuration Manager"
                   , "Settings"
                   , "SumatraPDF"
-                  , { Title: "Task Scheduler", Push: True }
+                  , "Task Scheduler"
                   , "Total Commander"
                   , "Virtual Machine Manager"
                   , "Windows Security" ] } )
