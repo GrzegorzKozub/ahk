@@ -1,9 +1,8 @@
 ﻿; Settings
 
-Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1080, Dpi: 96 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
+Setup( { Options: [ { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
+                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "BareTail"
                   , "DevTools" ; Chrome
                   , "dotPeek"
@@ -16,7 +15,6 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "OneNote"
                   , "Outlook"
                   , "paint.net"
-                  , "Pluralsight"
                   , "Postman"
                   , "PowerPoint"
                   , "Remote Desktop Connection"
@@ -24,13 +22,12 @@ Setup( { Options: [ { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { 
                   , "SourceTree"
                   , "SQL Server Management Studio"
                   , "SQL Server Profiler"
-                  , "Teams"
-                  , { Class: "Chrome_WidgetWin_1" } ; Termnius
                   , "Visual Studio Code"
                   , "Word" ] } )
 
-Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 550, Top: 150, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] } ]
+Setup( { Options: [ { Left: 550, Top: 150, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
+                  , { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Battle.net"
                   , "Epic Games"
                   , "Galaxy"
@@ -38,10 +35,9 @@ Setup( { Options: [ { Width: 700, Height: 900, Right: 50, Bottom: 50, Screens: [
                   , "Steam"
                   , "Uplay" ] } )
 
-Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
-                  , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1080, Dpi: 96 } ] }
-                  , { Left: 250, Top: 50, Stretch: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
+Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
+                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "Event Viewer"
                   , "Fiddler"
                   , "Hyper-V Manager"
@@ -59,12 +55,10 @@ Setup( { Options: [ { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 1800, D
                   , "Virtual Machine Manager"
                   , "Windows Security" ] } )
 
-Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
-                  , { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1080, Dpi: 96 } ] }
-                  , { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
-       , Windows: [ "4K Video Downloader"
-                  , { Class: "FM" } ; 7-Zip
+Setup( { Options: [ { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
+                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
+       , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Deluge"
                   , "Find Files" ; Total Commander
                   , "KeePass"
@@ -72,24 +66,19 @@ Setup( { Options: [ { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, 
                   , "Multi-Rename Tool" ; Total Commander
                   , "Notepad"
                   , "OBS"
-                  , "Rapid Environment Editor"
                   , { Class: "rctrl_renwnd32" } ; Outlook
                   , "Resource Hacker"
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 3082, Height: 1607, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Width: 2506, Height: 1431, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 } ] }
-                  , { Width: 1266, Height: 761, Left: 25, Top: 25, Screens: [ { P: 1080, Dpi: 96 } ] }
-                  , { Width: 2458, Height: 1249, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
+Setup( { Options: [ { Width: 2506, Height: 1431, Right: 100, Bottom: 100, Screens: [ { P: 2160, Dpi: 192 } ] }
+                  , { Width: 2497, Height: 1448, Right: 200, Bottom: 200, Screens: [ { P: 2160, Dpi: 144 } ] }
+                  , { Width: 3082, Height: 1607, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] } ]
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
 
-Setup( { Options: [ { Width: 3071, Height: 1548, Center: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
-                  , { Width: 2550, Height: 1459, Right: 50, Bottom: 50, Screens: [ { P: 2160, Dpi: 192 } ] }
-                  , { Width: 1403, Height: 724, Right: 25, Bottom: 25, Screens: [ { P: 1080, Dpi: 96 } ] }
-                  , { Width: 2455, Height: 1269, Center: True, Max: True, Screens: [ { P: 1440, Dpi: 192 } ] } ]
-       , Windows: [ { Class: "VirtualConsoleClass" } ] } ) ; ConEmu
+Setup( { Options: [ { Width: 819, Height: 1479, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 }, { P: 2160, Dpi: 144 } ] } ]
+       , Windows: [ "HWiNFO64" ] } )
 
 ; Main
 
