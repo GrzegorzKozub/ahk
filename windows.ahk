@@ -4,7 +4,8 @@ Setup( { Options: [ { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, D
                   , { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 200, Top: 50, Stretch: True, Screens: [ { P: 1800, Dpi: 192 } ] } ]
-       , Windows: [ "DevTools" ; Chrome
+       , Windows: [ "Azure Data Studio"
+                  , "DevTools" ; Chrome
                   , "dotPeek"
                   , "Edge"
                   , "Excel"
@@ -53,6 +54,10 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, 
                   , "Total Commander"
                   , "Virtual Machine Manager"
                   , "Windows Security" ] } )
+
+Setup( { Options: [ { Left: 1100, Top: 400, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
+       , Windows: [ "curve editor"
+                  , "hardware monitor" ] } )
 
 Setup( { Options: [ { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
                   , { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
