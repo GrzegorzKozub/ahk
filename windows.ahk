@@ -82,7 +82,7 @@ Setup( { Options: [ { Width: 2506, Height: 1431, Right: 100, Bottom: 100, Screen
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
 
-Setup( { Options: [ { Width: 819, Height: 1479, Left: 50, Top: 50, Screens: [ { P: 2160, Dpi: 192 }, { P: 2160, Dpi: 144 } ] } ]
+Setup( { Options: [ { Width: 800, Height: 1390, Left: 25, Top: 25, Screens: [ { P: 2160, Dpi: 192 }, { P: 2160, Dpi: 144 } ] } ]
        , Windows: [ "HWiNFO64" ] } )
 
 ; Main
