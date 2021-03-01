@@ -65,6 +65,7 @@ Setup( { Options: [ { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160,
                   , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1800, Dpi: 192 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Find Files" ; Total Commander
+                  , "HWiNFO64"
                   , "KeePass"
                   , "Lister" ; Total Commander
                   , "Multi-Rename Tool" ; Total Commander
@@ -81,9 +82,6 @@ Setup( { Options: [ { Width: 2506, Height: 1431, Right: 100, Bottom: 100, Screen
                   , { Width: 2486, Height: 1271, Right: 100, Bottom: 100, Screens: [ { P: 1800, Dpi: 192 } ] } ]
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
-
-Setup( { Options: [ { Width: 800, Height: 1390, Left: 25, Top: 25, Screens: [ { P: 2160, Dpi: 192 }, { P: 2160, Dpi: 144 } ] } ]
-       , Windows: [ "HWiNFO64" ] } )
 
 ; Main
 
