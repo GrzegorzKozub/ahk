@@ -28,9 +28,8 @@ Setup( { Options: [ { Left: 400, Top: 50, Stretch: True, Screens: [ { P: 2160, D
 Setup( { Options: [ { Left: 550, Top: 150, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
                   , { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
        , Windows: [ "Battle.net"
-                  , "Epic Games"
+                  , "Epic"
                   , "Galaxy"
-                  , "Rockstar Games"
                   , "Steam"
                   , "Uplay" ] } )
 
@@ -56,8 +55,9 @@ Setup( { Options: [ { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2160, 
                   , "Windows Security" ] } )
 
 Setup( { Options: [ { Left: 1100, Top: 400, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
-       , Windows: [ "curve editor"
-                  , "hardware monitor" ] } )
+       , Windows: [ "curve editor" ; MSI Afterburner
+                  , "hardware monitor" ; MSI Afterburner
+                  , "Rockstar" ] } )
 
 Setup( { Options: [ { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160, Dpi: 192 } ] }
                   , { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
