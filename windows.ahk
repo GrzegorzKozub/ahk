@@ -64,6 +64,7 @@ Setup( { Options: [ { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160,
                   , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 1800, Dpi: 240 } ] }
                   , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 1800, Dpi: 192 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
+                  , "Company Portal"
                   , "Find Files" ; Total Commander
                   , "HWiNFO64"
                   , "KeePass"
