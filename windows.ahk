@@ -68,6 +68,7 @@ Setup( { Options: [ { Left: 1150, Top: 450, Stretch: True, Screens: [ { P: 2160,
                   , "Find Files" ; Total Commander
                   , "HWiNFO64"
                   , "KeePass"
+                  , "KeePassXC"
                   , "Lister" ; Total Commander
                   , "Multi-Rename Tool" ; Total Commander
                   , "Notepad"
