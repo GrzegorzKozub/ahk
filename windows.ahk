@@ -1,8 +1,7 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 50, Top: 50, Stretch: True, Max: True, Screens: [ { P: 2400, Dpi: 288 } ] }
-                  , { Left: 200, Top: 50, Stretch: True, Screens: [ { P: 2400, Dpi: 192 } ] } ]
+                  , { Left: 200, Top: 100, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "Azure Data Studio"
                   , "DevTools" ; Chrome
                   , "dotPeek"
@@ -31,8 +30,7 @@ Setup( { Options: [ { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, 
                   , "Steam" ] } )
 
 Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 450, Top: 50, Stretch: True, Screens: [ { P: 2400, Dpi: 288 } ] }
-                  , { Left: 450, Top: 150, Stretch: True, Screens: [ { P: 2400, Dpi: 192 } ] } ]
+                  , { Left: 550, Top: 250, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "Event Viewer"
                   , "Fiddler"
                   , "Hyper-V Manager"
@@ -57,8 +55,7 @@ Setup( { Options: [ { Left: 1100, Top: 400, Stretch: True, Screens: [ { P: 2400,
                   , "Ubisoft" ] } )
 
 Setup( { Options: [ { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 650, Top: 150, Stretch: True, Screens: [ { P: 2400, Dpi: 288 } ] }
-                  , { Left: 750, Top: 250, Stretch: True, Screens: [ { P: 2400, Dpi: 192 } ] } ]
+                  , { Left: 900, Top: 400, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Company Portal"
                   , "Find Files" ; Total Commander
@@ -75,8 +72,7 @@ Setup( { Options: [ { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , "Task Manager" ] } )
 
 Setup( { Options: [ { Width: 2497, Height: 1448, Right: 200, Bottom: 200, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Width: 3082, Height: 1607, Center: True, Max: True, Screens: [ { P: 2400, Dpi: 288 } ] }
-                  , { Width: 2486, Height: 1271, Right: 100, Bottom: 100, Screens: [ { P: 2400, Dpi: 192 } ] } ]
+                  , { Width: 2497, Height: 1448, Right: 200, Bottom: 200, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
 
