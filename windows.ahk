@@ -30,7 +30,7 @@ Setup( { Options: [ { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, 
                   , "Steam" ] } )
 
 Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 550, Top: 250, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
+                  , { Left: 550, Top: 200, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "Event Viewer"
                   , "Fiddler"
                   , "Hyper-V Manager"
@@ -55,7 +55,7 @@ Setup( { Options: [ { Left: 1100, Top: 400, Stretch: True, Screens: [ { P: 2400,
                   , "Ubisoft" ] } )
 
 Setup( { Options: [ { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 900, Top: 400, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
+                  , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Company Portal"
                   , "Find Files" ; Total Commander
@@ -72,7 +72,7 @@ Setup( { Options: [ { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , "Task Manager" ] } )
 
 Setup( { Options: [ { Width: 2497, Height: 1448, Right: 200, Bottom: 200, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Width: 2497, Height: 1448, Right: 200, Bottom: 200, Screens: [ { P: 2400, Dpi: 240 } ] } ]
+                  , { Width: 2607, Height: 1656, Right: 100, Bottom: 200, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
 
