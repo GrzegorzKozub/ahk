@@ -48,13 +48,13 @@ Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, 
                   , "Virtual Machine Manager"
                   , "Windows Security" ] } )
 
-Setup( { Options: [ { Left: 1100, Top: 400, Stretch: True, Screens: [ { P: 2400, Dpi: 144 } ] } ]
+Setup( { Options: [ { Left: 1050, Top: 400, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
        , Windows: [ "curve editor" ; MSI Afterburner
                   , "hardware monitor" ; MSI Afterburner
                   , "Rockstar"
                   , "Ubisoft" ] } )
 
-Setup( { Options: [ { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
+Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Company Portal"
@@ -71,7 +71,7 @@ Setup( { Options: [ { Left: 1300, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
-Setup( { Options: [ { Width: 2497, Height: 1448, Right: 200, Bottom: 200, Screens: [ { P: 2160, Dpi: 144 } ] }
+Setup( { Options: [ { Width: 1822, Height: 1274, Right: 100, Top: 400, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Width: 2607, Height: 1656, Right: 100, Bottom: 200, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "GVIM"
                   , "Neovim" ] } )
