@@ -3,6 +3,7 @@
 Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
        , Windows: [ "Azure Data Studio"
+                  , "Brave"
                   , "DevTools" ; Chrome
                   , "dotPeek"
                   , "Edge"
