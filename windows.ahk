@@ -1,7 +1,8 @@
 ﻿; Settings
 
 Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
+                  , { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
+                  , { Left: 100, Top: 100, Stretch: True, Max: True, Screens: [ { Other: True } ] } ]
        , Windows: [ "Azure Data Studio"
                   , "Brave"
                   , "DevTools" ; Chrome
@@ -193,7 +194,7 @@ GetCurrentScreenDpi() {
 
 Execute(command) {
     tempFile := A_Temp . "\" . A_ScriptName . ".txt"
-    ComObjCreate("WScript.Shell").Run(ComSpec . " /c " . command . " > " . tempFile, 0, true)
+    ComObjCreate("WScript.Shell").Run(ComSpec . " /c " . command . " > " . tempFile, 0, True)
     FileRead, output, %tempFile%
     FileDelete, %tempFile%
     return output
@@ -300,7 +301,7 @@ WindowMatchesConfig(windowOnScreen, windowInConfig) {
 }
 
 ScreenMatchesConfig(actualScreen, screen) {
-    return actualScreen.P == screen.P && actualScreen.Dpi == screen.Dpi
+    return (actualScreen.P == screen.P && actualScreen.Dpi == screen.Dpi) || screen.Other == True
 }
 
 MeasureWindow(window) {
@@ -395,7 +396,7 @@ Contains(list, item) {
 
 Debug() {
     if (A_Args[1] == "debug") {
-        return true
+        return True
     } else {
         return false
     }
