@@ -2,7 +2,7 @@
 
 Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
-                  , { Left: 100, Top: 100, Stretch: True, Max: True, Screens: [ { Other: True } ] } ]
+                  , { Left: 100, Top: 50, Stretch: True, Screens: [ { Other: True } ] } ]
        , Windows: [ "Azure Data Studio"
                   , "Brave"
                   , "DevTools" ; Chrome
@@ -32,7 +32,8 @@ Setup( { Options: [ { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, 
                   , "Steam" ] } )
 
 Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
+                  , { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
+                  , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
        , Windows: [ "Event Viewer"
                   , "Fiddler"
                   , "Hyper-V Manager"
@@ -57,7 +58,8 @@ Setup( { Options: [ { Left: 1050, Top: 400, Stretch: True, Screens: [ { P: 2160,
                   , "Ubisoft" ] } )
 
 Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] } ]
+                  , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
+                  , { Left: 500, Top: 150, Stretch: True, Screens: [ { Other: True } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
                   , "Company Portal"
                   , "Find Files" ; Total Commander
