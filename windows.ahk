@@ -74,6 +74,7 @@ Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , "OBS"
                   , { Class: "rctrl_renwnd32" } ; Outlook
                   , "Resource Hacker"
+                  , "qBittorrent"
                   , "Synchronize directories" ; Total Commander
                   , "Task Manager" ] } )
 
