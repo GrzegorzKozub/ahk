@@ -34,7 +34,8 @@ Setup( { Options: [ { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, 
 Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
                   , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ "Event Viewer"
+       , Windows: [ "AMD Software"
+                  , "Event Viewer"
                   , "Fiddler"
                   , "HxD"
                   , "Hyper-V Manager"
