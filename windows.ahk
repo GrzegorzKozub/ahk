@@ -6,24 +6,13 @@ Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, 
        , Windows: [ "Azure Data Studio"
                   , "Brave"
                   , "DevTools" ; Chrome
-                  , "dotPeek"
                   , "Edge"
-                  , "Excel"
-                  , "Google Chrome"
-                  , "Microsoft Azure Storage Explorer"
                   , "Microsoft Visual Studio"
-                  , "OneNote"
-                  , "Outlook"
                   , "paint.net"
-                  , "Postman"
-                  , "PowerPoint"
                   , "Remote Desktop Connection"
-                  , "Slack"
-                  , "SourceTree"
                   , "SQL Server Management Studio"
                   , "SQL Server Profiler"
-                  , "Visual Studio Code"
-                  , "Word" ] } )
+                  , "Visual Studio Code" ] } )
 
 Setup( { Options: [ { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
        , Windows: [ "Battle.net"
@@ -36,13 +25,13 @@ Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, 
                   , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
        , Windows: [ "AMD Software"
                   , "Event Viewer"
-                  , "Fiddler"
                   , "HxD"
                   , "Hyper-V Manager"
                   , "Intel® Graphics Command Center"
                   , "Internet Information Services (IIS) Manager"
                   , "Microsoft Store"
                   , "NVIDIA Control Panel"
+                  , "Paint"
                   , "Registry Editor"
                   , "Services"
                   , "SQL Server Configuration Manager"
@@ -50,7 +39,6 @@ Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, 
                   , "SumatraPDF"
                   , "Task Scheduler"
                   , "Total Commander"
-                  , "Virtual Machine Manager"
                   , "Windows Security" ] } )
 
 Setup( { Options: [ { Left: 1050, Top: 400, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
@@ -63,17 +51,13 @@ Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
                   , { Left: 500, Top: 150, Stretch: True, Screens: [ { Other: True } ] } ]
        , Windows: [ { Class: "FM" } ; 7-Zip
-                  , "Company Portal"
-                  , "Deluge"
                   , "Find Files" ; Total Commander
                   , "HWiNFO64"
-                  , "KeePass"
                   , "KeePassXC"
                   , "Lister" ; Total Commander
                   , "Multi-Rename Tool" ; Total Commander
                   , "Notepad"
                   , "OBS"
-                  , { Class: "rctrl_renwnd32" } ; Outlook
                   , "Resource Hacker"
                   , "qBittorrent"
                   , "Synchronize directories" ; Total Commander
@@ -87,8 +71,7 @@ Setup( { Options: [ { Width: 1302, Height: 806, Center: True, Screens: [ { Other
 Setup( { Options: [ { Width: 1822, Height: 1274, Right: 100, Top: 400, Screens: [ { P: 2160, Dpi: 144 } ] }
                   , { Width: 2532, Height: 1803, Right: 100, Top: 249, Screens: [ { P: 2400, Dpi: 240 } ] }
                   , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ "GVIM"
-                  , "Neovim" ] } )
+       , Windows: [ "Neovim" ] } )
 
 ; Main
 
