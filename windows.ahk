@@ -8,6 +8,7 @@ Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, 
                   , "DevTools" ; Chrome
                   , "Edge"
                   , "Microsoft Visual Studio"
+                  , "NTLite"
                   , "paint.net"
                   , "Remote Desktop Connection"
                   , "SQL Server Management Studio"
