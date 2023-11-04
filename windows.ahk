@@ -56,6 +56,7 @@ Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , "HWiNFO64"
                   , "KeePassXC"
                   , "Lister" ; Total Commander
+                  , "LockHunter"
                   , "Multi-Rename Tool" ; Total Commander
                   , "Notepad"
                   , "OBS"
@@ -68,11 +69,6 @@ Setup( { Options: [ { Width: 1302, Height: 806, Center: True, Screens: [ { Other
        , Windows: [ "Cemu"
                   , "Ryujinx"
                   , "yuzu" ] } )
-
-Setup( { Options: [ { Width: 1822, Height: 1274, Right: 100, Top: 400, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Width: 2532, Height: 1803, Right: 100, Top: 249, Screens: [ { P: 2400, Dpi: 240 } ] }
-                  , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ "Neovim" ] } )
 
 ; Main
 
