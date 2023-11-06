@@ -60,6 +60,7 @@ Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160,
                   , "Multi-Rename Tool" ; Total Commander
                   , "Notepad"
                   , "OBS"
+                  , "Partition Expert"
                   , "Resource Hacker"
                   , "qBittorrent"
                   , "Synchronize directories" ; Total Commander
