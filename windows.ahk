@@ -33,6 +33,7 @@ Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, 
                   , "Microsoft Store"
                   , "NVIDIA Control Panel"
                   , "Paint"
+                  , "Photos"
                   , "Registry Editor"
                   , "Services"
                   , "SQL Server Configuration Manager"
