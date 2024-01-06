@@ -31,6 +31,7 @@ Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, 
                   , "Internet Information Services (IIS) Manager"
                   , "Microsoft Store"
                   , "NVIDIA Control Panel"
+                  , "Obsidian"
                   , "Paint"
                   , "paint.net"
                   , "Photos"
