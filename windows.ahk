@@ -25,6 +25,7 @@ Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, 
                   , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
        , Windows: [ "AMD Software"
                   , "Event Viewer"
+                  , "Firewall"
                   , "HxD"
                   , "Hyper-V Manager"
                   , "Intel® Graphics Command Center"
