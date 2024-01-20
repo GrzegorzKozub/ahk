@@ -1,399 +1,160 @@
-﻿; Settings
-
-Setup( { Options: [ { Left: 600, Top: 100, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 300, Top: 100, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
-                  , { Left: 100, Top: 50, Stretch: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ "Azure Data Studio"
-                  , "Brave"
-                  , "DevTools" ; Chrome
-                  , "Edge"
-                  , "Microsoft Visual Studio"
-                  , "NTLite"
-                  , "Remote Desktop Connection"
-                  , "SQL Server Management Studio"
-                  , "SQL Server Profiler"
-                  , "Visual Studio Code" ] } )
-
-Setup( { Options: [ { Left: 750, Top: 200, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
-       , Windows: [ "Battle.net"
-                  , "Epic"
-                  , "Galaxy"
-                  , "Steam" ] } )
-
-Setup( { Options: [ { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 600, Top: 200, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
-                  , { Left: 300, Top: 100, Stretch: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ "AMD Software"
-                  , "Event Viewer"
-                  , "Firewall"
-                  , "HxD"
-                  , "Hyper-V Manager"
-                  , "Intel® Graphics Command Center"
-                  , "Internet Information Services (IIS) Manager"
-                  , "Microsoft Store"
-                  , "NVIDIA Control Panel"
-                  , "Obsidian"
-                  , "Paint"
-                  , "paint.net"
-                  , "Photos"
-                  , "Registry Editor"
-                  , "Services"
-                  , "SQL Server Configuration Manager"
-                  , "Settings"
-                  , "SumatraPDF"
-                  , "Task Scheduler"
-                  , "Total Commander"
-                  , "Windows Security" ] } )
-
-Setup( { Options: [ { Left: 1050, Top: 400, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] } ]
-       , Windows: [ "curve editor" ; MSI Afterburner
-                  , "hardware monitor" ; MSI Afterburner
-                  , "Rockstar"
-                  , "Ubisoft" ] } )
-
-Setup( { Options: [ { Left: 1200, Top: 500, Stretch: True, Screens: [ { P: 2160, Dpi: 144 } ] }
-                  , { Left: 900, Top: 300, Stretch: True, Screens: [ { P: 2400, Dpi: 240 } ] }
-                  , { Left: 500, Top: 150, Stretch: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ { Class: "FM" } ; 7-Zip
-                  , "Find Files" ; Total Commander
-                  , "HWiNFO64"
-                  , "KeePassXC"
-                  , "Lister" ; Total Commander
-                  , "LockHunter"
-                  , "Multi-Rename Tool" ; Total Commander
-                  , "Notepad"
-                  , "OBS"
-                  , "Partition Expert"
-                  , "Resource Hacker"
-                  , "qBittorrent"
-                  , "Synchronize directories" ; Total Commander
-                  , "Task Manager" ] } )
-
-Setup( { Options: [ { Width: 1302, Height: 806, Center: True, Screens: [ { Other: True } ] } ]
-       , Windows: [ "Cemu"
-                  , "Ryujinx"
-                  , "yuzu" ] } )
-
-; Main
+﻿; https://www.autohotkey.com/docs/v2/
 
 #NoTrayIcon
-#SingleInstance force
+#SingleInstance Force
 
-SetTitleMatchMode 2
-HotKey ^#o, FixOpenWindows
-HotKey ^#w, FixActiveWindow
-HotKey ^#c, CenterActiveWindow
-HotKey ^#p, PushActiveWindow
-;InitShellHooks()
-return
+HotKey "^#o", fixAll
+HotKey "^#w", fixActive
+HotKey "^#c", centerActive
 
-; Shell hooks
+init
 
-InitShellHooks() {
-    ; Enables support for FixOnOpen
-    Gui +LastFound +HwndWindowHwnd
-    DllCall("RegisterShellHookWindow", UInt, WindowHwnd)
-    msgNumber := DllCall("RegisterWindowMessage", Str, "SHELLHOOK")
-    OnMessage(msgNumber, "HandleMessage")
+init() {
+  global config := []
+  addConfig(big, [
+    { title: "Brave" },
+    { title: "DevTools" }, ; Brave
+    { title: "Edge" },
+    { title: "Microsoft Visual Studio" },
+    { title: "NTLite" },
+    { title: "Remote Desktop Connection" },
+    { title: "SQL Server Management Studio" },
+    { title: "SQL Server Profiler" },
+    { title: "Visual Studio Code" },
+  ])
+  addConfig(bigMedium, [
+    { title: "Steam" },
+  ])
+  addConfig(medium, [
+    { title: "AMD Software" },
+    { title: "Event Viewer" },
+    { title: "Firewall" },
+    { title: "HxD" },
+    { title: "Hyper-V Manager" },
+    { title: "Intel® Graphics Command Center" },
+    { title: "Internet Information Services (IIS) Manager" },
+    { title: "Microsoft Store" },
+    { title: "NVIDIA Control Panel" },
+    { title: "Obsidian" },
+    { title: "Paint" },
+    { title: "paint.net" },
+    { title: "Photos" },
+    { title: "Registry Editor" },
+    { title: "Services" },
+    { title: "SQL Server Configuration Manager" },
+    { title: "Settings" },
+    { title: "SumatraPDF" },
+    { title: "Task Scheduler" },
+    { title: "Total Commander" },
+    { title: "Windows Security" },
+  ])
+  addConfig(mediumSmall, [
+    { title: "Cemu" },
+    { title: "yuzu" },
+  ])
+  addConfig(small, [
+    { title: "curve editor" }, ; Afterburner
+    { title: "Find Files" }, ; Total Commander
+    { class: "FM" }, ; 7-Zip
+    { title: "hardware monitor" }, ; Afterburner
+    { title: "HWiNFO64" },
+    { title: "KeePassXC" },
+    { title: "Lister" }, ; Total Commander
+    { title: "LockHunter" },
+    { title: "Multi-Rename Tool" }, ; Total Commander
+    { title: "Notepad" },
+    { title: "OBS" },
+    { title: "Partition Expert" },
+    { title: "qBittorrent" },
+    { title: "Resource Hacker" },
+    { title: "Synchronize directories" }, ; Total Commander
+    { title: "Task Manager" },
+  ])
 }
 
-HandleMessage(wParam, lParam) {
-    if (wParam != 1) { ; HSHELL_WINDOWCREATED
-        return
-    }
-    try {
-        global _settings
-        screen := GetCurrentScreen()
-        Sleep 1000
-        window := GetActiveWindow()
-        window.FixOnOpen := True
-        Fix(_settings, screen, window)
-    } catch e {
-        MsgBox 48,, %e%
-    }
+addConfig(fix, size) {
+  for cfg in size {
+    cfg.fix := fix.Bind()
+    config.Push cfg
+  }
 }
 
-; Labels
-
-FixOpenWindows:
-    try {
-        global _settings
-        screen := GetCurrentScreen()
-        windows := GetOpenWindows()
-        for key, window in windows {
-            Fix(_settings, screen, window)
-        }
-    } catch e {
-        MsgBox 48,, %e%
-    }
-    return
-
-FixActiveWindow:
-    try {
-        global _settings
-        screen := GetCurrentScreen()
-        window := GetActiveWindow()
-        Fix(_settings, screen, window)
-    } catch e {
-        MsgBox 48,, %e%
-    }
-    return
-
-CenterActiveWindow:
-    try {
-        screen := GetCurrentScreen()
-        window := GetActiveWindow()
-        Center(screen, window)
-    } catch e {
-        MsgBox 48,, %e%
-    }
-    return
-
-PushActiveWindow:
-    try {
-        screen := GetCurrentScreen()
-        window := GetActiveWindow()
-        Push(screen, window)
-    } catch e {
-        MsgBox 48,, %e%
-    }
-    return
-
-; Functions
-
-Setup(settingsChunk) {
-    global _settings
-    if (!_settings) {
-        _settings := Object()
-    }
-    _settings.Insert(settingsChunk)
+fixAll(*) {
+  for hwnd in WinGetList(,, "Program Manager")
+    fix hwnd
 }
 
-GetCurrentScreen() {
-    SysGet monitor, Monitor, %current%
-    SysGet monitorWorkArea, MonitorWorkArea, %current%
-    screen := { Dpi: GetCurrentScreenDpi()
-        , Width: monitorWorkAreaRight - monitorWorkAreaLeft
-        , Height: monitorWorkAreaBottom - monitorWorkAreaTop
-        , P: monitorBottom }
-    if (Debug()) {
-        MsgBox % "Dpi: " . screen.Dpi . ", Width: " . screen.Width . ", Height: " . screen.Height . ", P: " . screen.P 
-    }
-    return screen
+fixActive(*) => fix(WinGetID("A"))
+
+centerActive(*) {
+  WinWait WinGetID("A")
+  desktop := getDesktop()
+  WinRestore
+  WinGetPos(,, &width, &height)
+  WinMove desktop.width / 2 - width / 2, desktop.height / 2 - height / 2, width, height
 }
 
-GetCurrentScreenDpi() {
-    output := Execute("screen.exe")
-    RegExMatch(output, """dpi"": (\d+)", match)
-    return %match1%
+fix(hwnd) {
+  cfg := findConfig(hwnd)
+  if cfg {
+    WinWait hwnd ; https://www.autohotkey.com/docs/v2/misc/WinTitle.htm#LastFoundWindow
+    cfg.fix.Call()
+  }
 }
 
-Execute(command) {
-    tempFile := A_Temp . "\" . A_ScriptName . ".txt"
-    ComObjCreate("WScript.Shell").Run(ComSpec . " /c " . command . " > " . tempFile, 0, True)
-    FileRead, output, %tempFile%
-    FileDelete, %tempFile%
-    return output
+findConfig(hwnd) {
+  class := WinGetClass(hwnd), title := WinGetTitle(hwnd)
+  for cfg in config
+    if HasProp(cfg, "class") && RegExMatch(class, cfg.class) || HasProp(cfg, "title") && RegExMatch(title, cfg.title)
+      return cfg
 }
 
-GetOpenWindows() {
-    supported:= Object()
-    WinGet all, List
-    loop %all% {
-        id := all%A_Index%
-        WinGetTitle title, ahk_id %id%
-        if (title != "" && title != "Microsoft Store" && title != "Program Manager" && title != "Settings") {
-            WinGetClass class, ahk_id %id%
-            supported.Insert(InitWindow(class, title))
-        }
-    }
-    return supported
+big() => onUhd() ? center(12, 14) : center(14, 14.5)
+bigMedium() => onUhd() ? center(10.5, 13) : center(13, 13.5)
+medium() => onUhd() ? center(9, 12) : center(12, 12.5)
+mediumSmall() => onUhd() ? center(7.5, 11) : center(11, 11.5)
+small() => onUhd() ? center(6, 10) : center(10, 10.5)
+
+onUhd() {
+  MonitorGet getMonitor(), &left, &top, &right, &bottom
+  return right - left = 3840 && bottom - top = 2160
 }
 
-GetActiveWindow() {
-    WinGetClass class, A
-    WinGetTitle title, A
-    return InitWindow(class, title)
+center(width, height) => move(getCenterTile(width, height))
+
+getCenterTile(width, height) {
+  static step := 16
+  desktop := getDesktop()
+  return { 
+    x: ((desktop.width / step) * ((step - width) / 2)) + desktop.x, 
+    y: ((desktop.height / step) * ((step - height) / 2)) + desktop.y,
+    width: (desktop.width / step) * width,
+    height: (desktop.height / step) * height
+  }
 }
 
-InitWindow(class, title) {
-    return { Class: class, Title: title }
+move(tile) {
+  WinRestore
+  WinMove tile.x, tile.y, tile.width, tile.height
 }
 
-Fix(settings, screen, window) {
-    options := FindMatch(settings, screen, window)
-    if (!options) {
-        return
-    }
-    window := MeasureWindow(window)
-    RestoreWindow(window)
-    MoveWindow(screen, options, window)
-    if (options.Center) {
-        window := MeasureWindow(window)
-        CenterWindow(screen, window)
-    }
-    if (options.Max) {
-        MaximizeWindow(window)
-    }
-    if (options.Push) {
-        Push(screen, window)
-    }
+getDesktop() {
+  MonitorGetWorkArea getMonitor(), &left, &top, &right, &bottom
+  return { x: left, y: top, width: right - left, height: bottom - top }
 }
 
-Center(screen, window) {
-    window := MeasureWindow(window)
-    RestoreWindow(window)
-    window := MeasureWindow(window)
-    CenterWindow(screen, window)
-}
-
-Push(screen, window) {
-    ; Pushes the window to the screen on the right
-    ; Assumes all screen resolutions and DPI are the same
-    SysGet monitorCount, MonitorCount
-    if (monitorCount < 2) {
-        return
-    }
-    max := IsWindowMaximized(window)
-    if (max) {
-        RestoreWindow(window)
-    }
-    window := MeasureWindow(window)
-    left := window.Left < screen.Width ? screen.Width + window.Left : window.Left
-    PushWindow(window, left, window.Top)
-    if (max) {
-        MaximizeWindow(window)
-    }
-}
-
-FindMatch(settings, screen, window) {
-    for key, group in settings {
-        for key, windowInConfig in group.Windows {
-            if (WindowMatchesConfig(window, windowInConfig)) {
-                for key, options in group.Options {
-                    for key, screenInConfig in options.Screens {
-                        if (ScreenMatchesConfig(screen, screenInConfig)) {
-                            options.Push := windowInConfig.Push
-                            return options
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-WindowMatchesConfig(windowOnScreen, windowInConfig) {
-    if (windowOnScreen.FixOnOpen && !windowInConfig.FixOnOpen) {
-        return False
-    }
-    if (windowInConfig.Class && windowInConfig.Title) {
-        return windowOnScreen.Class == windowInConfig.Class && InStr(windowOnScreen.Title, windowInConfig.Title) > 0
-    } else if (windowInConfig.Class) {
-        return windowOnScreen.Class == windowInConfig.Class
+getMonitor() {
+  try {
+    static MONITOR_DEFAULTTONEAREST := 2
+    monitorHandle := DllCall("MonitorFromWindow", "Ptr", WinGetID(), "UInt", MONITOR_DEFAULTTONEAREST, "Ptr")
+    NumPut("UInt", 104, monitorInfo := Buffer(104))
+    if (DllCall("GetMonitorInfo", "Ptr", monitorHandle, "Ptr", monitorInfo)) {
+      return RegExReplace(StrGet(monitorInfo.Ptr + 40, 32), ".*(\d+)$", "$1")
     } else {
-        return InStr(windowOnScreen.Title, windowInConfig.Title ? windowInConfig.Title : windowInConfig) > 0
+      return MonitorGetPrimary()
     }
+  } catch {
+    return MonitorGetPrimary()
+  }
 }
 
-ScreenMatchesConfig(actualScreen, screen) {
-    return (actualScreen.P == screen.P && actualScreen.Dpi == screen.Dpi) || screen.Other == True
-}
-
-MeasureWindow(window) {
-    title := window.Title
-    class := window.Class
-    WinGetPos x, y, width, height, %title% ahk_class %class%
-    window.Left := x
-    window.Top := y
-    window.Width := width
-    window.Height := height
-    return window
-}
-
-IsWindowMaximized(window) {
-    title := window.Title
-    class := window.Class
-    WinGet minMax, MinMax, %title% ahk_class %class%
-    return minMax == 1 ? True : False
-}
-
-RestoreWindow(window) {
-    title := window.Title
-    class := window.Class
-    WinRestore %title% ahk_class %class%
-}
-
-MaximizeWindow(window) {
-    title := window.Title
-    class := window.Class
-    WinMaximize %title% ahk_class %class%
-}
-
-CenterWindow(screen, window) {
-    title := window.Title
-    class := window.Class
-    WinMove %title% ahk_class %class%,, (screen.Width / 2) - (window.Width / 2), (screen.Height / 2) - (window.Height / 2)
-}
-
-PushWindow(window, left, top) {
-    title := window.Title
-    class := window.Class
-    WinMove %title% ahk_class %class%,, left, top
-}
-
-MoveWindow(screen, options, window) {
-    if (!options.Left) {
-        options.Left := -options.Right
-    }
-    if (!options.Top) {
-        options.Top := -options.Bottom
-    }
-    options.Width := GetSize(options.Width, window.Width, screen.Width, options.Left, options.Right, options.Stretch)
-    options.Height := GetSize(options.Height, window.Height, screen.Height, options.Top, options.Bottom, options.Stretch)
-    options.Left := GetMargin(options.Left, window.Left, options.Width, screen.Width)
-    options.Top := GetMargin(options.Top, window.Top, options.Height, screen.Height)
-    title := window.Title
-    class := window.Class
-    WinMove %title% ahk_class %class%,, options.Left, options.Top, options.Width, options.Height
-}
-
-GetSize(size, windowSize, screenSize, startMargin, endMargin, stretch) {
-    if (size) {
-        return size
-    }
-    if (stretch) {
-        return screenSize - (2 * startMargin)
-    } else if (endMargin) {
-        return screenSize - startMargin - endMargin
-    } else {
-        return windowSize
-    }
-}
-
-GetMargin(margin, windowMargin, size, screenSize) {
-    if (!margin) {
-        return windowMargin
-    } else if (margin < 0) {
-        return screenSize - (size + Abs(margin))
-    } else {
-        return margin
-    }
-}
-
-Contains(list, item) {
-    for key, value in list {
-        if (value == item) {
-            return True
-        }
-    }
-    return False
-}
-
-Debug() {
-    if (A_Args[1] == "debug") {
-        return True
-    } else {
-        return false
-    }
-}
