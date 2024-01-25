@@ -6,6 +6,7 @@
 HotKey "^#o", fixAll
 HotKey "^#w", fixActive
 HotKey "^#c", centerActive
+HotKey "^#f", tileFullActive
 
 init
 
@@ -92,6 +93,11 @@ centerActive(*) {
   WinMove desktop.width / 2 - width / 2, desktop.height / 2 - height / 2, width, height
 }
 
+tileFullActive(*) {
+  WinWait WinGetID("A")
+  tileFull
+}
+
 fix(hwnd) {
   cfg := findConfig(hwnd)
   if cfg {
@@ -123,11 +129,38 @@ center(width, height) => move(getCenterTile(width, height))
 getCenterTile(width, height) {
   static step := 16
   desktop := getDesktop()
-  return { 
-    x: ((desktop.width / step) * ((step - width) / 2)) + desktop.x, 
-    y: ((desktop.height / step) * ((step - height) / 2)) + desktop.y,
-    width: (desktop.width / step) * width,
-    height: (desktop.height / step) * height
+  return tile(
+    ((desktop.width / step) * ((step - width) / 2)) + desktop.x, 
+    ((desktop.height / step) * ((step - height) / 2)) + desktop.y,
+    (desktop.width / step) * width,
+    (desktop.height / step) * height,
+  )
+}
+
+tileFull() => move(getTiles().full)
+
+getTiles() {
+  static gap := 25, step := 2, master := 1
+  desktop := getDesktop()
+  xLeft := desktop.x + gap
+  xRight := desktop.x + (desktop.width / step * master) + (gap * 0.5)
+  yDown := desktop.y + (desktop.height / 2) + (gap * 0.5)
+  yUp := desktop.y + gap
+  widthFull := desktop.width - (gap * 2)
+  widthLeft := (desktop.width / step * master) - (gap * 1.5)
+  widthRight := (desktop.width / step * (step - master)) - (gap * 1.5)
+  heightFull := (desktop.height) - (gap * 2)
+  heightHalf := (desktop.height / 2) - (gap * 1.5)
+  return {
+    full: tile(xLeft, yUp, widthFull, heightFull),
+    left: tile(xLeft, yUp, widthLeft, heightFull),
+    right: tile(xRight, yUp, widthRight, heightFull),
+    down: tile(xLeft, yDown, widthFull, heightHalf),
+    up: tile(xLeft, yUp, widthFull, heightHalf),
+    leftDown: tile(xLeft, yDown, widthLeft, heightHalf),
+    leftUp: tile(xLeft, yUp, widthLeft, heightHalf),
+    rightDown: tile(xRight, yDown, widthRight, heightHalf),
+    rightUp: tile(xRight, yUp, widthRight, heightHalf),
   }
 }
 
@@ -155,4 +188,6 @@ getMonitor() {
     return MonitorGetPrimary()
   }
 }
+
+tile(x, y, width, height) => { x: x, y: y, width: width, height: height }
 
