@@ -3,10 +3,14 @@
 #NoTrayIcon
 #SingleInstance Force
 
-HotKey "^#o", fixAll
-HotKey "^#w", fixActive
-HotKey "^#c", centerActive
-HotKey "^#f", tileFullActive
+^#o::fixAll
+^#w::fixActive
+^#c::centerActive
+^#f::tileActive tileFull
+^#h::tileActive tileLeft
+^#j::tileActive tileDown
+^#k::tileActive tileUp
+^#l::tileActive tileRight
 
 init
 
@@ -78,25 +82,27 @@ addConfig(fix, size) {
   }
 }
 
-fixAll(*) {
+fixAll() {
   for hwnd in WinGetList(,, "Program Manager")
     fix hwnd
 }
 
-fixActive(*) => fix(WinGetID("A"))
+fixActive() => fix(WinGetID("A"))
 
-centerActive(*) {
-  WinWait WinGetID("A")
+centerActive() {
+  focusActive
   desktop := getDesktop()
   WinRestore
   WinGetPos(,, &width, &height)
   WinMove desktop.width / 2 - width / 2, desktop.height / 2 - height / 2, width, height
 }
 
-tileFullActive(*) {
-  WinWait WinGetID("A")
-  tileFull
+tileActive(where) {
+  focusActive
+  where.Call
 }
+
+focusActive() => WinWait(WinGetID("A"))
 
 fix(hwnd) {
   cfg := findConfig(hwnd)
@@ -130,14 +136,72 @@ getCenterTile(width, height) {
   static step := 16
   desktop := getDesktop()
   return tile(
-    ((desktop.width / step) * ((step - width) / 2)) + desktop.x, 
+    ((desktop.width / step) * ((step - width) / 2)) + desktop.x,
     ((desktop.height / step) * ((step - height) / 2)) + desktop.y,
     (desktop.width / step) * width,
     (desktop.height / step) * height,
   )
 }
 
-tileFull() => move(getTiles().full)
+tileFull() {
+  getTilingSetup &now, &tiles
+  if tiles.full.equal(now)
+    return
+  move tiles.full
+}
+
+tileLeft() {
+  getTilingSetup &now, &tiles
+  if tiles.left.equal(now) || tiles.leftDown.equal(now) || tiles.leftUp.equal(now)
+    return
+  tiles.down.equal(now) && move(tiles.leftDown) ||
+  tiles.up.equal(now) && move(tiles.leftUp) ||
+  tiles.right.equal(now) && move(tiles.full) ||
+  tiles.rightDown.equal(now) && move(tiles.down) ||
+  tiles.rightUp.equal(now) && move(tiles.up) ||
+  move(tiles.left)
+}
+
+tileDown() {
+  getTilingSetup &now, &tiles
+  if tiles.down.equal(now) || tiles.leftDown.equal(now) || tiles.rightDown.equal(now)
+    return
+  tiles.up.equal(now) && move(tiles.full) ||
+  tiles.left.equal(now) && move(tiles.leftDown) ||
+  tiles.right.equal(now) && move(tiles.rightDown) ||
+  tiles.leftUp.equal(now) && move(tiles.left) ||
+  tiles.rightUp.equal(now) && move(tiles.right) ||
+  move(tiles.down)
+}
+
+tileUp() {
+  getTilingSetup &now, &tiles
+  if tiles.up.equal(now) || tiles.leftUp.equal(now) || tiles.rightUp.equal(now)
+    return
+  tiles.down.equal(now) && move(tiles.full) ||
+  tiles.left.equal(now) && move(tiles.leftUp) ||
+  tiles.right.equal(now) && move(tiles.rightUp) ||
+  tiles.leftDown.equal(now) && move(tiles.left) ||
+  tiles.rightDown.equal(now) && move(tiles.right) ||
+  move(tiles.up)
+}
+
+tileRight() {
+  getTilingSetup &now, &tiles
+  if tiles.right.equal(now) || tiles.rightDown.equal(now) || tiles.rightUp.equal(now)
+    return
+  tiles.down.equal(now) && move(tiles.rightDown) ||
+  tiles.up.equal(now) && move(tiles.rightUp) ||
+  tiles.left.equal(now) && move(tiles.full) ||
+  tiles.leftDown.equal(now) && move(tiles.down) ||
+  tiles.leftUp.equal(now) && move(tiles.up) ||
+  move(tiles.right)
+}
+
+getTilingSetup(&now, &tiles) {
+  WinGetPos &x, &y, &width, &height
+  now := tile(x, y, width, height), tiles := getTiles()
+}
 
 getTiles() {
   static gap := 25, step := 2, master := 1
@@ -167,11 +231,12 @@ getTiles() {
 move(tile) {
   WinRestore
   WinMove tile.x, tile.y, tile.width, tile.height
+  return true
 }
 
 getDesktop() {
   MonitorGetWorkArea getMonitor(), &left, &top, &right, &bottom
-  return { x: left, y: top, width: right - left, height: bottom - top }
+  return tile(left, top, right - left, bottom - top)
 }
 
 getMonitor() {
@@ -189,5 +254,12 @@ getMonitor() {
   }
 }
 
-tile(x, y, width, height) => { x: x, y: y, width: width, height: height }
+tile(x, y, width, height) {
+  equal(this, that) {
+    close := (a, b) => Abs(a - b) <= 1
+    return close(this.x, that.x) && close(this.y, that.y) &&
+      close(this.width, that.width) && close(this.height, that.height)
+  }
+  return { x: x, y: y, width: width, height: height, equal: equal }
+}
 
