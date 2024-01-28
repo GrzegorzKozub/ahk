@@ -3,14 +3,14 @@
 #NoTrayIcon
 #SingleInstance Force
 
-^#o::fixAll
-^#w::fixActive
-^#c::centerActive
-^#f::tileActive tileFull
-^#h::tileActive tileLeft
-^#j::tileActive tileDown
-^#k::tileActive tileUp
-^#l::tileActive tileRight
+^#o:: fixAll
+^#w:: fixActive
+^#c:: centerActive
+^#f:: tileActive tileFull
+^#h:: tileActive tileLeft
+^#j:: tileActive tileDown
+^#k:: tileActive tileUp
+^#l:: tileActive tileRight
 
 init
 
@@ -83,7 +83,7 @@ addConfig(fix, size) {
 }
 
 fixAll() {
-  for hwnd in WinGetList(,, "Program Manager")
+  for hwnd in WinGetList(, , "Program Manager")
     fix hwnd
 }
 
@@ -93,7 +93,7 @@ centerActive() {
   focusActive
   desktop := getDesktop()
   WinRestore
-  WinGetPos(,, &width, &height)
+  WinGetPos(, , &width, &height)
   WinMove desktop.width / 2 - width / 2, desktop.height / 2 - height / 2, width, height
 }
 
@@ -155,11 +155,11 @@ tileLeft() {
   if tiles.left.equal(now) || tiles.leftDown.equal(now) || tiles.leftUp.equal(now)
     return
   tiles.down.equal(now) && move(tiles.leftDown) ||
-  tiles.up.equal(now) && move(tiles.leftUp) ||
-  tiles.right.equal(now) && move(tiles.full) ||
-  tiles.rightDown.equal(now) && move(tiles.down) ||
-  tiles.rightUp.equal(now) && move(tiles.up) ||
-  move(tiles.left)
+    tiles.up.equal(now) && move(tiles.leftUp) ||
+    tiles.right.equal(now) && move(tiles.full) ||
+    tiles.rightDown.equal(now) && move(tiles.down) ||
+    tiles.rightUp.equal(now) && move(tiles.up) ||
+    move(tiles.left)
 }
 
 tileDown() {
@@ -167,11 +167,11 @@ tileDown() {
   if tiles.down.equal(now) || tiles.leftDown.equal(now) || tiles.rightDown.equal(now)
     return
   tiles.up.equal(now) && move(tiles.full) ||
-  tiles.left.equal(now) && move(tiles.leftDown) ||
-  tiles.right.equal(now) && move(tiles.rightDown) ||
-  tiles.leftUp.equal(now) && move(tiles.left) ||
-  tiles.rightUp.equal(now) && move(tiles.right) ||
-  move(tiles.down)
+    tiles.left.equal(now) && move(tiles.leftDown) ||
+    tiles.right.equal(now) && move(tiles.rightDown) ||
+    tiles.leftUp.equal(now) && move(tiles.left) ||
+    tiles.rightUp.equal(now) && move(tiles.right) ||
+    move(tiles.down)
 }
 
 tileUp() {
@@ -179,11 +179,11 @@ tileUp() {
   if tiles.up.equal(now) || tiles.leftUp.equal(now) || tiles.rightUp.equal(now)
     return
   tiles.down.equal(now) && move(tiles.full) ||
-  tiles.left.equal(now) && move(tiles.leftUp) ||
-  tiles.right.equal(now) && move(tiles.rightUp) ||
-  tiles.leftDown.equal(now) && move(tiles.left) ||
-  tiles.rightDown.equal(now) && move(tiles.right) ||
-  move(tiles.up)
+    tiles.left.equal(now) && move(tiles.leftUp) ||
+    tiles.right.equal(now) && move(tiles.rightUp) ||
+    tiles.leftDown.equal(now) && move(tiles.left) ||
+    tiles.rightDown.equal(now) && move(tiles.right) ||
+    move(tiles.up)
 }
 
 tileRight() {
@@ -191,11 +191,11 @@ tileRight() {
   if tiles.right.equal(now) || tiles.rightDown.equal(now) || tiles.rightUp.equal(now)
     return
   tiles.down.equal(now) && move(tiles.rightDown) ||
-  tiles.up.equal(now) && move(tiles.rightUp) ||
-  tiles.left.equal(now) && move(tiles.full) ||
-  tiles.leftDown.equal(now) && move(tiles.down) ||
-  tiles.leftUp.equal(now) && move(tiles.up) ||
-  move(tiles.right)
+    tiles.up.equal(now) && move(tiles.rightUp) ||
+    tiles.left.equal(now) && move(tiles.full) ||
+    tiles.leftDown.equal(now) && move(tiles.down) ||
+    tiles.leftUp.equal(now) && move(tiles.up) ||
+    move(tiles.right)
 }
 
 getTilingSetup(&now, &tiles) {
@@ -262,4 +262,3 @@ tile(x, y, width, height) {
   }
   return { x: x, y: y, width: width, height: height, equal: equal }
 }
-
