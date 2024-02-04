@@ -53,7 +53,6 @@ init() {
   ])
   addConfig(mediumSmall, [
     { title: "Cemu" },
-    { title: "KeePassXC" },
     { title: "yuzu" },
   ])
   addConfig(small, [
@@ -73,6 +72,10 @@ init() {
     { title: "Synchronize directories" }, ; Total Commander
     { title: "Task Manager" },
   ])
+  if EnvGet("COMPUTERNAME") = "DRIFTER"
+    addConfig(small, [{ title: "KeePassXC" }])
+  else
+    addConfig(mediumSmall, [{ title: "KeePassXC" }]) ; min size on 4k at 200%
 }
 
 addConfig(fix, size) {
