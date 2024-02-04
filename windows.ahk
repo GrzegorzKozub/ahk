@@ -53,6 +53,7 @@ init() {
   ])
   addConfig(mediumSmall, [
     { title: "Cemu" },
+    { title: "KeePassXC" },
     { title: "yuzu" },
   ])
   addConfig(small, [
@@ -61,7 +62,6 @@ init() {
     { class: "FM" }, ; 7-Zip
     { title: "hardware monitor" }, ; Afterburner
     { title: "HWiNFO64" },
-    { title: "KeePassXC" },
     { title: "Lister" }, ; Total Commander
     { title: "LockHunter" },
     { title: "Multi-Rename Tool" }, ; Total Commander
