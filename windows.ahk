@@ -61,6 +61,7 @@ init() {
     { class: "FM" }, ; 7-Zip
     { title: "hardware monitor" }, ; Afterburner
     { title: "HWiNFO64" },
+    { title: "KeePassXC" },
     { title: "Lister" }, ; Total Commander
     { title: "LockHunter" },
     { title: "Multi-Rename Tool" }, ; Total Commander
@@ -72,10 +73,6 @@ init() {
     { title: "Synchronize directories" }, ; Total Commander
     { title: "Task Manager" },
   ])
-  if EnvGet("COMPUTERNAME") = "DRIFTER"
-    addConfig(small, [{ title: "KeePassXC" }])
-  else
-    addConfig(mediumSmall, [{ title: "KeePassXC" }]) ; min size on 4k at 200%
 }
 
 addConfig(fix, size) {
