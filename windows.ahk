@@ -36,6 +36,7 @@ init() {
     { title: "Firewall" },
     { title: "HxD" },
     { title: "Intel® Graphics Command Center" },
+    { title: "KeePassXC" },
     { title: "Microsoft Store" },
     { title: "NVIDIA Control Panel" },
     { title: "Obsidian" },
@@ -61,7 +62,6 @@ init() {
     { class: "FM" }, ; 7-Zip
     { title: "hardware monitor" }, ; Afterburner
     { title: "HWiNFO64" },
-    { title: "KeePassXC" },
     { title: "Lister" }, ; Total Commander
     { title: "LockHunter" },
     { title: "Multi-Rename Tool" }, ; Total Commander
