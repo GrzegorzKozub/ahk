@@ -38,7 +38,7 @@ init() {
     { title: "Intel® Graphics Command Center" },
     { title: "KeePassXC" },
     { title: "Microsoft Store" },
-    { title: "NVIDIA Control Panel" },
+    { title: "NVIDIA" },
     { title: "Obsidian" },
     { title: "Paint" },
     { title: "paint.net" },
