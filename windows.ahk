@@ -54,6 +54,7 @@ init() {
   ])
   addConfig(mediumSmall, [
     { title: "Cemu" },
+    { title: "shadPS4" },
     { title: "yuzu" },
   ])
   addConfig(small, [
