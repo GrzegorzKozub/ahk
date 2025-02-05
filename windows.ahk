@@ -32,6 +32,7 @@ init() {
   ])
   addConfig(medium, [
     { title: "AMD Software" },
+    { title: "DLSS Swapper" },
     { title: "Event Viewer" },
     { title: "Firewall" },
     { title: "HxD" },
