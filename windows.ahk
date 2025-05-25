@@ -42,16 +42,15 @@ init() {
     { title: "NVIDIA" },
     { title: "Obsidian" },
     { title: "Paint" },
-    { title: "paint.net" },
     { title: "Photos" },
     { title: "Registry Editor" },
-    { title: "Services" },
     { title: "SQL Server Configuration Manager" },
     { title: "Settings" },
     { title: "SumatraPDF" },
     { title: "Task Scheduler" },
     { title: "Total Commander" },
     { title: "Windows Security" },
+    { title: "paint.net" },
   ])
   addConfig(mediumSmall, [
     { title: "Cemu" },
@@ -60,11 +59,14 @@ init() {
   ])
   addConfig(small, [
     { title: "curve editor" }, ; Afterburner
+    { title: "Device Manager" },
+    { title: "Disk Management" },
     { title: "Find Files" }, ; Total Commander
     { class: "FM" }, ; 7-Zip
     { title: "hardware monitor" }, ; Afterburner
     { title: "HWiNFO64" },
     { title: "Lister" }, ; Total Commander
+    { title: "Local Group Policy Editor" },
     { title: "LockHunter" },
     { title: "Multi-Rename Tool" }, ; Total Commander
     { title: "Notepad" },
@@ -72,6 +74,7 @@ init() {
     { title: "Partition Expert" },
     { title: "qBittorrent" },
     { title: "Resource Hacker" },
+    { title: "Services" },
     { title: "Synchronize directories" }, ; Total Commander
     { title: "Task Manager" },
   ])
