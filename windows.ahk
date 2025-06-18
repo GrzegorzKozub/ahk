@@ -42,6 +42,7 @@ init() {
     { title: "NVIDIA" },
     { title: "Obsidian" },
     { title: "Paint" },
+    { title: "Partition Expert" },
     { title: "Photos" },
     { title: "Registry Editor" },
     { title: "SQL Server Configuration Manager" },
@@ -69,7 +70,6 @@ init() {
     { title: "Multi-Rename Tool" }, ; Total Commander
     { title: "Notepad" },
     { title: "OBS" },
-    { title: "Partition Expert" },
     { title: "qBittorrent" },
     { title: "Resource Hacker" },
     { title: "Services" },
