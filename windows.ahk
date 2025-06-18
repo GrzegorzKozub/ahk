@@ -53,9 +53,7 @@ init() {
     { title: "paint.net" },
   ])
   addConfig(mediumSmall, [
-    { title: "Cemu" },
     { title: "shadPS4" },
-    { title: "yuzu" },
   ])
   addConfig(small, [
     { title: "curve editor" }, ; Afterburner
@@ -64,7 +62,7 @@ init() {
     { title: "Find Files" }, ; Total Commander
     { class: "FM" }, ; 7-Zip
     { title: "hardware monitor" }, ; Afterburner
-    { title: "HWiNFO64" },
+    { title: "HWiNFO" },
     { title: "Lister" }, ; Total Commander
     { title: "Local Group Policy Editor" },
     { title: "LockHunter" },
