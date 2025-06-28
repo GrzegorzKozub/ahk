@@ -44,6 +44,7 @@ init() {
     { title: "Paint" },
     { title: "Partition Expert" },
     { title: "Photos" },
+    { title: "Realtek Audio Console" },
     { title: "Registry Editor" },
     { title: "SQL Server Configuration Manager" },
     { title: "Settings" },
