@@ -20,7 +20,6 @@ init() {
     { title: "Brave" },
     { title: "DevTools" }, ; Brave
     { title: "Edge" },
-    { title: "Fan Control" },
     { title: "Microsoft Visual Studio" },
     { title: "NTLite" },
     { title: "Remote Desktop Connection" },
@@ -36,6 +35,7 @@ init() {
     { title: "AMD Software" },
     { title: "DLSS Swapper" },
     { title: "Event Viewer" },
+    { title: "Fan Control" },
     { title: "Firewall" },
     { title: "HxD" },
     { title: "Intel® Graphics Command Center" },
