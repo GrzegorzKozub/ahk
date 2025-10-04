@@ -39,7 +39,6 @@ init() {
     { title: "Firewall" },
     { title: "HxD" },
     { title: "Intel® Graphics Command Center" },
-    { title: "KeePassXC" },
     { title: "Microsoft Store" },
     { title: "NVIDIA" },
     { title: "Obsidian" },
@@ -65,6 +64,7 @@ init() {
     { title: "Disk Management" },
     { title: "Find Files" }, ; Total Commander
     { title: "HWiNFO" },
+    { title: "KeePassXC" },
     { title: "Lister" }, ; Total Commander
     { title: "Local Group Policy Editor" },
     { title: "LockHunter" },
