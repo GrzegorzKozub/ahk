@@ -56,6 +56,7 @@ init() {
     { title: "paint.net" },
   ])
   addConfig(mediumSmall, [
+    { title: "KeePassXC" },
     { title: "shadPS4" },
   ])
   addConfig(small, [
@@ -64,7 +65,6 @@ init() {
     { title: "Disk Management" },
     { title: "Find Files" }, ; Total Commander
     { title: "HWiNFO" },
-    { title: "KeePassXC" },
     { title: "Lister" }, ; Total Commander
     { title: "Local Group Policy Editor" },
     { title: "LockHunter" },
