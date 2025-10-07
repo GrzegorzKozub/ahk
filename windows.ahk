@@ -79,7 +79,7 @@ init() {
     { title: "hardware monitor" }, ; Afterburner
     { title: "qBittorrent" },
   ])
-  addConfig(tiny, [
+  addConfig(aimp, [
     { class: "TAIMPMainForm" }, ; AIMP main window
   ])
 }
@@ -133,7 +133,7 @@ bigMedium() => onUhd() ? center(10.5, 13) : center(13, 13.5)
 medium() => onUhd() ? center(9, 12) : center(12, 12.5)
 mediumSmall() => onUhd() ? center(7.5, 11) : center(11, 11.5)
 small() => onUhd() ? center(6, 10) : center(10, 10.5)
-tiny() => onUhd() ? center(4.5, 9) : center(9, 9.5)
+aimp() => onUhd() ? center(4.5, 9) : center(6, 11.5)
 
 onUhd() {
   MonitorGet getMonitor(), &left, &top, &right, &bottom
