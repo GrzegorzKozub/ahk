@@ -67,6 +67,7 @@ init() {
     { title: "HWiNFO" },
     { title: "Lister" }, ; Total Commander
     { title: "Local Group Policy Editor" },
+    { title: "LocalSend" },
     { title: "LockHunter" },
     { title: "Multi-Rename Tool" }, ; Total Commander
     { title: "Notepad" },
