@@ -42,6 +42,7 @@ init() {
     { title: "Microsoft Store" },
     { title: "NVIDIA" },
     { title: "Obsidian" },
+    { title: "ONLYOFFICE" },
     { title: "Paint" },
     { title: "Partition Expert" },
     { title: "Photos" },
