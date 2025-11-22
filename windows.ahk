@@ -66,6 +66,7 @@ init() {
     { title: "Disk Management" },
     { title: "Find Files" }, ; Total Commander
     { title: "HWiNFO" },
+    { title: "ImageGlass" },
     { title: "Lister" }, ; Total Commander
     { title: "Local Group Policy Editor" },
     { title: "LocalSend" },
