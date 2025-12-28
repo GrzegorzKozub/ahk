@@ -50,6 +50,7 @@ init() {
     { title: "Registry Editor" },
     { title: "SQL Server Configuration Manager" },
     { title: "Settings" },
+    { title: "Snipping Tool" },
     { title: "SumatraPDF" },
     { title: "Task Scheduler" },
     { title: "Total Commander" },
