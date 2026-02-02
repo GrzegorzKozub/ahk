@@ -20,6 +20,7 @@ init() {
     { title: "Brave" },
     { title: "DevTools" }, ; Brave
     { title: "Edge" },
+    { title: "LM Studio" },
     { title: "Microsoft Visual Studio" },
     { title: "NTLite" },
     { title: "Remote Desktop Connection" },
