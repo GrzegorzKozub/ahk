@@ -17,6 +17,7 @@ init
 init() {
   global config := []
   addConfig(big, [
+    { title: "Agents" }, ; vscode
     { title: "Brave" },
     { title: "DevTools" }, ; Brave
     { title: "Edge" },
