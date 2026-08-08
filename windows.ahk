@@ -40,7 +40,7 @@ init() {
     { title: "Fan Control" },
     { title: "Firewall" },
     { title: "HxD" },
-    { title: "Intel® Graphics Command Center" },
+    { title: "Intel® Graphics Software" },
     { title: "Microsoft Store" },
     { title: "NVIDIA" },
     { title: "ONLYOFFICE" },
