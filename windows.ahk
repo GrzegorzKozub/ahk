@@ -20,6 +20,7 @@ init() {
     { title: "Agents" }, ; vscode
     { title: "Brave" },
     { title: "DevTools" }, ; Brave
+    { title: "DisplayCAL" },
     { title: "Edge" },
     { title: "LM Studio" },
     { title: "Microsoft Visual Studio" },
