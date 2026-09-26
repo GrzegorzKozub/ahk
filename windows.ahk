@@ -29,12 +29,12 @@ init() {
     { title: "SQL Server Management Studio" },
     { title: "SQL Server Profiler" },
     { title: "Visual Studio Code" },
+    { class: "Zed::Window" },
   ])
   addConfig(bigMedium, [
     { title: "Steam" },
   ])
   addConfig(medium, [
-    { class: "TASEScene" }, ; AIMP music library
     { title: "AMD Software" },
     { title: "DLSS Swapper" },
     { title: "Event Viewer" },
@@ -55,6 +55,7 @@ init() {
     { title: "Settings" },
     { title: "Snipping Tool" },
     { title: "SumatraPDF" },
+    { class: "TASEScene" }, ; AIMP music library
     { title: "TIDAL" },
     { title: "Task Scheduler" },
     { title: "Total Commander" },
@@ -66,10 +67,10 @@ init() {
     { title: "shadPS4" },
   ])
   addConfig(small, [
-    { class: "FM" }, ; 7-Zip
     { title: "Device Manager" },
     { title: "Disk Management" },
     { title: "Find Files" }, ; Total Commander
+    { class: "FM" }, ; 7-Zip
     { title: "HWiNFO" },
     { title: "ImageGlass" },
     { title: "Lister" }, ; Total Commander
