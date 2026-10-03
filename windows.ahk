@@ -61,6 +61,7 @@ init() {
     { title: "Total Commander" },
     { title: "Windows Security" },
     { title: "paint.net" },
+    { title: "qBittorrent" },
   ])
   addConfig(mediumSmall, [
     { title: "KeePassXC" },
@@ -86,7 +87,6 @@ init() {
     { title: "Task Manager" },
     { title: "curve editor" }, ; Afterburner
     { title: "hardware monitor" }, ; Afterburner
-    { title: "qBittorrent" },
   ])
   addConfig(aimp, [
     { class: "TAIMPMainForm" }, ; AIMP main window
