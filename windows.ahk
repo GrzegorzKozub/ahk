@@ -54,7 +54,7 @@ init() {
     { title: "SQL Server Configuration Manager" },
     { title: "Settings" },
     { title: "Snipping Tool" },
-    { title: "SumatraPDF" },
+    { class: "SUMATRA_PDF_FRAME" }, ; SumatraPDF
     { class: "TASEScene" }, ; AIMP music library
     { title: "TIDAL" },
     { title: "Task Scheduler" },
@@ -83,6 +83,7 @@ init() {
     { title: "OBS" },
     { title: "Resource Hacker" },
     { title: "Services" },
+    { class: "SumatraWgDefaultWinClass" }, ; SumatraPDF Documentation
     { title: "Synchronize directories" }, ; Total Commander
     { title: "Task Manager" },
     { title: "curve editor" }, ; Afterburner
