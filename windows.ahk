@@ -53,6 +53,7 @@ init() {
     { title: "Registry Editor" },
     { title: "SQL Server Configuration Manager" },
     { title: "Settings" },
+    { title: "ShareX - Image Editor" },
     { title: "Snipping Tool" },
     { class: "SUMATRA_PDF_FRAME" }, ; SumatraPDF
     { class: "TASEScene" }, ; AIMP music library
@@ -83,6 +84,7 @@ init() {
     { title: "OBS" },
     { title: "Resource Hacker" },
     { title: "Services" },
+    { title: "ShareX" },
     { class: "SumatraWgDefaultWinClass" }, ; SumatraPDF Documentation
     { title: "Synchronize directories" }, ; Total Commander
     { title: "Task Manager" },
