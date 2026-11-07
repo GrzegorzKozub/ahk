@@ -44,8 +44,9 @@ init() {
     { title: "Intel® Graphics Software" },
     { title: "Microsoft Store" },
     { title: "NVIDIA" },
-    { title: "ONLYOFFICE" },
+    { title: "OBS" },
     { title: "Obsidian" },
+    { title: "ONLYOFFICE" },
     { title: "Paint" },
     { title: "Partition Expert" },
     { title: "Photos" },
@@ -81,7 +82,6 @@ init() {
     { title: "LockHunter" },
     { title: "Multi-Rename Tool" }, ; Total Commander
     { title: "Notepad" },
-    { title: "OBS" },
     { title: "Resource Hacker" },
     { title: "Services" },
     { title: "ShareX" },
