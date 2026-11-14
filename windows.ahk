@@ -33,6 +33,7 @@ init() {
   ])
   addConfig(bigMedium, [
     { title: "Steam" },
+    { title: "Ubisoft Connect" },
   ])
   addConfig(medium, [
     { title: "AMD Software" },
